@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XneTvZipNrXdriJkPRMXO77vj3H4vKqCErujwDBXZFGrP/fySPIM0oJ++YJZMWY/Wm4tF6H8PJH41c92Rx55XA==",
+  "dgSpecHash": "D+9lAk2FkEZpb2x6cCo8PDqpP7ZTi0fMiZlglgV4vyCoS8UJc2e5nmdCwY1MhLw7f3HOqyJ+wBrSlCdpeLEzVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

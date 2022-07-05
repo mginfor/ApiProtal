@@ -28,3 +28,18 @@ C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persisten
 C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\refint\Persistence.dll
 C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.pdb
 C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\ref\Persistence.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\bin\Release\net5.0\Persistence.deps.json
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\bin\Release\net5.0\Persistence.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\bin\Release\net5.0\Persistence.pdb
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\bin\Release\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\bin\Release\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\Persistence.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\Persistence.csproj.CopyComplete
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\Persistence.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\refint\Persistence.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\Persistence.pdb
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Persistence\obj\Release\net5.0\ref\Persistence.dll

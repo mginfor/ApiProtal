@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vEzdUiKmVUpNrVv9rj5cglvR6JKbdU5nV7toCn73xCWLI3P+kdhw0FwWS5WLDdN+NuAYOu7kY9CeUEU9gEspwA==",
+  "dgSpecHash": "iRmUFUKKI6d1i7RaSv5P28AvXg3vv7PCLKHEYSs8NFrUZ99YRV/23A/qkDx9Q+/EU/VgxjZizAwMivPl4Ite6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.9\\microsoft.entityframeworkcore.5.0.9.nupkg.sha512",

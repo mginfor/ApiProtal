@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\api\\api.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\api\\api.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\api\\api.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\api\\api.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\api\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Contracts\\Contracts.csproj"
+              "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj"
+              "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Services\\Services.csproj"
+              "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Services\\Services.csproj"
               }
             }
           }
@@ -97,14 +97,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Contracts\\Contracts.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -121,8 +121,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj"
+              "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj"
               }
             }
           }
@@ -155,14 +155,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -209,14 +209,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Persistence\\Persistence.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -233,8 +233,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj"
+              "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj"
               }
             }
           }
@@ -289,14 +289,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Services\\Services.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Services\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -313,14 +313,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Contracts\\Contracts.csproj"
+              "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Entities\\Entities.csproj"
+              "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\Persistence\\Persistence.csproj"
+              "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Persistence\\Persistence.csproj"
               }
             }
           }

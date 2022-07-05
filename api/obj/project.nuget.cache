@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0AqSvZz8CqZgsqfJ52iO0ndk3r262Do4KGVw6umdsUAAnehzzvXGlwgNgESDMHZnbfv6a8QDfMIETuwlFrpA/Q==",
+  "dgSpecHash": "tWpEmrLgO6qL1dt2ykMuyo2eALmR6p1jNNWuO8tSOkrVCd81FJ6yj8wI8T+zi0eJGs2QnJhIsV20+/3dJ1NYeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\Nueva carpeta\\miapi\\mgapi\\api\\api.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\common.logging\\3.4.1\\common.logging.3.4.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\common.logging.core\\3.4.1\\common.logging.core.3.4.1.nupkg.sha512",
