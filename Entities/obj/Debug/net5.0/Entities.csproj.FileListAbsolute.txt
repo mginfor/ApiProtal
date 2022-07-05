@@ -1,0 +1,131 @@
+C:\Proyectos\MGApis\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Proyectos\MGApis\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Proyectos\MGApis\mgapi\Entities\bin\Debug\net5.0\ref\Entities.dll
+C:\Proyectos\MGApis\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Proyectos\MGApis\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\MGApis\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Proyectos\MGApis\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Proyectos\MGApis\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Proyectos\MGApis\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Proyectos\MGApis\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Proyectos\MGApis\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Proyectos\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Proyectos\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Proyectos\mgapi\mgapi\Entities\bin\Debug\net5.0\ref\Entities.dll
+C:\Proyectos\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Proyectos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Proyectos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Proyectos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Proyectos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Proyectos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Proyectos\mgapi\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Proyectos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Proyectos\MGApis\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\bin\Debug\net5.0\ref\Entities.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\bin\Debug\net5.0\ref\Entities.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\bin\Debug\net5.0\ref\Entities.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\bin\Debug\net5.0\ref\Entities.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\refint\Entities.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\Usuario\Documents\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\Usuario\Documents\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Documents\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\refint\Entities.dll
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Documents\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\bin\Debug\net5.0\ref\Entities.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\refint\Entities.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\refint\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Entities\obj\Debug\net5.0\ref\Entities.dll

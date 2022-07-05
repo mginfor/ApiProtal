@@ -1,0 +1,923 @@
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\ref\api.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.xml
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\ref\api.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.xml
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Proyectos\mgapi\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Proyectos\mgapi\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Proyectos\MGApis\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Proyectos\MGApis\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\ref\api.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.xml
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Users\Ricardo Valdés\source\repos\mgapi\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\ref\api.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\git\mgapi\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\nlog.config
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\appsettings.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\api.exe
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\api.deps.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\api.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\ref\api.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\api.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.io.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\MailKit.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\NLog.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Contracts.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Entities.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Persistence.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Services.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Entities.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Services.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.xml
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\ref\api.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.StaticWebAssets.xml
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\ref\api.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Users\Usuario\Desktop\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\nlog.config
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\appsettings.json
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.StaticWebAssets.xml
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.exe
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.deps.json
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\api.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.io.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\MailKit.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\NLog.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Contracts.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Entities.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Persistence.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Services.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Entities.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Services.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\refint\api.dll
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.pdb
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+D:\mg\nuevas versiones\MG\Api\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\refint\api.dll
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\api.StaticWebAssets.xml
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Users\Usuario\Documents\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Documents\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\api.StaticWebAssets.xml
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\ref\api.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Users\ACER\Downloads\API Portal cliente v1.2\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.StaticWebAssets.xml
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\refint\api.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\ref\api.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\nlog.config
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\appsettings.json
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.StaticWebAssets.xml
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.exe
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Plantillas\mensaje.html
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.deps.json
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\api.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Common.Logging.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Common.Logging.Core.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.barcodes.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.forms.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.io.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.kernel.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.layout.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.pdfa.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.sign.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.styledxmlparser.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.svg.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\itext.html2pdf.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\MailKit.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Microsoft.SharePoint.Client.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\NLog.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Contracts.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Persistence.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Services.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Contracts.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Services.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\bin\Debug\net5.0\Persistence.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\refint\api.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\api\obj\Debug\net5.0\ref\api.dll

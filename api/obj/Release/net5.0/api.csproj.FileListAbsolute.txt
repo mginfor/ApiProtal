@@ -1,0 +1,168 @@
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\nlog.config
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\appsettings.Development.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\appsettings.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\api.exe
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Plantillas\mensaje.html
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\api.deps.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\api.runtimeconfig.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\api.runtimeconfig.dev.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\api.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\ref\api.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\api.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Common.Logging.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Common.Logging.Core.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.barcodes.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.forms.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.io.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.kernel.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.layout.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.pdfa.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.sign.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.styledxmlparser.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.svg.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\itext.html2pdf.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\MailKit.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.EntityFrameworkCore.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.Extensions.DependencyModel.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.IdentityModel.Logging.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.IdentityModel.Tokens.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.OpenApi.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.Office.Client.Policy.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.Office.Client.TranslationServices.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.Office.SharePoint.Tools.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.ProjectServer.Client.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Search.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\MimeKit.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\MySqlConnector.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Newtonsoft.Json.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\NLog.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\NLog.Extensions.Logging.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\BouncyCastle.Crypto.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Contracts.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Entities.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Persistence.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Services.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Contracts.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Entities.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Services.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\bin\Release\net5.0\Persistence.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.csproj.AssemblyReference.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.AssemblyInfoInputs.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.AssemblyInfo.cs
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.csproj.CoreCompileInputs.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\staticwebassets\api.StaticWebAssets.xml
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\scopedcss\bundle\api.styles.css
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.RazorTargetAssemblyInfo.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.csproj.CopyComplete
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\ref\api.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\api\obj\Release\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\nlog.config
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\appsettings.Development.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\appsettings.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\api.StaticWebAssets.xml
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\api.exe
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Plantillas\mensaje.html
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\api.deps.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\api.runtimeconfig.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\api.runtimeconfig.dev.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\api.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\api.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Common.Logging.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Common.Logging.Core.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.barcodes.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.forms.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.io.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.kernel.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.layout.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.pdfa.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.sign.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.styledxmlparser.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.svg.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\itext.html2pdf.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\MailKit.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.Office.Client.Policy.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.ProjectServer.Client.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Search.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Microsoft.SharePoint.Client.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\MimeKit.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\MySqlConnector.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Newtonsoft.Json.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\NLog.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Contracts.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Entities.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Persistence.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Services.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Contracts.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Entities.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Services.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\bin\Release\net5.0\Persistence.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.AssemblyInfo.cs
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.csproj.CopyComplete
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\refint\api.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\api.genruntimeconfig.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\api\obj\Release\net5.0\ref\api.dll

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ef47ddc7-d2f2-4d71-ad25-d3a4e99e1106": {
+      "ProjectGuid": "ef47ddc7-d2f2-4d71-ad25-d3a4e99e1106",
+      "DisplayName": "Services",
+      "ColorIndex": 0
+    },
+    "ab2fbf38-f328-4da1-94b0-7c6790dff114": {
+      "ProjectGuid": "ab2fbf38-f328-4da1-94b0-7c6790dff114",
+      "DisplayName": "Entities",
+      "ColorIndex": 1
+    },
+    "4c7e3c01-8084-461c-a0e9-b18c5659e7ac": {
+      "ProjectGuid": "4c7e3c01-8084-461c-a0e9-b18c5659e7ac",
+      "DisplayName": "Contracts",
+      "ColorIndex": 2
+    },
+    "d8d5d75e-288e-4461-8b53-9505b467d1e9": {
+      "ProjectGuid": "d8d5d75e-288e-4461-8b53-9505b467d1e9",
+      "DisplayName": "api",
+      "ColorIndex": 3
+    },
+    "ad49646a-5755-4850-aaa3-060662f456be": {
+      "ProjectGuid": "ad49646a-5755-4850-aaa3-060662f456be",
+      "DisplayName": "Persistence",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}

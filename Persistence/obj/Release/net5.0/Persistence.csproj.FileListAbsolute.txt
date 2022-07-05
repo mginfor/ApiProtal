@@ -1,0 +1,30 @@
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\bin\Release\net5.0\Persistence.deps.json
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\bin\Release\net5.0\Persistence.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\bin\Release\net5.0\ref\Persistence.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\bin\Release\net5.0\Persistence.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\bin\Release\net5.0\Entities.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\bin\Release\net5.0\Entities.pdb
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\Persistence.csproj.AssemblyReference.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\Persistence.AssemblyInfoInputs.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\Persistence.AssemblyInfo.cs
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\Persistence.csproj.CoreCompileInputs.cache
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\Persistence.csproj.CopyComplete
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\Persistence.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\ref\Persistence.dll
+d:\Sistemas\Mg\Api\Api ver 2\mgapi\Persistence\obj\Release\net5.0\Persistence.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\bin\Release\net5.0\Persistence.deps.json
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\bin\Release\net5.0\Persistence.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\bin\Release\net5.0\Persistence.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\bin\Release\net5.0\Entities.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\bin\Release\net5.0\Entities.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.AssemblyInfo.cs
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.csproj.CopyComplete
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\refint\Persistence.dll
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\Persistence.pdb
+C:\Users\Usuario\Downloads\Nueva carpeta (4)\Nueva carpeta\miapi\mgapi\Persistence\obj\Release\net5.0\ref\Persistence.dll
