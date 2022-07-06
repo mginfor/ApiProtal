@@ -66,18 +66,30 @@ namespace api.Controllers
             var salida = new GenericResponse();
             var user = _usuarioService.PreLogin(model);
 
-            if (user == null)
+            try
             {
-                salida.data = new { message = "Usuario inválido" };
-                salida.status = false;
-                return Unauthorized(salida);
+
+                if (user == null)
+                {
+                    salida.data = new { message = "Usuario inválido" };
+                    salida.status = false;
+                    return Unauthorized(salida);
+                }
+
+                enviarCodigoPorCorreo(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.clave);
+
+                var aux = user.correo.Split("@");
+                salida.data = new { message = "correo enviado a " + aux[0].Substring(0, 3) + "xxxxx@" + aux[1] };
+                return Ok(salida);
+
+            }
+            catch (Exception ex)
+            {
+
+                return Unauthorized(ex);
             }
 
-            enviarCodigoPorCorreo(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.clave);
-
-            var aux = user.correo.Split("@");
-            salida.data = new { message = "correo enviado a " + aux[0].Substring(0, 3) + "xxxxx@" + aux[1] };
-            return Ok(salida);
+           
 
 
 

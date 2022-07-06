@@ -163,3 +163,18 @@ C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Cont
 C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Contracts\obj\Debug\net5.0\refint\Contracts.dll
 C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Contracts\obj\Debug\net5.0\Contracts.pdb
 C:\Users\Usuario\Desktop\apis\api portal clientes\Nueva carpeta\miapi\mgapi\Contracts\obj\Debug\net5.0\ref\Contracts.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\refint\Contracts.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.pdb
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\bin\Debug\net5.0\Contracts.deps.json
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\bin\Debug\net5.0\Contracts.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\bin\Debug\net5.0\Contracts.pdb
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.csproj.CopyComplete
+C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Contracts\obj\Debug\net5.0\ref\Contracts.dll

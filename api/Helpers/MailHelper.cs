@@ -25,7 +25,7 @@ namespace api.Helpers
                 try
                 {
                     var mailSettings = _configuration.GetSection("MailSettings");
-                    client.Connect(mailSettings.GetSection("SmtpServer").Value, int.Parse(mailSettings.GetSection("SmtpPort").Value), SecureSocketOptions.Auto);
+                    client.Connect(mailSettings.GetSection("SmtpServer").Value, int.Parse(mailSettings.GetSection("SmtpPort").Value), SecureSocketOptions.StartTls);
                     client.Authenticate(mailSettings.GetSection("mailSenderAddress").Value, mailSettings.GetSection("mailSenderPass").Value);
                     client.Send(mailMesssaje);
                 }
