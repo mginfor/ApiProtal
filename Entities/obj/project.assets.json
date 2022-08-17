@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",

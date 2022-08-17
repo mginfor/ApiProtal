@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gfcbCOXLCMwBRdDYR5MiOSE43Ht5I0IpdYuUhk3tY93ISenXOiPe4KagMwuvJnXsraQGZxs3ELj9IA78a7R4Dg==",
+  "dgSpecHash": "Xfc6ZVoQDNctU+u+MGygHIQYQThO2yLEcQNtFHULAb8kIfXQV5b3BdNsFMlazJ8b4M0yG3eaJXU8N27N3A7jyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Persistence\\Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.9\\microsoft.entityframeworkcore.5.0.9.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.9\\microsoft.entityframeworkcore.abstractions.5.0.9.nupkg.sha512",

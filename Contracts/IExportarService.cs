@@ -1,4 +1,5 @@
-﻿using Entities.DbModels;
+﻿using ClosedXML.Excel;
+using Entities.DbModels;
 using Entities.EPModels;
 using System.Collections.Generic;
 namespace Contracts
@@ -7,6 +8,8 @@ namespace Contracts
     {
         public List<Exportar> getDatosExportacion(int idPerfil, int idFaena, int idCliente);
         public List<BrechasCandidato> getProcesoBrecha(int idEvaluacion);
+
+        public XLWorkbook GenerarExcelBrechasCandidatos(ExcelBrechaCandidatos excelBrechaCandidatos);
 
 
 

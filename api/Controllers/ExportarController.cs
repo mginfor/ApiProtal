@@ -1,9 +1,11 @@
 ﻿using api.Helpers;
 using Contracts;
+using Entities.DbModels;
 using Entities.EPModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -60,6 +62,35 @@ namespace api.Controllers
             }
 
         }
+
+
+        [Route("[action]")]
+        [HttpPost]
+        public IActionResult getExcelBrechaCandidatos(ExcelBrechaCandidatos excelBrechaCandidatos)
+        {
+
+            var libro = _exportarService.GenerarExcelBrechasCandidatos(excelBrechaCandidatos);
+
+
+            //Aca agregar otras hojas con adaptadores
+
+            using (var memo = new MemoryStream())
+            {
+
+                libro.SaveAs(memo);
+                var nombreExcel = string.Concat("Reporte tickets", DateTime.Now.ToString(), ".xlsx");
+                var archivos = File(memo.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", nombreExcel);
+                return archivos;
+            }
+
+
+        }
+
+
+
+
+
+
 
 
 

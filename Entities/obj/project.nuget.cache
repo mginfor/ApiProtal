@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D+9lAk2FkEZpb2x6cCo8PDqpP7ZTi0fMiZlglgV4vyCoS8UJc2e5nmdCwY1MhLw7f3HOqyJ+wBrSlCdpeLEzVw==",
+  "dgSpecHash": "FJLamBJty4X661ua8/rdjF0aNKw5XsgsdBQFySbDs8+WUzjzYG/BRP3BXqBBTeHsHgyrb6dVttNyb5hcClrqMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\apiportal\\api\\ApiProtal\\ApiProtal\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

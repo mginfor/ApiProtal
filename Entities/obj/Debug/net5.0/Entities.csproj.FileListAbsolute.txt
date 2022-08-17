@@ -141,3 +141,15 @@ C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Entities\bin\Deb
 C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Entities\bin\Debug\net5.0\Entities.dll
 C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Entities\bin\Debug\net5.0\Entities.pdb
 C:\Users\Usuario\Desktop\apis\apiportal\api\ApiProtal\ApiProtal\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\refint\Entities.dll
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\Entities.pdb
+C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\ref\Entities.dll
