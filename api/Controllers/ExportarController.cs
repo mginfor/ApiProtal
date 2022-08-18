@@ -16,9 +16,11 @@ namespace api.Controllers
     public class ExportarController : ControllerBase
     {
         private IExportarService _exportarService;
-        public ExportarController(IExportarService exportarService)
+        private IUsuarioPortalService _usuarioPortalService;
+        public ExportarController(IExportarService exportarService, IUsuarioPortalService usuarioPortalService)
         {
             _exportarService = exportarService;
+            _usuarioPortalService = usuarioPortalService;
         }
 
         [Route("[action]/{idPerfil}/{idFaena}/{idCliente}")]
@@ -69,10 +71,10 @@ namespace api.Controllers
         public IActionResult getExcelBrechaCandidatos([FromBody]ExcelBrechaCandidatos excelBrechaCandidatos)
         {
             var libro = _exportarService.GenerarExcelBrechasCandidatos(excelBrechaCandidatos);
-
+            excelBrechaCandidatos.idCliente = _usuarioPortalService.GetById(excelBrechaCandidatos.idUsuario).idCliente;
             using (var memo = new MemoryStream())
             {
-
+                
                 libro.SaveAs(memo);
                 var nombreExcel = string.Concat("Reporte tickets", DateTime.Now.ToString(), ".xlsx");
                 var archivos = File(memo.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", nombreExcel);
