@@ -153,3 +153,15 @@ C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\refint\Entities.dll
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\Entities.pdb
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Entities\obj\Debug\net5.0\ref\Entities.dll
+D:\Proyectos\MG\ApiProtal\Entities\bin\Debug\net5.0\Entities.deps.json
+D:\Proyectos\MG\ApiProtal\Entities\bin\Debug\net5.0\Entities.dll
+D:\Proyectos\MG\ApiProtal\Entities\bin\Debug\net5.0\Entities.pdb
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\Entities.dll
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\refint\Entities.dll
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\Entities.pdb
+D:\Proyectos\MG\ApiProtal\Entities\obj\Debug\net5.0\ref\Entities.dll

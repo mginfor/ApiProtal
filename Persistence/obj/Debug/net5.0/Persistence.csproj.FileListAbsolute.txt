@@ -193,3 +193,18 @@ C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Persistence\o
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Persistence\obj\Debug\net5.0\refint\Persistence.dll
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.pdb
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Persistence\obj\Debug\net5.0\ref\Persistence.dll
+D:\Proyectos\MG\ApiProtal\Persistence\bin\Debug\net5.0\Persistence.deps.json
+D:\Proyectos\MG\ApiProtal\Persistence\bin\Debug\net5.0\Persistence.dll
+D:\Proyectos\MG\ApiProtal\Persistence\bin\Debug\net5.0\Persistence.pdb
+D:\Proyectos\MG\ApiProtal\Persistence\bin\Debug\net5.0\Entities.dll
+D:\Proyectos\MG\ApiProtal\Persistence\bin\Debug\net5.0\Entities.pdb
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.csproj.AssemblyReference.cache
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfoInputs.cache
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfo.cs
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.csproj.CoreCompileInputs.cache
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.csproj.CopyComplete
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.dll
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\refint\Persistence.dll
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\Persistence.pdb
+D:\Proyectos\MG\ApiProtal\Persistence\obj\Debug\net5.0\ref\Persistence.dll

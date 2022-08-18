@@ -66,13 +66,9 @@ namespace api.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult getExcelBrechaCandidatos(ExcelBrechaCandidatos excelBrechaCandidatos)
+        public IActionResult getExcelBrechaCandidatos([FromBody]ExcelBrechaCandidatos excelBrechaCandidatos)
         {
-
             var libro = _exportarService.GenerarExcelBrechasCandidatos(excelBrechaCandidatos);
-
-
-            //Aca agregar otras hojas con adaptadores
 
             using (var memo = new MemoryStream())
             {
@@ -82,8 +78,6 @@ namespace api.Controllers
                 var archivos = File(memo.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", nombreExcel);
                 return archivos;
             }
-
-
         }
 
 

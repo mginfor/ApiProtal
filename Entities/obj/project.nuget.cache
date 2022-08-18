@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FJLamBJty4X661ua8/rdjF0aNKw5XsgsdBQFySbDs8+WUzjzYG/BRP3BXqBBTeHsHgyrb6dVttNyb5hcClrqMg==",
+  "dgSpecHash": "LyUUNqSHgDtgmio0FbrMltv1FyW2RcxzjsNvosHC+q4hY4X6/ar9wjjh9rBQWjSMcU1In1BVf6YOwWwdjUeINQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

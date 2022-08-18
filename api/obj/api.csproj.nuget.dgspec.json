@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\api\\api.csproj": {}
+    "D:\\Proyectos\\MG\\ApiProtal\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\api\\api.csproj": {
+    "D:\\Proyectos\\MG\\ApiProtal\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\api\\api.csproj",
+        "projectUniqueName": "D:\\Proyectos\\MG\\ApiProtal\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\api\\obj\\",
+        "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MG\\ApiProtal\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,14 +28,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Contracts\\Contracts.csproj"
+              "D:\\Proyectos\\MG\\ApiProtal\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj"
+              "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Services\\Services.csproj"
+              "D:\\Proyectos\\MG\\ApiProtal\\Services\\Services.csproj": {
+                "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Services\\Services.csproj"
               }
             }
           }
@@ -85,6 +85,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -93,21 +111,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Contracts\\Contracts.csproj": {
+    "D:\\Proyectos\\MG\\ApiProtal\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\Proyectos\\MG\\ApiProtal\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Contracts\\Contracts.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Contracts\\obj\\",
+        "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Contracts\\Contracts.csproj",
+        "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MG\\ApiProtal\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -121,8 +139,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj"
+              "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj"
               }
             }
           }
@@ -152,26 +170,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj": {
+    "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\obj\\",
+        "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MG\\ApiProtal\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -206,26 +238,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Persistence\\Persistence.csproj": {
+    "D:\\Proyectos\\MG\\ApiProtal\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\Proyectos\\MG\\ApiProtal\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Persistence\\obj\\",
+        "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MG\\ApiProtal\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -239,8 +285,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj"
+              "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj"
               }
             }
           }
@@ -286,26 +332,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Services\\Services.csproj": {
+    "D:\\Proyectos\\MG\\ApiProtal\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\Proyectos\\MG\\ApiProtal\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Services\\obj\\",
+        "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MG\\ApiProtal\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -319,14 +379,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Contracts\\Contracts.csproj"
+              "D:\\Proyectos\\MG\\ApiProtal\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Entities\\Entities.csproj"
+              "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\apis\\api portal clientes\\github\\ApiProtal\\Persistence\\Persistence.csproj"
+              "D:\\Proyectos\\MG\\ApiProtal\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\Proyectos\\MG\\ApiProtal\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -349,6 +409,10 @@
               "target": "Package",
               "version": "[1.7.3, )"
             },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.12.2, )"
@@ -364,12 +428,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

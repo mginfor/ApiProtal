@@ -245,3 +245,22 @@ C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Services\obj\
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Services\obj\Debug\net5.0\refint\Services.dll
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Services\obj\Debug\net5.0\Services.pdb
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Services\obj\Debug\net5.0\ref\Services.dll
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Services.deps.json
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Services.dll
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Services.pdb
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Contracts.dll
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Entities.dll
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Persistence.dll
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Contracts.pdb
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Entities.pdb
+D:\Proyectos\MG\ApiProtal\Services\bin\Debug\net5.0\Persistence.pdb
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\Services.csproj.AssemblyReference.cache
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\Services.AssemblyInfoInputs.cache
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\Services.AssemblyInfo.cs
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\Services.csproj.CoreCompileInputs.cache
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\Services.csproj.CopyComplete
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\Services.dll
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\refint\Services.dll
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\Services.pdb
+D:\Proyectos\MG\ApiProtal\Services\obj\Debug\net5.0\ref\Services.dll

@@ -193,3 +193,18 @@ C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Contracts\obj
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Contracts\obj\Debug\net5.0\refint\Contracts.dll
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.pdb
 C:\Users\Usuario\Desktop\apis\api portal clientes\github\ApiProtal\Contracts\obj\Debug\net5.0\ref\Contracts.dll
+D:\Proyectos\MG\ApiProtal\Contracts\bin\Debug\net5.0\Contracts.deps.json
+D:\Proyectos\MG\ApiProtal\Contracts\bin\Debug\net5.0\Contracts.dll
+D:\Proyectos\MG\ApiProtal\Contracts\bin\Debug\net5.0\Contracts.pdb
+D:\Proyectos\MG\ApiProtal\Contracts\bin\Debug\net5.0\Entities.dll
+D:\Proyectos\MG\ApiProtal\Contracts\bin\Debug\net5.0\Entities.pdb
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.csproj.AssemblyReference.cache
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfoInputs.cache
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfo.cs
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.csproj.CoreCompileInputs.cache
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.csproj.CopyComplete
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.dll
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\refint\Contracts.dll
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\Contracts.pdb
+D:\Proyectos\MG\ApiProtal\Contracts\obj\Debug\net5.0\ref\Contracts.dll
