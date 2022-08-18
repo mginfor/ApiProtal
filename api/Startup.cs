@@ -38,6 +38,7 @@ namespace api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
+            services.AddHealthChecks();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -113,6 +114,7 @@ namespace api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health");
             });
         }
     }
