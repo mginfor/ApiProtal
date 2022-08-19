@@ -28,7 +28,7 @@ namespace api.Controllers
         public IActionResult getDatosExportacion(int idPerfil, int idFaena, int idCliente)
         {
             var salida = new GenericResponse();
-            var resultado = _exportarService.getDatosExportacion(idPerfil,idFaena, idCliente).ToList();
+            var resultado = _exportarService.getDatosExportacion(idPerfil, idFaena, idCliente).ToList();
 
             if (resultado == null)
             {
@@ -68,36 +68,20 @@ namespace api.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult getExcelBrechaCandidatos([FromBody]ExcelBrechaCandidatos excelBrechaCandidatos)
+        public IActionResult getExcelBrechaCandidatos([FromBody] ExcelBrechaCandidatos excelBrechaCandidatos)
         {
-            var libro = _exportarService.GenerarExcelBrechasCandidatos(excelBrechaCandidatos);
             excelBrechaCandidatos.idCliente = _usuarioPortalService.GetById(excelBrechaCandidatos.idUsuario).idCliente;
+            var libro = _exportarService.GenerarExcelBrechasCandidatos(excelBrechaCandidatos);
+            AdjuntoResponse documento;
             using (var memo = new MemoryStream())
             {
-                
                 libro.SaveAs(memo);
                 var nombreExcel = string.Concat("Reporte tickets", DateTime.Now.ToString(), ".xlsx");
-                var archivos = File(memo.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", nombreExcel);
-                return archivos;
+                documento = new AdjuntoResponse(nombreExcel, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Convert.ToBase64String(memo.ToArray()));
             }
+
+            return Ok(new GenericResponse(true, documento, "Documento generado exitosamente"));
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
 }
+

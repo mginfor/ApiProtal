@@ -181,8 +181,8 @@ namespace Services
                     }
                 }
 
-
-                var worksheet = libro.Worksheets.Add(dtPerfilesCliente.Rows[i]["desc_perfil"].ToString());
+                string nombrePerfil = dtPerfilesCliente.Rows[i]["desc_perfil"].ToString().Length > 31 ? dtPerfilesCliente.Rows[i]["desc_perfil"].ToString().Substring(0, 31) : dtPerfilesCliente.Rows[i]["desc_perfil"].ToString();
+                var worksheet = libro.Worksheets.Add(nombrePerfil.Replace("/",""));
                 // WORKSHEET AGREGAR TABLA CON NOMBRE PERFIL Y DESPUES LA TABLA DINAMICA
                 //worksheet.Cell("A1").Value = "Perfil";
                 //worksheet.Cell("A2").Value = dtPerfilesCliente.Rows[i]["DESC_PERFIL"].ToString();
