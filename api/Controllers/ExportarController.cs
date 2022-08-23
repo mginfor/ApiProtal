@@ -76,7 +76,7 @@ namespace api.Controllers
             using (var memo = new MemoryStream())
             {
                 libro.SaveAs(memo);
-                var nombreExcel = string.Concat("Reporte tickets", DateTime.Now.ToString(), ".xlsx");
+                var nombreExcel = string.Concat("Reporte", DateTime.Now.ToString(), ".xlsx");
                 documento = new AdjuntoResponse(nombreExcel, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Convert.ToBase64String(memo.ToArray()));
             }
 

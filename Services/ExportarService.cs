@@ -88,7 +88,7 @@ namespace Services
 
             DataTable tablita1 = new DataTable();
             tablita1 = tablaExcel.Tables[0];
-            tablita1.TableName = "Tickets";
+            tablita1.TableName = "Vigentes";
 
 
 
@@ -100,7 +100,7 @@ namespace Services
 
             DataTable tablita3 = new DataTable();
             tablita3 = tablaExcel.Tables[2];
-            tablita3.TableName = "Tickets3";
+            tablita3.TableName = "No Vigente";
 
 
 
@@ -171,6 +171,8 @@ namespace Services
                         workRow = dtBrechasPorPerfilXCandidato.NewRow();
                         workRow["BRECHAS"] = dtBRECHASDECANDIDATOS.Rows[x]["GLS_BRECHA"];
                         workRow[dtBRECHASDECANDIDATOS.Rows[x]["CANDIDATO"].ToString()] = "X";
+                        
+
                         dtBrechasPorPerfilXCandidato.Rows.Add(workRow);
                     }
                     else
@@ -186,8 +188,13 @@ namespace Services
                 // WORKSHEET AGREGAR TABLA CON NOMBRE PERFIL Y DESPUES LA TABLA DINAMICA
                 //worksheet.Cell("A1").Value = "Perfil";
                 //worksheet.Cell("A2").Value = dtPerfilesCliente.Rows[i]["DESC_PERFIL"].ToString();
-                worksheet.Cell("A1").InsertTable(dtBrechasPorPerfilXCandidato);
+                worksheet.Cell("A1").InsertTable(tablita1);
+                worksheet.Cell("A10").InsertTable(dtBrechasPorPerfilXCandidato);
+                worksheet.ColumnsUsed().Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                worksheet.Column(1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
+                worksheet.Row(1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
                 worksheet.ColumnsUsed().AdjustToContents();
+                
             }
             return libro;
         }
