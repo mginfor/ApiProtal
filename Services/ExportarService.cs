@@ -83,7 +83,7 @@ namespace Services
             //info Hoja 1 y 2
             DataSet tablaExcel = InfoHoja1(excelBrechaCandidatosReq.idCliente, excelBrechaCandidatosReq.idUsuario, excelBrechaCandidatosReq.idFaena, excelBrechaCandidatosReq.idPerfil);
 
-            XLWorkbook libro = GenerarHoja1y2(tablaExcel,excelBrechaCandidatosReq);
+            XLWorkbook libro = GenerarHoja1y2(tablaExcel, excelBrechaCandidatosReq);
 
             //Get lista de los perfiles que trabaja el cliente
             DataTable dtPerfilesCliente = new DataTable();
@@ -116,17 +116,19 @@ namespace Services
                 //Añadimos filas como candidatos existan
                 for (int x = 0; x < dtBrechasCandidatosPorPerfil.Rows.Count; x++)
                 {
+                    string brecha = dtBrechasCandidatosPorPerfil.Rows[x]["GLS_BRECHA"].ToString();
+                    string candidato = dtBrechasCandidatosPorPerfil.Rows[x]["CANDIDATO"].ToString();
+                    string runCandidato = dtBrechasCandidatosPorPerfil.Rows[x]["RUN"].ToString();
 
-                    var k = (from r in dtBrechasPorPerfilXCandidato.Rows.OfType<DataRow>() where r["COLABORADOR"].ToString() == dtBrechasCandidatosPorPerfil.Rows[x]["CANDIDATO"].ToString() select r).FirstOrDefault();
+                    var k = (from r in dtBrechasPorPerfilXCandidato.Rows.OfType<DataRow>() where r["COLABORADOR"].ToString() == candidato select r).FirstOrDefault();
 
-                    if (k == null)//SI K ES NULL SIGNIFICA QUE dtBrechasPorPerfilXCandidato AUN NO TIENE LA BRECHA
+                    if (k == null) //SI K ES NULL SIGNIFICA QUE dtBrechasPorPerfilXCandidato AUN NO TIENE LA BRECHA
                     {
                         DataRow workRow;
                         workRow = dtBrechasPorPerfilXCandidato.NewRow();
-                        workRow["COLABORADOR"] = dtBrechasCandidatosPorPerfil.Rows[x]["CANDIDATO"];
-                        workRow["RUN"] = dtBrechasCandidatosPorPerfil.Rows[x]["RUN"];
+                        workRow["COLABORADOR"] = candidato;
+                        workRow["RUN"] = runCandidato;
                         workRow[dtBrechasCandidatosPorPerfil.Rows[x]["GLS_BRECHA"].ToString()] = "X";
-
 
                         dtBrechasPorPerfilXCandidato.Rows.Add(workRow);
                     }
@@ -175,7 +177,7 @@ namespace Services
             dtProcesosVigentes.TableName = "Tickets2";
 
             libro.Worksheets.Add(dtCabeceraVigentes);
-            if (excelBrechaCandidatosReq.idFaena == 0)
+            if (excelBrechaCandidatosReq.idFaena > 0)
             {
                 dtProcesosVigentes.Columns.Remove("FAENA");
                 dtProcesosNoVigentes.Columns.Remove("FAENA");
@@ -195,7 +197,7 @@ namespace Services
             return libro;
         }
 
-    
+
 
         #endregion
 
@@ -278,7 +280,9 @@ namespace Services
                                      from tges_evaluacion te
                                      join tg_perfil tp on(te.CRR_PERFIL = tp.CRR_IDPERFIL)
                                      where te.FLG_PROCESO_ANULADO = 0 AND te.FLG_PROCESO_ANTIGUO = 0 and 
-                                     CRR_CLIENTE =  @CLIENTE and CRR_IDPERFIL =  @PERFIL or CRR_FAENA = @FAENA; ";
+                                     CRR_CLIENTE =  @CLIENTE and CRR_IDPERFIL =  @PERFIL ";
+
+                query += excelBrechaCandidatos.idFaena > 0 ? " and CRR_FAENA = @FAENA" : "";
 
                 // Create the DbCommand.
                 command = factory.CreateCommand();
@@ -339,6 +343,7 @@ namespace Services
                     DbProviderFactories.GetFactory(db.Database.GetDbConnection());
                 DbConnection connection = db.Database.GetDbConnection();
                 // Define the query.
+
                 string query = @"select
                                  tdi.CRR_IDDETINSTRUMENTO,
                                  tdi.GLS_BRECHA,
@@ -352,8 +357,11 @@ namespace Services
                                  join tcnf_det_instrumento tdi on (tdi.CRR_IDDETINSTRUMENTO = tep.CRR_DETINSTRUMENTO)
 
                                 where te.FLG_PROCESO_ANULADO = 0 AND te.FLG_PROCESO_ANTIGUO = 0 and tep.FLG_BRECHA <> 0 and 
-                                 te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE or  te.CRR_FAENA = @FAENA
-                                 group by tdi.GLS_BRECHA, CRR_CANDIDATO order by CANDIDATO ASC;";
+                                 te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE ";
+
+                query += excelBrechaCandidatos.idFaena > 0 ? @" and  te.CRR_FAENA = @FAENA" : "";
+
+                query += @" group by tdi.GLS_BRECHA, CRR_CANDIDATO order by CANDIDATO ASC;";
 
                 // Create the DbCommand.
                 command = factory.CreateCommand();
@@ -493,9 +501,11 @@ namespace Services
                                  join tcnf_det_instrumento tdi on (tdi.CRR_IDDETINSTRUMENTO = tep.CRR_DETINSTRUMENTO)
 
                                 where te.FLG_PROCESO_ANULADO = 0 and te.FLG_PROCESO_ANULADO = 0 and tep.FLG_BRECHA <> 0 and 
-                                 te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE OR  te.CRR_FAENA = @FAENA
-                                 group by tdi.GLS_BRECHA;";
+                                 te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE ";
 
+
+                query = +excelBrechaCandidatos.idFaena > 0 ? " and te.CRR_FAENA = @FAENA" : "";
+                query = " group by tdi.GLS_BRECHA";
                 // Create the DbCommand.
                 command = factory.CreateCommand();
                 command.CommandText = query;
