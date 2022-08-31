@@ -78,127 +78,124 @@ namespace Services
                 .ToList();
         }
 
-        public XLWorkbook GenerarExcelBrechasCandidatos(ExcelBrechaCandidatos excelBrechaCandidatos)
+        public XLWorkbook GenerarExcelBrechasCandidatos(ExcelBrechaCandidatos excelBrechaCandidatosReq)
         {
-            //info Hoja 1
-            var libro = new XLWorkbook();
+            //info Hoja 1 y 2
+            DataSet tablaExcel = InfoHoja1(excelBrechaCandidatosReq.idCliente, excelBrechaCandidatosReq.idUsuario, excelBrechaCandidatosReq.idFaena, excelBrechaCandidatosReq.idPerfil);
 
-            DataSet tablaExcel = InfoHoja1(excelBrechaCandidatos.idCliente, excelBrechaCandidatos.idUsuario, excelBrechaCandidatos.idFaena, excelBrechaCandidatos.idPerfil);
-            //hoja 1
-
-            DataTable tablita1 = new DataTable();
-            tablita1 = tablaExcel.Tables[0];
-            tablita1.TableName = "Vigentes";
-
-
-
-            DataTable tablita2 = new DataTable();
-            tablita2 = tablaExcel.Tables[1];
-            tablita2.TableName = "Tickets2";
-            //hoja = libro.Worksheets.Add(tablita2);
-            //hoja.ColumnsUsed().AdjustToContents();
-
-            DataTable tablita3 = new DataTable();
-            tablita3 = tablaExcel.Tables[2];
-            tablita3.TableName = "No Vigente";
-
-
-
-            DataTable tablita4 = new DataTable();
-            tablita4 = tablaExcel.Tables[3];
-            tablita4.TableName = "Tickets4";
-
-
-
-            //hoja 1
-            libro.Worksheets.Add(tablita1);
-            libro.Worksheet(1).Cell(10, 1).InsertTable(tablita2);
-            libro.Worksheet(1).ColumnsUsed().AdjustToContents();
-
-            //hoja2
-            libro.Worksheets.Add(tablita3);
-            libro.Worksheet(2).Cell(10, 1).InsertTable(tablita4);
-            libro.Worksheet(2).ColumnsUsed().AdjustToContents();
-
-
-
+            XLWorkbook libro = GenerarHoja1y2(tablaExcel,excelBrechaCandidatosReq);
 
             //Get lista de los perfiles que trabaja el cliente
             DataTable dtPerfilesCliente = new DataTable();
-            dtPerfilesCliente = PerfilesPorCliente(excelBrechaCandidatos);
-
-
+            dtPerfilesCliente = PerfilesPorCliente(excelBrechaCandidatosReq);
 
             //Por cada perfil debes agregar las columnas de brechas, N * Candidatos
             DataTable dtBrechasPorPerfilXCandidato = new DataTable();
-            DataTable dtBRECHASDECANDIDATOS = new DataTable();
-
+            DataTable dtBrechasCandidatosPorPerfil = new DataTable();
 
 
             for (int i = 0; i < dtPerfilesCliente.Rows.Count; i++)
             {
                 dtBrechasPorPerfilXCandidato.Columns.Clear();
                 dtBrechasPorPerfilXCandidato.Clear();
+                dtBrechasPorPerfilXCandidato.Columns.Add("COLABORADOR");
+                dtBrechasPorPerfilXCandidato.Columns.Add("RUN");
 
+                // GET BRECHAS POR CADA PERFIL SEGUN CLIENTE
+                DataTable dtBrechasPorPerfil = BrechasPorPerfilPorCliente(excelBrechaCandidatosReq, Convert.ToInt32(dtPerfilesCliente.Rows[i]["CRR_PERFIL"])); // retorna id y nombre del candidato
 
-
-                dtBrechasPorPerfilXCandidato.Columns.Add("BRECHAS");
-
-
-
-                //GET CANDIDATOS POR CADA PERFIL SEGUN CLIENTE
-                DataTable dtCandidatosPorPerfil = new DataTable();
-                dtCandidatosPorPerfil = CandidatosPorPerfilPorCliente(excelBrechaCandidatos, Convert.ToInt32(dtPerfilesCliente.Rows[i]["CRR_PERFIL"]));
-
-
-
-                for (int j = 0; j < dtCandidatosPorPerfil.Rows.Count; j++)
+                //Añadimos cabeceras de brechas 
+                for (int x = 0; x < dtBrechasPorPerfil.Rows.Count; x++)
                 {
-                    dtBrechasPorPerfilXCandidato.Columns.Add(dtCandidatosPorPerfil.Rows[j]["CANDIDATO"].ToString());//TENEMOS LAS COLUMNAS BRECHAS Y CANDIDATOS
+                    dtBrechasPorPerfilXCandidato.Columns.Add(dtBrechasPorPerfil.Rows[x]["GLS_BRECHA"].ToString());//TENEMOS LAS COLUMNAS BRECHAS Y CANDIDATOS
                 }
 
+                //OBTENER BRECHAS Y CANDIDATOS por un perfil
+                dtBrechasCandidatosPorPerfil = BrechasDeCandidatos(excelBrechaCandidatosReq, Convert.ToInt32(dtPerfilesCliente.Rows[i]["CRR_PERFIL"]));
 
-
-                //OBTENER BRECHAS Y CANDIDATOS
-                dtBRECHASDECANDIDATOS = BrechasDeCandidatos(excelBrechaCandidatos, Convert.ToInt32(dtPerfilesCliente.Rows[i]["CRR_PERFIL"]));
-                for (int x = 0; x < dtBRECHASDECANDIDATOS.Rows.Count; x++)
+                //Añadimos filas como candidatos existan
+                for (int x = 0; x < dtBrechasCandidatosPorPerfil.Rows.Count; x++)
                 {
-                    var k = (from r in dtBrechasPorPerfilXCandidato.Rows.OfType<DataRow>() where r["BRECHAS"].ToString() == dtBRECHASDECANDIDATOS.Rows[x]["GLS_BRECHA"].ToString() select r).FirstOrDefault();
+
+                    var k = (from r in dtBrechasPorPerfilXCandidato.Rows.OfType<DataRow>() where r["COLABORADOR"].ToString() == dtBrechasCandidatosPorPerfil.Rows[x]["CANDIDATO"].ToString() select r).FirstOrDefault();
 
                     if (k == null)//SI K ES NULL SIGNIFICA QUE dtBrechasPorPerfilXCandidato AUN NO TIENE LA BRECHA
                     {
                         DataRow workRow;
                         workRow = dtBrechasPorPerfilXCandidato.NewRow();
-                        workRow["BRECHAS"] = dtBRECHASDECANDIDATOS.Rows[x]["GLS_BRECHA"];
-                        workRow[dtBRECHASDECANDIDATOS.Rows[x]["CANDIDATO"].ToString()] = "X";
-                        
+                        workRow["COLABORADOR"] = dtBrechasCandidatosPorPerfil.Rows[x]["CANDIDATO"];
+                        workRow["RUN"] = dtBrechasCandidatosPorPerfil.Rows[x]["RUN"];
+                        workRow[dtBrechasCandidatosPorPerfil.Rows[x]["GLS_BRECHA"].ToString()] = "X";
+
 
                         dtBrechasPorPerfilXCandidato.Rows.Add(workRow);
                     }
                     else
                     {
                         k.BeginEdit();
-                        k[dtBRECHASDECANDIDATOS.Rows[x]["CANDIDATO"].ToString()] = "X";
+                        k[dtBrechasCandidatosPorPerfil.Rows[x]["GLS_BRECHA"].ToString()] = "X";
                         k.EndEdit();
                     }
+
                 }
 
                 string nombrePerfil = dtPerfilesCliente.Rows[i]["desc_perfil"].ToString().Length > 31 ? dtPerfilesCliente.Rows[i]["desc_perfil"].ToString().Substring(0, 31) : dtPerfilesCliente.Rows[i]["desc_perfil"].ToString();
-                var worksheet = libro.Worksheets.Add(nombrePerfil.Replace("/",""));
+                var worksheet = libro.Worksheets.Add(nombrePerfil.Replace("/", ""));
                 // WORKSHEET AGREGAR TABLA CON NOMBRE PERFIL Y DESPUES LA TABLA DINAMICA
                 //worksheet.Cell("A1").Value = "Perfil";
                 //worksheet.Cell("A2").Value = dtPerfilesCliente.Rows[i]["DESC_PERFIL"].ToString();
-                worksheet.Cell("A1").InsertTable(tablita1);
+                worksheet.Cell("A1").InsertTable(tablaExcel.Tables[0]);
                 worksheet.Cell("A10").InsertTable(dtBrechasPorPerfilXCandidato);
                 worksheet.ColumnsUsed().Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
                 worksheet.Column(1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
                 worksheet.Row(1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
                 worksheet.ColumnsUsed().AdjustToContents();
-                
+
             }
+
             return libro;
         }
 
+        #region Generación de hojas
+
+        private XLWorkbook GenerarHoja1y2(DataSet tablaExcel, ExcelBrechaCandidatos excelBrechaCandidatosReq)
+        {
+
+            var libro = new XLWorkbook();
+
+            //hoja 1
+
+            DataTable dtCabeceraVigentes = tablaExcel.Tables[0];
+            dtCabeceraVigentes.TableName = "Vigentes";
+
+            DataTable dtProcesosVigentes = tablaExcel.Tables[1];
+            dtProcesosVigentes.TableName = "Tickets2";
+
+            libro.Worksheets.Add(dtCabeceraVigentes);
+
+            libro.Worksheet(1).Cell(10, 1).InsertTable(dtProcesosVigentes);
+            libro.Worksheet(1).ColumnsUsed().AdjustToContents();
+
+            //hoja2
+            DataTable dtCabeceraNoVigentes = tablaExcel.Tables[2];
+            dtCabeceraNoVigentes.TableName = "No Vigente";
+
+            DataTable dtProcesosNoVigentes = tablaExcel.Tables[3];
+            dtProcesosNoVigentes.TableName = "Tickets4";
+
+            libro.Worksheets.Add(dtCabeceraNoVigentes);
+            libro.Worksheet(2).Cell(10, 1).InsertTable(dtProcesosNoVigentes);
+            libro.Worksheet(2).ColumnsUsed().AdjustToContents();
+
+            return libro;
+        }
+
+    
+
+        #endregion
+
+
+        #region llamadas base de datos 
         private DataSet InfoHoja1(int idCliente, int idUsuario, int idFaena, int idPerfil)
         {
             DbCommand command = null;
@@ -258,7 +255,6 @@ namespace Services
 
         }
 
-
         private DataTable PerfilesPorCliente(ExcelBrechaCandidatos excelBrechaCandidatos)
         {
             DbCommand command = null;
@@ -276,7 +272,8 @@ namespace Services
                                      tp.DESC_PERFIL
                                      from tges_evaluacion te
                                      join tg_perfil tp on(te.CRR_PERFIL = tp.CRR_IDPERFIL)
-                                     where CRR_CLIENTE =  @CLIENTE and CRR_IDPERFIL =  @PERFIL and CRR_FAENA = @FAENA; ";
+                                     where te.FLG_PROCESO_ANULADO = 0 AND te.FLG_PROCESO_ANTIGUO = 0 and 
+                                     CRR_CLIENTE =  @CLIENTE and CRR_IDPERFIL =  @PERFIL or CRR_FAENA = @FAENA; ";
 
                 // Create the DbCommand.
                 command = factory.CreateCommand();
@@ -341,15 +338,17 @@ namespace Services
                                  tdi.CRR_IDDETINSTRUMENTO,
                                  tdi.GLS_BRECHA,
                                  te.CRR_CANDIDATO,
-                                 concat(tc.NOMBRE_CANDIDATO, ' ', tc.APELLIDOS_CANDIDATO) CANDIDATO
+                                 concat(tc.NOMBRE_CANDIDATO, ' ', tc.APELLIDOS_CANDIDATO) CANDIDATO,
+                                 concat(tc.RUN_CANDIDATO, '-', tc.DIG_CANDIDATO) RUN
 
                                 from tges_evaluacion te
                                  join tg_candidato tc on (te.CRR_CANDIDATO = tc.CRR_IDCANDIDATO)
                                  join tges_eval_pct tep on (te.CRR_IDEVALUACION = tep.CRR_EVALUACION)
                                  join tcnf_det_instrumento tdi on (tdi.CRR_IDDETINSTRUMENTO = tep.CRR_DETINSTRUMENTO)
 
-                                where tep.FLG_BRECHA <> 0 and te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE and  te.CRR_FAENA = @FAENA
-                                 group by tdi.GLS_BRECHA, CRR_CANDIDATO;";
+                                where te.FLG_PROCESO_ANULADO = 0 AND te.FLG_PROCESO_ANTIGUO = 0 and tep.FLG_BRECHA <> 0 and 
+                                 te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE or  te.CRR_FAENA = @FAENA
+                                 group by tdi.GLS_BRECHA, CRR_CANDIDATO order by CANDIDATO ASC;";
 
                 // Create the DbCommand.
                 command = factory.CreateCommand();
@@ -400,7 +399,6 @@ namespace Services
 
             }
         }
-
 
         private DataTable CandidatosPorPerfilPorCliente(ExcelBrechaCandidatos excelBrechaCandidatos, int idPerfil = 0)
         {
@@ -417,7 +415,8 @@ namespace Services
                                      concat(tc.NOMBRE_CANDIDATO, ' ', tc.APELLIDOS_CANDIDATO) CANDIDATO
                                      from tges_evaluacion te  
                                      join tg_candidato tc on (te.CRR_CANDIDATO = tc.CRR_IDCANDIDATO)
-                                     where te.CRR_CLIENTE = @CLIENTE and te.CRR_PERFIL = @PERFIL and te.CRR_FAENA = @FAENA ;";
+                                     where te.FLG_PROCESO_ANULADO = 0 AND te.FLG_PROCESO_ANTIGUO = 0 
+                                      te.CRR_CLIENTE = @CLIENTE and te.CRR_PERFIL = @PERFIL and te.CRR_FAENA = @FAENA ;";
 
                 // Create the DbCommand.
                 command = factory.CreateCommand();
@@ -470,6 +469,80 @@ namespace Services
             }
         }
 
+
+        private DataTable BrechasPorPerfilPorCliente(ExcelBrechaCandidatos excelBrechaCandidatos, int idPerfil = 0)
+        {
+            DbCommand command = null;
+
+            try
+            {
+                DbProviderFactory factory =
+                    DbProviderFactories.GetFactory(db.Database.GetDbConnection());
+                DbConnection connection = db.Database.GetDbConnection();
+                // Define the query.
+                string query = @"select distinct
+                                 tdi.CRR_IDDETINSTRUMENTO,
+                                 tdi.GLS_BRECHA
+                                from tges_evaluacion te
+                                 join tges_eval_pct tep on (te.CRR_IDEVALUACION = tep.CRR_EVALUACION)
+                                 join tcnf_det_instrumento tdi on (tdi.CRR_IDDETINSTRUMENTO = tep.CRR_DETINSTRUMENTO)
+
+                                where te.FLG_PROCESO_ANULADO = 0 and te.FLG_PROCESO_ANULADO = 0 and tep.FLG_BRECHA <> 0 and 
+                                 te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE OR  te.CRR_FAENA = @FAENA
+                                 group by tdi.GLS_BRECHA;";
+
+                // Create the DbCommand.
+                command = factory.CreateCommand();
+                command.CommandText = query;
+                command.Connection = connection;
+                var idClienteParameter = command.CreateParameter();
+                idClienteParameter.ParameterName = "CLIENTE";
+                idClienteParameter.Value = excelBrechaCandidatos.idCliente;
+                command.Parameters.Add(idClienteParameter);
+
+                if (excelBrechaCandidatos.idPerfil > 0 || idPerfil > 0)
+                {
+                    var idPerfilParameter = command.CreateParameter();
+                    idPerfilParameter.ParameterName = "PERFIL";
+                    idPerfilParameter.Value = excelBrechaCandidatos.idPerfil > 0 ? excelBrechaCandidatos.idPerfil : idPerfil;
+                    command.Parameters.Add(idPerfilParameter);
+                }
+
+                if (excelBrechaCandidatos.idFaena > 0)
+                {
+                    var idFaenaParameter = command.CreateParameter();
+                    idFaenaParameter.ParameterName = "FAENA";
+                    idFaenaParameter.Value = excelBrechaCandidatos.idFaena;
+                    command.Parameters.Add(idFaenaParameter);
+                }
+
+                command.Connection.Open();
+                // Create the DbDataAdapter.
+                DbDataAdapter adapter = factory.CreateDataAdapter();
+                adapter.SelectCommand = command;
+
+                // Fill the DataTable.
+                DataSet tables = new DataSet();
+                adapter.Fill(tables);
+                return tables.Tables[0];
+                command.Connection.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                return null;
+
+            }
+            finally
+            {
+                command.Connection.Close();
+
+            }
+        }
+
+        #endregion
 
 
     }
