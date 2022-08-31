@@ -163,24 +163,29 @@ namespace Services
 
             var libro = new XLWorkbook();
 
-            //hoja 1
 
             DataTable dtCabeceraVigentes = tablaExcel.Tables[0];
+            DataTable dtProcesosVigentes = tablaExcel.Tables[1];
+            DataTable dtCabeceraNoVigentes = tablaExcel.Tables[2];
+            DataTable dtProcesosNoVigentes = tablaExcel.Tables[3];
+
+
             dtCabeceraVigentes.TableName = "Vigentes";
 
-            DataTable dtProcesosVigentes = tablaExcel.Tables[1];
             dtProcesosVigentes.TableName = "Tickets2";
 
             libro.Worksheets.Add(dtCabeceraVigentes);
-
+            if (excelBrechaCandidatosReq.idFaena == 0)
+            {
+                dtProcesosVigentes.Columns.Remove("FAENA");
+                dtProcesosNoVigentes.Columns.Remove("FAENA");
+            }
             libro.Worksheet(1).Cell(10, 1).InsertTable(dtProcesosVigentes);
             libro.Worksheet(1).ColumnsUsed().AdjustToContents();
 
             //hoja2
-            DataTable dtCabeceraNoVigentes = tablaExcel.Tables[2];
             dtCabeceraNoVigentes.TableName = "No Vigente";
 
-            DataTable dtProcesosNoVigentes = tablaExcel.Tables[3];
             dtProcesosNoVigentes.TableName = "Tickets4";
 
             libro.Worksheets.Add(dtCabeceraNoVigentes);
