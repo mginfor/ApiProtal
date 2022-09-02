@@ -30,41 +30,27 @@ namespace api.Controllers
             var faenasEp = new List<FaenaEP>();
             foreach (var faena in faenas)
             {
-                faenasEp.Add(new FaenaEP
-                {
-                    id = faena.id,
-                    descripcion = faena.descripcion,
-                    vigencia = faena.vigencia,
-                    zona = faena.zona
-                });
+                faenasEp.Add(new FaenaEP(faena.id, faena.descripcion, faena.vigencia, faena.zona));
+
             }
             return Ok(faenasEp);
         }
-        
-        [Route("[action]/{idCliente}")]
+
+        [Route("[action]/{idCliente}/{idPerfil}")]
         [HttpGet]
-        public IActionResult getAllFaenasByCliente(int idCliente)
+        public IActionResult getAllFaenasByCliente(int idCliente, int idPerfil)
         {
             var faenas = _faenaService.getAllFaenas();
             var faenasEp = new List<FaenaEP>();
-            var evals = _evaluacionService.getAllEvaluationsByCliente(idCliente);
+            var evals = _evaluacionService.getAllEvaluationsByClienteByPerfil(idCliente, idPerfil)
+                .GroupBy(evaluacion => evaluacion.idFaena)
+                .Select(x => x.FirstOrDefault()).ToList();
             foreach (var eval in evals)
             {
-                foreach (var faena in faenas)
-                {
-                    if (eval.idFaena == faena.id)
-                    {
-                        faenasEp.Add(new FaenaEP
-                        {
-                            id = faena.id,
-                            descripcion = faena.descripcion,
-                            vigencia = faena.vigencia,
-                            zona = faena.zona
-                        });
-                    }
-                }
+                var faenaAux = faenas.Find(faena => faena.id == eval.idFaena);
+                if (faenaAux != null) faenasEp.Add(new FaenaEP(faenaAux.id, faenaAux.descripcion, faenaAux.vigencia, faenaAux.zona));
             }
-            return Ok(faenasEp.GroupBy(x => x.id).Select(x => x.FirstOrDefault()).OrderBy(x => x.descripcion));
+            return Ok(faenasEp.OrderBy(x => x.descripcion));
         }
     }
     

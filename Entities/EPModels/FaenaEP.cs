@@ -15,5 +15,13 @@ namespace Entities.EPModels
         public int vigencia { get; set; }
 
         public string zona { get; set; }
+
+        public FaenaEP(int id, string descripcion, int vigencia, string zona)
+        {
+            this.id = id;
+            this.descripcion = descripcion;
+            this.vigencia = vigencia;
+            this.zona = zona;
+        }
     }
 }

@@ -141,8 +141,9 @@ namespace Services
 
                 }
 
-                string nombrePerfil = dtPerfilesCliente.Rows[i]["desc_perfil"].ToString().Length > 31 ? dtPerfilesCliente.Rows[i]["desc_perfil"].ToString().Substring(0, 31) : dtPerfilesCliente.Rows[i]["desc_perfil"].ToString();
+                string nombrePerfil = dtPerfilesCliente.TableName = "BRECHAS X COLABORADOR";
                 var worksheet = libro.Worksheets.Add(nombrePerfil.Replace("/", ""));
+                //var worksheet = libro.Worksheets.Add("BRECHAS X COLABORADOR");
                 // WORKSHEET AGREGAR TABLA CON NOMBRE PERFIL Y DESPUES LA TABLA DINAMICA
                 //worksheet.Cell("A1").Value = "Perfil";
                 //worksheet.Cell("A2").Value = dtPerfilesCliente.Rows[i]["DESC_PERFIL"].ToString();
@@ -504,8 +505,8 @@ namespace Services
                                  te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE ";
 
 
-                query = +excelBrechaCandidatos.idFaena > 0 ? " and te.CRR_FAENA = @FAENA" : "";
-                query = " group by tdi.GLS_BRECHA";
+                query += excelBrechaCandidatos.idFaena > 0 ? " and te.CRR_FAENA = @FAENA" : "";
+                query += " group by tdi.GLS_BRECHA";
                 // Create the DbCommand.
                 command = factory.CreateCommand();
                 command.CommandText = query;
