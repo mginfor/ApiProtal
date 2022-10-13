@@ -143,12 +143,21 @@ namespace Services
 
                 string nombrePerfil = dtPerfilesCliente.TableName = "BRECHAS X COLABORADOR";
                 var worksheet = libro.Worksheets.Add(nombrePerfil.Replace("/", ""));
-                //var worksheet = libro.Worksheets.Add("BRECHAS X COLABORADOR");
-                // WORKSHEET AGREGAR TABLA CON NOMBRE PERFIL Y DESPUES LA TABLA DINAMICA
-                //worksheet.Cell("A1").Value = "Perfil";
-                //worksheet.Cell("A2").Value = dtPerfilesCliente.Rows[i]["DESC_PERFIL"].ToString();
+
                 worksheet.Cell("A1").InsertTable(tablaExcel.Tables[0]);
                 worksheet.Cell("A10").InsertTable(dtBrechasPorPerfilXCandidato);
+                foreach (var cell in worksheet.Row(10).Cells())
+                {
+                    for (int contBrecha = 0; contBrecha < dtBrechasPorPerfil.Rows.Count; contBrecha++)
+                    {
+
+                        if (cell.Value.ToString() == dtBrechasPorPerfil.Rows[contBrecha]["GLS_BRECHA"].ToString() &&  dtBrechasPorPerfil.Rows[contBrecha]["FLG_COMP_COND_CRIT"].ToString()!= "0")
+                        {
+                            cell.Style.Fill.SetBackgroundColor(XLColor.Red);
+                            cell.Style.Font.SetFontColor(XLColor.White);
+                        }
+                    }
+                }
                 worksheet.ColumnsUsed().Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
                 worksheet.Column(1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
                 worksheet.Row(1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
@@ -430,7 +439,7 @@ namespace Services
                                      from tges_evaluacion te  
                                      join tg_candidato tc on (te.CRR_CANDIDATO = tc.CRR_IDCANDIDATO)
                                      where te.FLG_PROCESO_ANULADO = 0 AND te.FLG_PROCESO_ANTIGUO = 0 
-                                      te.CRR_CLIENTE = @CLIENTE and te.CRR_PERFIL = @PERFIL and te.CRR_FAENA = @FAENA ;";
+                                     and te.CRR_CLIENTE = @CLIENTE and te.CRR_PERFIL = @PERFIL and te.CRR_FAENA = @FAENA ;";
 
                 // Create the DbCommand.
                 command = factory.CreateCommand();
@@ -495,18 +504,20 @@ namespace Services
                 DbConnection connection = db.Database.GetDbConnection();
                 // Define the query.
                 string query = @"select distinct
+                                 tdi.GLS_BRECHA,
                                  tdi.CRR_IDDETINSTRUMENTO,
-                                 tdi.GLS_BRECHA
-                                from tges_evaluacion te
+                                 tdi.FLG_COMP_COND_CRIT 
+                                 from tges_evaluacion te
                                  join tges_eval_pct tep on (te.CRR_IDEVALUACION = tep.CRR_EVALUACION)
                                  join tcnf_det_instrumento tdi on (tdi.CRR_IDDETINSTRUMENTO = tep.CRR_DETINSTRUMENTO)
-
+                
                                 where te.FLG_PROCESO_ANULADO = 0 and te.FLG_PROCESO_ANULADO = 0 and tep.FLG_BRECHA <> 0 and 
                                  te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE ";
 
 
                 query += excelBrechaCandidatos.idFaena > 0 ? " and te.CRR_FAENA = @FAENA" : "";
                 query += " group by tdi.GLS_BRECHA";
+
                 // Create the DbCommand.
                 command = factory.CreateCommand();
                 command.CommandText = query;
