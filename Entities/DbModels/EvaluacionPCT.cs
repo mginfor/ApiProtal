@@ -76,6 +76,9 @@ namespace Entities.DbModels
         [Column("CRR_DOCUMENTOBRECHA")]
         public int? idDocumento { get; set; }
 
+        [Column("FLG_COMP_COND_CRIT")]
+        public bool flgCompetenciaCritica { get; set; }
+
         //FK
         [ForeignKey("idDocumento")]
         public DocumentoBrecha documento { get; set; }

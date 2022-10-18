@@ -54,11 +54,12 @@ namespace api.Controllers
             {
                 salida.data = new
                 {
-                    brechaPct = brechaPCT,
-                    brechaProt = brechaPROT,
+                    brechaPct = brechaPCT.OrderBy(x => !x.flgCompetenciaCritica),
+                    brechaProt = brechaPROT.OrderBy(x => !x.flgCompetenciaCritica),
                     brechaEi = brechaEI
                 };
                 return Ok(salida);
+               
             }
             else
             {
