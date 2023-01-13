@@ -15,6 +15,7 @@ namespace Entities.EPModels
 
         public int idCliente { get; set; }
 
+
         public string correo { get; set; }
 
         //public int clave { get; set; }

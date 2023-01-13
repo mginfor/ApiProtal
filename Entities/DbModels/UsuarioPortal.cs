@@ -26,6 +26,8 @@ namespace Entities.DbModels
         [Column("TELEFONO_USUARIO")]
         public int? telefono { get; set; }
 
+
+
         [Column("CRR_CLIENTE")]
         public int idCliente { get; set; }
 
@@ -54,6 +56,7 @@ namespace Entities.DbModels
         [ForeignKey("idCliente")]
         public Cliente cliente { get; set; }
 
-        
+   
+
     }
 }

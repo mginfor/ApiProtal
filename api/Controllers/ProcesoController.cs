@@ -1,5 +1,6 @@
 ﻿using api.Helpers;
 using Contracts;
+using Entities.DbModels;
 using Entities.EPModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -35,13 +36,52 @@ namespace api.Controllers
         [HttpGet("{proceso}")]
         public IActionResult Get(string proceso)
         {
-            var condicion= JsonSerializer.Deserialize<ProcesoEP>(proceso);
+            var condicion = JsonSerializer.Deserialize<ProcesoEP>(proceso);
             var procesos = _procesoService.getProcesosByProcesoEP(condicion);
             return Ok(procesos);
         }
 
-        
 
+        [HttpGet("[action]")]
+        [ProducesResponseType(200, Type = typeof(ProcesoReportabilidadDTO))]
+        public IActionResult GetProcesosReportabilidad()
+        {
+            var procesos = _procesoService.GetProcesosReportabilidad();
+            //fake results
+            var procesosDto = new List<ProcesoReportabilidadDTO>();
+
+            foreach (var item in procesos)
+            {
+                procesosDto.Add(new ProcesoReportabilidadDTO
+                {
+                    ResultadoChilevalora = item.COD_RESULTADO == 1 ? "Competente" : "No Competente",
+                    Perfil = item.DESC_PERFIL,
+                    Rut = item.RUN_CANDIDATO.ToString("N0") + "- " + item.DIG_CANDIDATO,
+                    Auditoria = item.FECHA_AUDITORIA,
+                    Elegibilidad = item.FECHA_ELEGIBILIDAD,
+                    FECHAINICIO = item.FECHA_INICIO,
+                    CuestionarioJefaturaDirecta = item.FECHA_REAL_EJD,
+                    PruebaTeorica = item.FECHA_REAL_PCT,
+                    EvaluacionPractica1 = item.FECHA_REAL_PROT,
+                    EvaluacionPractica2 = item.FECHA_REAL_PROT2,
+                    Socializacion = item.FECHA_SOCIALIZACION,
+                    FECHATERMINO = item.FECHA_TERMINO,
+                    ProcesoValidacionChilevalora = item.FECHA_VALIDACION_CHILE_VALORA,
+                    NombreTrabajador = item.NOMBRE_CANDIDATO,
+                    Empresa = item.NOMBRE_CLIENTE,
+                    Evaluador = item.NOMBRE_EVALUADOR,
+                    Faena = item.NOMBRE_FAENA,
+                    ProcentajeAvance = item.PORCENTAJE_AVANCE,
+                    EvidenciaDocumental = item.FECHA_EI,
+                    EsElegible = item.FLG_ELEGIBILIDAD
+                });
+            }
+
+            //mapeo dto
+
+
+            return Ok(procesosDto);
+        }
 
     }
 }

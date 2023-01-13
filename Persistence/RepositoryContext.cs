@@ -37,6 +37,7 @@ namespace Persistence
 
             //Portal
             modelBuilder.Entity<Proceso>().HasNoKey();
+            modelBuilder.Entity<ProcesoReportabilidad>().HasNoKey();
             modelBuilder.Entity<Grafico_Brecha>().HasNoKey();
             modelBuilder.Entity<Tablero_brecha>().HasNoKey();
 
@@ -68,6 +69,7 @@ namespace Persistence
         public DbSet<Log> Logs { get; set; }
         public DbSet<UsuarioPortal> UsuarioPortals { get; set; }
         public DbSet<Proceso> ProcesoPortal { get; set; }
+        public DbSet<ProcesoReportabilidad> ProcesoReportabilidadPortal { get; set; }
         public DbSet<BrechaPortal> BrechaPortal { get; set; }
         public DbSet<ServiciosVinculados> ServiciosVinculados { get; set; }
         public DbSet<Grafico_Brecha> graficoBrecha { get; set; }

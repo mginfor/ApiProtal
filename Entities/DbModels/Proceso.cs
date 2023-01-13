@@ -44,7 +44,8 @@ namespace Entities.DbModels
         public DateTime? fechaEi { get; set; }
         public double? porcEi { get; set; }
         public string resultadoGeneral { get; set; }
+        public int? codelcoVp { get; set; }
 
-
+          
     }
 }

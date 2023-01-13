@@ -40,6 +40,7 @@ namespace api
             services.AddCors();
             services.AddHealthChecks();
             services.AddControllers();
+                //.AddJsonOptions(opts => opts.JsonSerializerOptions.PropertyNamingPolicy = null); 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "api", Version = "v1" });

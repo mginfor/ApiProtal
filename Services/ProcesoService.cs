@@ -8,6 +8,7 @@ using System.Text;
 using Entities.DbModels;
 using System.Threading.Tasks;
 using Entities.EPModels;
+using System.Diagnostics;
 
 namespace Services
 {
@@ -46,7 +47,7 @@ namespace Services
                 .ToList();
         }
 
-       
+
 
         public List<Proceso> getProcesosByProcesoEP(ProcesoEP proceso)
         {
@@ -55,11 +56,11 @@ namespace Services
                 .FromSqlRaw(query, Convert.ToInt32(proceso.idCliente)).ToList();
 
 
-            if (!string.IsNullOrEmpty( proceso.zonaFaena) )
+            if (!string.IsNullOrEmpty(proceso.zonaFaena))
             {
                 resultado = resultado.Where(x => x.zonaFaena == proceso.zonaFaena).ToList();
             }
-            if (!string.IsNullOrEmpty(proceso.runCandidato ))
+            if (!string.IsNullOrEmpty(proceso.runCandidato))
             {
                 resultado = resultado.Where(x => x.runCandidato == proceso.runCandidato).ToList();
             }
@@ -67,7 +68,7 @@ namespace Services
             {
                 resultado = resultado.Where(x => x.dni_Pasaporte == proceso.dni_Pasaporte).ToList();
             }
-            if (!string.IsNullOrEmpty(proceso.estado ))
+            if (!string.IsNullOrEmpty(proceso.estado))
             {
                 resultado = resultado.Where(x => x.estado == proceso.estado).ToList();
             }
@@ -77,21 +78,21 @@ namespace Services
                 resultado = resultado.Where(x => x.idResultado == Convert.ToInt32(proceso.resultado)).ToList();
             }
             //revisar
-            if (!string.IsNullOrEmpty(proceso.vigencia ))
+            if (!string.IsNullOrEmpty(proceso.vigencia))
             {
                 resultado = resultado.Where(x => x.vigencia == proceso.vigencia).ToList();
             }
-            if (!string.IsNullOrEmpty(proceso.fechaInicio ))
+            if (!string.IsNullOrEmpty(proceso.fechaInicio))
             {
                 resultado = resultado.Where(x => x.fechaInforme >= DateTime.Parse(proceso.fechaInicio)).ToList();
             }
-            if (!string.IsNullOrEmpty(proceso.fechaFinal ))
+            if (!string.IsNullOrEmpty(proceso.fechaFinal))
             {
-                resultado = resultado.Where(x=>x.fechaInforme <= DateTime.Parse(proceso.fechaFinal)).ToList();
+                resultado = resultado.Where(x => x.fechaInforme <= DateTime.Parse(proceso.fechaFinal)).ToList();
             }
-            
+
             return resultado.ToList();
-            
+
         }
 
 
@@ -118,6 +119,92 @@ namespace Services
             return db.BrechaPortal
                 .FromSqlRaw(query, idEvaluacion)
                 .ToList();
+        }
+
+        public List<ProcesoReportabilidad> GetProcesosReportabilidad()
+        {
+            var query = "select * from vw_reportabilidad;";
+            var resultado = db.ProcesoReportabilidadPortal
+                .FromSqlRaw(query).ToList();
+            resultado.Add(new Entities.DbModels.ProcesoReportabilidad
+            {
+                COD_RESULTADO = 1,
+                DESC_PERFIL = "camión aljibe",
+                DIG_CANDIDATO = "0",
+                RUN_CANDIDATO = 18284786,
+                FECHA_AUDITORIA = DateTime.Now,
+                FECHA_ELEGIBILIDAD = DateTime.Now,
+                FECHA_INICIO = DateTime.Now,
+                FECHA_REAL_EJD = DateTime.Now,
+                FECHA_REAL_PCT = DateTime.Now,
+                FECHA_REAL_PROT = DateTime.Now,
+                FECHA_REAL_PROT2 = DateTime.Now,
+                FECHA_SOCIALIZACION = DateTime.Now,
+
+                FECHA_TERMINO = DateTime.Now,
+                FECHA_VALIDACION_CHILE_VALORA = DateTime.Now,
+                NOMBRE_CANDIDATO = "Alexis Williams Villa Salinas",
+                NOMBRE_CLIENTE = "Codelco salvador",
+                NOMBRE_EVALUADOR = "Francisco Fuenzalida",
+                NOMBRE_FAENA = "El Salvador",
+                FLG_ELEGIBILIDAD = true
+            });
+            return CalcularPorcentajeAvance(resultado) ;
+
+        }
+        private List<ProcesoReportabilidad> CalcularPorcentajeAvance(List<ProcesoReportabilidad> procesos)
+        {
+            foreach (var item in procesos)
+            {
+                item.PORCENTAJE_AVANCE = CalcularPorcentajeAvance(item).ToString()+"%";
+            }
+            return procesos;
+
+        }
+        private int CalcularPorcentajeAvance(ProcesoReportabilidad proceso)
+        {
+            int avance = 0;
+            if (proceso.FECHA_SOCIALIZACION != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_ELEGIBILIDAD != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_REAL_PCT != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_REAL_PROT != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_REAL_PROT2 != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_REAL_EJD != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_EI != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_AUDITORIA != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_VALIDACION_CHILE_VALORA != null)
+            {
+                avance += 10;
+            }
+            if (proceso.FECHA_TERMINO != null)
+            {
+                avance += 10;
+            }
+            return avance;
         }
     }
 }
