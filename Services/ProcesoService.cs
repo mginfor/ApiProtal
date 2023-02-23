@@ -126,29 +126,29 @@ namespace Services
             var query = "select * from vw_reportabilidad;";
             var resultado = db.ProcesoReportabilidadPortal
                 .FromSqlRaw(query).ToList();
-            resultado.Add(new Entities.DbModels.ProcesoReportabilidad
-            {
-                COD_RESULTADO = 1,
-                DESC_PERFIL = "camión aljibe",
-                DIG_CANDIDATO = "0",
-                RUN_CANDIDATO = 18284786,
-                FECHA_AUDITORIA = DateTime.Now,
-                FECHA_ELEGIBILIDAD = DateTime.Now,
-                FECHA_INICIO = DateTime.Now,
-                FECHA_REAL_EJD = DateTime.Now,
-                FECHA_REAL_PCT = DateTime.Now,
-                FECHA_REAL_PROT = DateTime.Now,
-                FECHA_REAL_PROT2 = DateTime.Now,
-                FECHA_SOCIALIZACION = DateTime.Now,
+            //resultado.Add(new Entities.DbModels.ProcesoReportabilidad
+            //{
+            //    COD_RESULTADO = 1,
+            //    DESC_PERFIL = "camión aljibe",
+            //    DIG_CANDIDATO = "0",
+            //    RUN_CANDIDATO = 18284786,
+            //    FECHA_AUDITORIA = DateTime.Now,
+            //    FECHA_ELEGIBILIDAD = DateTime.Now,
+            //    FECHA_INICIO = DateTime.Now,
+            //    FECHA_REAL_EJD = DateTime.Now,
+            //    FECHA_REAL_PCT = DateTime.Now,
+            //    FECHA_REAL_PROT = DateTime.Now,
+            //    FECHA_REAL_PROT2 = DateTime.Now,
+            //    FECHA_SOCIALIZACION = DateTime.Now,
 
-                FECHA_TERMINO = DateTime.Now,
-                FECHA_VALIDACION_CHILE_VALORA = DateTime.Now,
-                NOMBRE_CANDIDATO = "Alexis Williams Villa Salinas",
-                NOMBRE_CLIENTE = "Codelco salvador",
-                NOMBRE_EVALUADOR = "Francisco Fuenzalida",
-                NOMBRE_FAENA = "El Salvador",
-                FLG_ELEGIBILIDAD = true
-            });
+            //    FECHA_TERMINO = DateTime.Now,
+            //    FECHA_VALIDACION_CHILE_VALORA = DateTime.Now,
+            //    NOMBRE_CANDIDATO = "Alexis Williams Villa Salinas",
+            //    NOMBRE_CLIENTE = "Codelco salvador",
+            //    NOMBRE_EVALUADOR = "Francisco Fuenzalida",
+            //    NOMBRE_FAENA = "El Salvador",
+            //    FLG_ELEGIBILIDAD = true
+            //});
             return CalcularPorcentajeAvance(resultado) ;
 
         }

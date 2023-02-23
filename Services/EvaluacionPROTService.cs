@@ -21,7 +21,8 @@ namespace Services
 
         public List<EvaluacionPROT> getBrechasByIdEvaluacion(int idEvaluacion)
         {
-            return this.findByCondition(x => x.idEvaluacion == idEvaluacion && x.brecha, "documento").ToList();
+            var includes = new string[] { "documento", "detInstrumentos" };
+            return this.findByCondition(x => x.idEvaluacion == idEvaluacion && x.brecha, includes).ToList();
         }
     }
 }

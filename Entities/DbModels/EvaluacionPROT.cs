@@ -11,10 +11,7 @@ namespace Entities.DbModels
         public int id { get; set; }
 
         [Column("CRR_INSTRUMENTO")]
-        public int idInstrumento{ get; set; }
-
-        [Column("CRR_DETINSTRUMENTO")]
-        public int idDetInstrumento { get; set; }
+        public int idInstrumento { get; set; }
 
         [Column("CRR_EVALUACION")]
         public int idEvaluacion { get; set; }
@@ -32,7 +29,7 @@ namespace Entities.DbModels
         public string? categoria { get; set; }
 
         [Column("SUPRA_CATEGORIA")]
-        public int? supraCategoria{ get; set; }
+        public int? supraCategoria { get; set; }
 
         [Column("ITEM")]
         public int? item { get; set; }
@@ -41,22 +38,22 @@ namespace Entities.DbModels
         public double? nota1 { get; set; }
 
         [Column("FLG_BRECHA")]
-        public bool brecha{ get; set; }
+        public bool brecha { get; set; }
 
         [Column("FLG_CRITICO")]
-        public bool critico{ get; set; }
+        public bool critico { get; set; }
 
         [Column("GLS_BRECHA")]
         public string? glsBrecha { get; set; }
 
         [Column("GLS_RECOMENDACION")]
-        public string? glsRecomendacion{ get; set; }
+        public string? glsRecomendacion { get; set; }
 
         [Column("FLG_ESTADO_PRUEBA")]
         public bool estadoPrueba { get; set; }
 
         [Column("ID_USUARIO")]
-        public int? idUsuario{ get; set; }
+        public int? idUsuario { get; set; }
 
         [Column("FLG_ANULADO")]
         public bool anulado { get; set; }
@@ -71,5 +68,8 @@ namespace Entities.DbModels
         //FK
         [ForeignKey("idDocumento")]
         public DocumentoBrecha documento { get; set; }
+        //FK
+        [ForeignKey("CRR_DETINSTRUMENTO")]
+        public DetInstrumentos detInstrumentos { get; set;}
     }
-}
+}  

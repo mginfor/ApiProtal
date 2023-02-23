@@ -52,6 +52,14 @@ namespace api.Controllers
 
             if (idEvaluacion > 0)
             {
+                if (brechaPROT.Count >0 )
+                {
+                    foreach (var brecha in brechaPROT)
+                    {
+
+                        brecha.glsBrecha = string.IsNullOrEmpty( brecha.glsBrecha) ?  brecha.detInstrumentos.Pregunta : brecha.glsBrecha;
+                    }
+                }
                 salida.data = new
                 {
                     brechaPct = brechaPCT.OrderBy(x => !x.flgCompetenciaCritica),

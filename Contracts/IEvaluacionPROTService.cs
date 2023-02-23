@@ -8,5 +8,7 @@ namespace Contracts
     {
         public List<EvaluacionPROT> getBrechasByIdEvaluacion(int idEvaluacion);
         public bool addDocumentoInBrecha(int idBrecha, int idDocumento);
+
+
     }
 }

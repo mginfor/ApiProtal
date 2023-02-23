@@ -48,6 +48,21 @@ namespace Services.Generic
             return this._RepositoryContext.Set<T>().Include(toInclude).Where(expression).AsNoTracking();
         }
 
+        public IQueryable<T> findByCondition(Expression<Func<T, bool>> expression, string[] toInclude)
+        {
+            var cantidadInclude = toInclude.Count();
+            if (cantidadInclude == 1)
+            {
+                return this._RepositoryContext.Set<T>().Include(toInclude[0]).Where(expression).AsNoTracking();
+            }
+            if (cantidadInclude == 2)
+            {
+                return this._RepositoryContext.Set<T>().Include(toInclude[0]).Include(toInclude[1]).Where(expression).AsNoTracking();
+            }
+            return this._RepositoryContext.Set<T>().Include(toInclude[0]).Where(expression).AsNoTracking();
+
+        }
+
         public void update(T entity)
         {
             this._RepositoryContext.Set<T>().Update(entity);
