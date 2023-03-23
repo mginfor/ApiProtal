@@ -1,10 +1,12 @@
-﻿using Entities.EPModels;
+﻿using Email;
+using Entities.EPModels;
 using MailKit.Security;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace api.Helpers
 {
@@ -99,6 +101,20 @@ namespace api.Helpers
             }
 
             return newBody.ToMessageBody();
+        }
+
+
+        public void EnviarCorreoGraph(string destinatario, string usuario, int codigo)
+        {
+            string relativePath = @"Plantillas\mensaje.html";
+            var ruta = Path.GetFullPath(relativePath);
+            string html = System.IO.File.ReadAllText(ruta);
+
+            string body = string.Format(html, usuario, codigo.ToString());
+            string asunto = "codigo de verificación: " + codigo.ToString();
+            Email.Email emailGraph = new(_configuration);
+            emailGraph.EnviarCorreo( destinatario, asunto, body);
+
         }
     }
 }
