@@ -11,6 +11,9 @@ namespace Contracts
 
         public Entities.DbModels.UsuarioPortal GetById(int Id);
         public UsuarioPortal PreLogin(AuthenticateRequestPortal model);
+        public List<UsuarioPortal> GetAllUsuario();
+
+
 
 
     }

@@ -16,7 +16,7 @@ namespace Entities.DbModels
         public string DESC_PERFIL { get; set; }
         public string NOMBRE_EVALUADOR { get; set; }
         public string PORCENTAJE_AVANCE { get; set; }
-        public int COD_RESULTADO { get; set; }
+        public int? COD_RESULTADO { get; set; }
         public DateTime? FECHA_SOCIALIZACION { get; set; }
         public DateTime? FECHA_ELEGIBILIDAD { get; set; }
         public DateTime? FECHA_REAL_PROT { get; set; }

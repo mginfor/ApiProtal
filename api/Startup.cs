@@ -73,6 +73,9 @@ namespace api
             services.AddScoped<IDocumentoBrechaService, DocumentoBrechaService>();
             services.AddScoped<IGraficoBrechaService, GraficoBrechaService>();
             services.AddScoped<ITablero_brecha, TableroBrechaService>();
+            services.AddScoped<IPermisosServices, PermisosServices>();
+            services.AddScoped<IRolService, RolServices>();
+
 
             //Funciones realizadas por Syscomp
             services.AddScoped<IPerfilService, PerfilService>();

@@ -27,7 +27,6 @@ namespace Entities.DbModels
         public int? telefono { get; set; }
 
 
-
         [Column("CRR_CLIENTE")]
         public int idCliente { get; set; }
 
@@ -52,11 +51,19 @@ namespace Entities.DbModels
         [Column("ZONA_FAENA")]
         public string zona { get; set; }
 
+        [Column("CRR_IDROL")]
+        public int idRol { get; set; }
+
         //FKs
         [ForeignKey("idCliente")]
         public Cliente cliente { get; set; }
 
-   
+        [ForeignKey("idRol")]
+        public Rol rol { get; set; }
+
+
+
+
 
     }
 }

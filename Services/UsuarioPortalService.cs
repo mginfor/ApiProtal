@@ -1,6 +1,7 @@
 ﻿using Contracts;
 using Entities.DbModels;
 using Entities.EPModels;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Persistence;
@@ -24,7 +25,7 @@ namespace Services
 
         public UsuarioPortal PreLogin(AuthenticateRequestPortal model)
         {
-            var user = findByCondition(x => x.run  == model.RutUsuario &&
+            var user = findByCondition(x => x.run == model.RutUsuario &&
                                        (x.cliente.run.ToString() + x.cliente.digito) == model.RutCliente
                                        , "cliente")
                                       .ToList()
@@ -41,21 +42,25 @@ namespace Services
             var user = findByCondition(x => x.run.ToUpper() == model.RutUsuario.ToUpper() &&
                                       (x.cliente.run.ToString() + x.cliente.digito).ToUpper() == model.RutCliente.ToUpper() &&
                                        x.clave == model.Codigo,
-                                       "cliente")
+                                       new string[] { "cliente", "rol" })
                                       .ToList()
                                       .FirstOrDefault();
             // return null if user not found
             if (user == null) return null;
-
+            var permisos = this._RepositoryContext.RolPermisos
+                .Include(x => x.rol)
+                .Include(x => x.permiso)
+                .Where(x => x.rol.id == user.idRol)
+                .Select(x => x.permiso).ToList();
             // authentication successful so generate jwt token
             var token = generateJwtToken(user);
 
-            return new AuthenticateResponsePortal(user, token);
+            return new AuthenticateResponsePortal(user, token, permisos);
         }
 
         private string generateJwtToken(UsuarioPortal user)
         {
-            // generate token that is valid for 7 days
+            // generate token that is valid for 8 HOURS
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -70,9 +75,20 @@ namespace Services
 
         public UsuarioPortal GetById(int Id)
         {
-            var user = findByCondition(x => x.id == Id, "cliente").ToList().First();
+            var includes = new string[] { "cliente", "rol" };
+            var user = findByCondition(x => x.id == Id, includes).ToList().First();
             return user;
+
         }
+
+
+        public List<UsuarioPortal> GetAllUsuario()
+        {
+
+
+            return this.findAll().ToList();
+        }
+
 
         private int generarCodigo()
         {

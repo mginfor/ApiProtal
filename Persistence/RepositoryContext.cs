@@ -62,6 +62,9 @@ namespace Persistence
         public DbSet<Resultado> Resultados { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<EstadoProceso> EstadoProcesos { get; set; }
+        public DbSet<Rol> Rol { get; set; }
+        public DbSet<Permisos> Permisos { get; set; }
+        public DbSet<RolPermisos> RolPermisos{ get; set; }
 
         #endregion
 
@@ -105,5 +108,7 @@ namespace Persistence
         public DbSet<FaenaPerfilCandidato> dataFaenaPerfilCandidatos { get; set; }
         public DbSet<ProcesoLogroCandidato> dataProcesoLogroCandidatos { get; set; }
         #endregion
+
+        
     }
 }

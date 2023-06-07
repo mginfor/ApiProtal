@@ -8,6 +8,7 @@ using System.Linq;
 
 
 
+
 namespace Services
 {
     public class ClienteService : RepositoryBase<Cliente>, IClienteService

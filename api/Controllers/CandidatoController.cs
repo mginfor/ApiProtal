@@ -38,7 +38,7 @@ namespace api.Controllers
 
             return Ok(new GenericResponse(true, candidato, "contraseña Correcta :D"));
 
-            //return Ok(candidato);
+
 
         }
 

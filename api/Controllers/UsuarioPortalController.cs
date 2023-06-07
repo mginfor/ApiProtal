@@ -5,6 +5,7 @@ using Entities.DbModels;
 using Entities.EPModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,33 +26,39 @@ namespace api.Controllers
         private IClienteService _clienteService;
 
 
+
         
         public UsuarioPortalController(ILoggerManager logger,
             IUsuarioPortalService usuarioService,
             IConfiguration configuration,
             ILogService logService,
             IServicioVinculadoService servicioVinculadoService, 
-            IClienteService clienteService)
+            IClienteService clienteService
+
+            )
         {
             _logger = logger;
             _usuarioService = usuarioService;
             _configuration = configuration;
             _logService = logService;
             _servicioVinculadoService = servicioVinculadoService;
-            _clienteService = clienteService; //entidad cliente
+            _clienteService = clienteService;
+
+            //entidad cliente
         }
 
 
 
         // GET: api/<UsuarioController>
-        //[Authorize]
+        [Authorize]
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult GetUsuario()
         {
-            return Ok();
+            var usuario = _usuarioService.GetAllUsuario();
+            return Ok(usuario);
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -160,6 +167,12 @@ namespace api.Controllers
             mail.sendMail(mailMap);
         }
 
-     
+
+       
+
+
+       
+
+
     }
 }

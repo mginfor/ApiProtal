@@ -6,11 +6,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace api.Controllers
 {
-    [Route("[controller]")]
-    [ApiController]
-    public class TableroController : ControllerBase
+
+    
+    [Authorize]
+    public class TableroController : BaseController
     {
         private ITableroService _conexion;
         public TableroController(ITableroService conexion)
@@ -92,23 +94,7 @@ namespace api.Controllers
             return Ok(result);
         }
 
-        // POST api/<TableroController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<TableroController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<TableroController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+   
 
         //custom get Methods
 
@@ -116,6 +102,16 @@ namespace api.Controllers
         [HttpGet]
         public IActionResult GetPerfilBrechaById(int idCliente)
         {
+
+            var idUsuario = this.GetIdUser();
+
+            AutorizacionHelper helper = new();
+
+            if (!helper.EstaAutorizado(idUsuario, EnumPermisos.TableroGestion))
+            {
+                return Unauthorized();
+            }
+
             var perfilBrecha = _conexion.getDataPerfilBrechaByIdCliente(idCliente);
 
             var unePerfil = perfilBrecha.GroupBy(x => x.Codigo)

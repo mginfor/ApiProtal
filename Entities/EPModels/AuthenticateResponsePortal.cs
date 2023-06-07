@@ -1,4 +1,5 @@
 ﻿using Entities.DbModels;
+using System.Collections.Generic;
 
 namespace Entities.EPModels
 {
@@ -9,7 +10,7 @@ namespace Entities.EPModels
         public int Expira { get; set; }
 
 
-        public AuthenticateResponsePortal(UsuarioPortal user, string token)
+        public AuthenticateResponsePortal(UsuarioPortal user, string token,List<Permisos> permisos)
         {
             usuario = new UsuarioPortalEP()
             {
@@ -21,8 +22,8 @@ namespace Entities.EPModels
                 zona = user.zona,
                 cargo = user.cargo,
                 UrlServicio = "",
-             
-
+                rol=user.rol,
+                permisos= permisos
             };
             Token = token;
             Expira = 8;

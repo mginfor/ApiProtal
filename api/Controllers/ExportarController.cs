@@ -68,8 +68,20 @@ namespace api.Controllers
 
         [Route("[action]")]
         [HttpPost]
+
         public IActionResult getExcelBrechaCandidatos([FromBody] ExcelBrechaCandidatos excelBrechaCandidatos)
         {
+          
+            //AutorizacionHelper autorizacionHelper = new AutorizacionHelper();
+
+            //bool isAuthorized = autorizacionHelper.EstaAutorizado(excelBrechaCandidatos.idUsuario, AutorizacionHelper.Roles.Descarga);
+
+            //if (!isAuthorized)
+            //{
+               
+            //    return StatusCode(403, "No tiene permiso.");
+            //}
+
             excelBrechaCandidatos.idCliente = _usuarioPortalService.GetById(excelBrechaCandidatos.idUsuario).idCliente;
             var libro = _exportarService.GenerarExcelBrechasCandidatos(excelBrechaCandidatos);
             AdjuntoResponse documento;
