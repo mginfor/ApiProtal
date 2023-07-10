@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Entities.DbModels;
 using Entities.EPModels;
 using Microsoft.EntityFrameworkCore;
@@ -17,9 +18,11 @@ namespace Services
     public class UsuarioPortalService : RepositoryBase<UsuarioPortal>, IUsuarioPortalService
     {
         private readonly AppSettings _appSettings;
+        private readonly RepositoryContext _repositoryContext;
         public UsuarioPortalService(RepositoryContext repositoryContext, IOptions<AppSettings> appSettings) : base(repositoryContext)
         {
             _appSettings = appSettings.Value;
+            _repositoryContext = repositoryContext;
         }
 
 
@@ -55,7 +58,13 @@ namespace Services
             // authentication successful so generate jwt token
             var token = generateJwtToken(user);
 
-            return new AuthenticateResponsePortal(user, token, permisos);
+            //insertar un registro a la tabla con los datos que necesitas
+
+             
+            this._repositoryContext.LogLogins
+                .Add(new LogLogin { id_usuario = user.id, token = token, fecha_creacion = DateTime.Now, fecha_expiracion = DateTime.Now.AddHours(8) });
+            this._RepositoryContext.SaveChanges();
+            return new AuthenticateResponsePortal(user, token, permisos); // esta wea teni q retornar
         }
 
         private string generateJwtToken(UsuarioPortal user)
@@ -96,6 +105,50 @@ namespace Services
             return rnd.Next(100000, 999999);
         }
 
+        public bool EstaAutorizado(int idUsuario, string constantePermisos)
+        {
 
+
+
+            var userRol = _repositoryContext.UsuarioPortals
+                 .Where(u => u.id == idUsuario)
+                 .Include(u => u.rol)
+                 .FirstOrDefault();
+
+            var permisos = _repositoryContext.RolPermisos
+               .Include(x => x.rol)
+               .Include(x => x.permiso)
+               .Where(x => x.rol.id == userRol.idRol)
+               .Select(x => x.permiso).ToList();
+
+            var estaAutorizado = permisos.Exists(x => x.NombrePermiso.Equals(constantePermisos));
+
+            return estaAutorizado;
+        }
+
+
+        public AuthenticateResponsePortal GetUserByToken(string token)
+        {
+            // ir a buscar por token y retornar la misma info que retorna  el login 
+            var log = _repositoryContext.LogLogins
+                .Where(x => x.token == token && x.fecha_expiracion > DateTime.Now)
+                .Include(x => x.usuario )
+                .ThenInclude(x => x.rol)
+                .Include(x => x.usuario)
+                .ThenInclude(x =>x.cliente)
+                .FirstOrDefault();
+
+      
+
+            var permisos = _repositoryContext.RolPermisos
+              .Include(x => x.rol)
+              .Include(x => x.permiso)
+              .Where(x => x.rol.id == log.usuario.rol.id)
+              .Select(x => x.permiso).ToList();
+
+
+            return new AuthenticateResponsePortal(log.usuario, log.token, permisos);
+        }
+        
     }
 }

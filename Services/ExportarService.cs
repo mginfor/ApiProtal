@@ -180,6 +180,8 @@ namespace Services
             DataTable dtProcesosVigentes = tablaExcel.Tables[1];
             DataTable dtCabeceraNoVigentes = tablaExcel.Tables[2];
             DataTable dtProcesosNoVigentes = tablaExcel.Tables[3];
+            DataTable dtDescripcionCritica = tablaExcel.Tables[4];
+        
 
 
             dtCabeceraVigentes.TableName = "Vigentes";
@@ -203,6 +205,19 @@ namespace Services
             libro.Worksheets.Add(dtCabeceraNoVigentes);
             libro.Worksheet(2).Cell(10, 1).InsertTable(dtProcesosNoVigentes);
             libro.Worksheet(2).ColumnsUsed().AdjustToContents();
+
+            //Hoja4
+
+            dtDescripcionCritica.TableName = "Competencias Condicionantes";
+
+            dtDescripcionCritica.TableName = "Tickets6";
+
+            libro.Worksheets.Add(dtDescripcionCritica);
+            libro.Worksheet(4).Cell(10, 1).InsertTable(dtProcesosNoVigentes);
+            libro.Worksheet(4).ColumnsUsed().AdjustToContents();
+
+
+
 
             return libro;
         }

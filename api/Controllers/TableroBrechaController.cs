@@ -11,35 +11,28 @@ using System;
 namespace api.Controllers
 {
 
-    [Authorize]
+    //[Authorize]
+    [Route("[controller]")]
+    [ApiController]
     public class TableroBrechaController : ControllerBase 
     {
         private ITablero_brecha _tablerobrechaservice;
+        private IUsuarioPortalService _usuarioPortalService;
 
-        public TableroBrechaController(ITablero_brecha tablero_Brecha)
+        public TableroBrechaController(ITablero_brecha tablero_Brecha, IUsuarioPortalService usuarioPortalService)
         {
             _tablerobrechaservice = tablero_Brecha;
+            _usuarioPortalService = usuarioPortalService;
       
         }
 
 
-        [Route("[controller]/[action]/{idcliente}")]
+        [Route("[action]/{idcliente}")]
         [HttpGet]
         public IActionResult GetCantidadTableroBrecha( int idcliente)
         {
             try
             {
-
-                AutorizacionHelper helper = new();
-
-                var idUsuarioString = User.Identity.Name;
-
-                var idUsuario = Convert.ToInt32(idUsuarioString);
-
-                if (!helper.EstaAutorizado(idUsuario, EnumPermisos.TableroGestion))
-                {
-                    return Unauthorized();
-                }
                 var listado = _tablerobrechaservice.getCantidadTableroBrecha(idcliente);
                 var listadoEP = new List<Tablero_Brecha>();
 

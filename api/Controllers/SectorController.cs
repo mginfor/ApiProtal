@@ -10,7 +10,7 @@ using Entities.DbModels;
 
 namespace api.Controllers
 {
-    public class SectorController : Controller
+    public class SectorController : ControllerBase
     {
         private ISectorService _sectorService;
         public SectorController(ISectorService sectorService)

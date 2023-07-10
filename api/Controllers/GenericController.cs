@@ -86,6 +86,7 @@ namespace api.Controllers
                 {
                     string nombreCandidato = "";
                     string run = "";
+                    string dniPasaporte = "";
                     int idCandidato = 0;
                     foreach (var item in results)
                     {
@@ -96,7 +97,7 @@ namespace api.Controllers
                         idCandidato = item.idCandidato;
                     }
 
-                    salida.data = (new HistorialCandidatoEP(nombreCandidato, run, data, idCandidato));
+                    salida.data = (new HistorialCandidatoEP(nombreCandidato, run, dniPasaporte , data, idCandidato));
 
 
                     return Ok(salida);

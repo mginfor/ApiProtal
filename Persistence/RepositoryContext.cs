@@ -79,6 +79,8 @@ namespace Persistence
         public DbSet<Tablero_brecha> tablero_Brechas { get; set; }
 
         public DbSet<BrechasCandidato> brechasCandidato { get; set; }
+        // token
+        public DbSet<LogLogin> LogLogins { get; set; }
 
 
 

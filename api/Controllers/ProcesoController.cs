@@ -2,7 +2,9 @@
 using Contracts;
 using Entities.DbModels;
 using Entities.EPModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +18,15 @@ namespace api.Controllers
     //[Authorize]
     [Route("[controller]")]
     [ApiController]
+    
     public class ProcesoController : ControllerBase
     {
         private IProcesoService _procesoService;
-        public ProcesoController(IProcesoService conexion)
+        IUsuarioPortalService _usuarioPortalService; 
+        public ProcesoController(IProcesoService conexion, IUsuarioPortalService usuarioPortalService)
         {
             _procesoService = conexion;
+            _usuarioPortalService = usuarioPortalService;
         }
 
 
@@ -32,10 +37,10 @@ namespace api.Controllers
             return Ok(null);
         }
 
-
         [HttpGet("{proceso}")]
         public IActionResult Get(string proceso)
         {
+             
             var condicion = JsonSerializer.Deserialize<ProcesoEP>(proceso);
             var procesos = _procesoService.getProcesosByProcesoEP(condicion);
             return Ok(procesos);
@@ -81,6 +86,19 @@ namespace api.Controllers
 
 
             return Ok(procesosDto);
+        }
+        private int GetIdUser()
+        {
+            var user = HttpContext.Items["User"] as UsuarioPortal;
+            return Convert.ToInt32(user.id);
+
+        }
+        private UsuarioPortal GetUser()
+        {
+            var user = HttpContext.Items["User"] as UsuarioPortal;
+
+            return user;
+
         }
 
     }

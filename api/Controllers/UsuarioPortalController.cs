@@ -145,6 +145,28 @@ namespace api.Controllers
             return Ok(salida);
         }
 
+
+
+        [HttpGet("getlogin")]
+        public IActionResult GetLogin(string token)
+        {
+            var salida = new GenericResponse();
+            var user = _usuarioService.GetUserByToken(token);
+
+            if (user == null)
+            {
+                salida.data = new { message = "Token incorrecto" };
+                salida.status = false;
+                return BadRequest(salida);
+            }
+
+
+
+            salida.data = user;
+
+            return Ok(salida);
+        }
+
         #region Metodos
 
         #endregion
@@ -166,6 +188,8 @@ namespace api.Controllers
 
             mail.sendMail(mailMap);
         }
+
+
 
 
        

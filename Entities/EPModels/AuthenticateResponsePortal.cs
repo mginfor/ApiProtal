@@ -22,7 +22,7 @@ namespace Entities.EPModels
                 zona = user.zona,
                 cargo = user.cargo,
                 UrlServicio = "",
-                rol=user.rol,
+                //rol=user.rol,
                 permisos= permisos
             };
             Token = token;

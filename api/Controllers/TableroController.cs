@@ -1,7 +1,10 @@
 ﻿using api.Helpers;
 using Contracts;
+using Entities.DbModels;
 using Entities.EPModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +14,17 @@ namespace api.Controllers
 {
 
     
-    [Authorize]
-    public class TableroController : BaseController
+    //[Authorize]
+    [Route("[controller]")]
+    [ApiController]
+    public class TableroController : ControllerBase
     {
         private ITableroService _conexion;
-        public TableroController(ITableroService conexion)
+        IUsuarioPortalService _usuarioPortalService;
+        public TableroController(ITableroService conexion, IUsuarioPortalService usuarioPortalService)
         {
             _conexion = conexion;
+            _usuarioPortalService = usuarioPortalService;
         }
 
         // GET: api/<TableroController>
@@ -29,7 +36,9 @@ namespace api.Controllers
         }
 
         // GET api/<TableroController>/5
-        [HttpGet("{id}")]
+        [Route("[action]/{id}")]
+
+        [HttpGet()]
         public IActionResult Get(int id)
         {
             var grafico = _conexion.getDataGraficoGeneralByIdCliente(id);
@@ -103,14 +112,13 @@ namespace api.Controllers
         public IActionResult GetPerfilBrechaById(int idCliente)
         {
 
-            var idUsuario = this.GetIdUser();
+            //var idUsuario = this.GetIdUser();
 
-            AutorizacionHelper helper = new();
 
-            if (!helper.EstaAutorizado(idUsuario, EnumPermisos.TableroGestion))
-            {
-                return Unauthorized();
-            }
+            //if (!_usuarioPortalService.EstaAutorizado(idUsuario, EnumPermisos.TableroGestion))
+            //{
+            //    return Unauthorized();
+            //}
 
             var perfilBrecha = _conexion.getDataPerfilBrechaByIdCliente(idCliente);
 
@@ -248,6 +256,18 @@ namespace api.Controllers
 
             return Ok(salida);
         }
+        private int GetIdUser()
+        {
+            var user = HttpContext.Items["User"] as UsuarioPortal;
+            return Convert.ToInt32(user.id);
 
+        }
+        private UsuarioPortal GetUser()
+        {
+            var user = HttpContext.Items["User"] as UsuarioPortal;
+
+            return user;
+
+        }
     }
 }

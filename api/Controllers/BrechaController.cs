@@ -9,6 +9,7 @@ using iText.Kernel.Utils;
 using iText.Layout;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,31 +21,43 @@ namespace api.Controllers
     //[Authorize]
     [Route("[controller]")]
     [ApiController]
-    public class BrechaController : Controller
+
+    public class BrechaController : ControllerBase
     {
         private IEvaluacionPCTService _evaluacionPctService;
         private IEvaluacionPROTService _evaluacionProtService;
         private IEvaluacionEIService _evaluacionEiService;
         private IProcesoService _procesoService;
         private IDocumentoBrechaService _documentoBrechaService;
+        IUsuarioPortalService _usuarioPortalService;
         public BrechaController(IEvaluacionPCTService evaluacionPCTService,
             IEvaluacionPROTService evaluacionPROTService,
             IEvaluacionEIService evaluacionEIService,
             IProcesoService procesoService,
-            IDocumentoBrechaService documentoBrechaService)
+            IDocumentoBrechaService documentoBrechaService,
+            IUsuarioPortalService usuarioPortalService)
         {
             _evaluacionPctService = evaluacionPCTService;
             _evaluacionProtService = evaluacionPROTService;
             _evaluacionEiService = evaluacionEIService;
             _procesoService = procesoService;
             _documentoBrechaService = documentoBrechaService;
-
+            _usuarioPortalService = usuarioPortalService;
         }
 
         [Route("[action]/{idEvaluacion}")]
         [HttpGet]
         public IActionResult getDataBrechasByIdEvaluacion(int idEvaluacion)
         {
+
+            //var idUsuario = this.GetIdUser();
+
+
+            //if (!_usuarioPortalService.EstaAutorizado(idUsuario, EnumPermisos.TratamientoBrecha))
+            //{
+            //    return Unauthorized();
+            //}
+
             var salida = new GenericResponse();
             var brechaPCT = _evaluacionPctService.getBrechasByIdEvaluacion(idEvaluacion);
             var brechaPROT = _evaluacionProtService.getBrechasByIdEvaluacion(idEvaluacion);
@@ -52,12 +65,12 @@ namespace api.Controllers
 
             if (idEvaluacion > 0)
             {
-                if (brechaPROT.Count >0 )
+                if (brechaPROT.Count > 0)
                 {
                     foreach (var brecha in brechaPROT)
                     {
 
-                        brecha.glsBrecha = string.IsNullOrEmpty( brecha.glsBrecha) ?  brecha.detInstrumentos.Pregunta : brecha.glsBrecha;
+                        brecha.glsBrecha = string.IsNullOrEmpty(brecha.glsBrecha) ? brecha.detInstrumentos.Pregunta : brecha.glsBrecha;
                     }
                 }
                 salida.data = new
@@ -67,7 +80,7 @@ namespace api.Controllers
                     brechaEi = brechaEI
                 };
                 return Ok(salida);
-               
+
             }
             else
             {
@@ -156,9 +169,9 @@ namespace api.Controllers
 
             var pdfInforme = generatePdf(levantamiento.htmlDocument, levantamiento.idEvaluacion);
             var rutaHtml = @"Plantillas\Informe_" + levantamiento.idEvaluacion + ".html";
-            var pdfFinal=mergePdf(levantamiento.idEvaluacion, pdfInforme,adjuntos);
+            var pdfFinal = mergePdf(levantamiento.idEvaluacion, pdfInforme, adjuntos);
 
-            salida.data = new { archivoName = "InformeLevantamiento_"+ levantamiento.idEvaluacion, archivoB64 = toBase64(pdfFinal) };
+            salida.data = new { archivoName = "InformeLevantamiento_" + levantamiento.idEvaluacion, archivoB64 = toBase64(pdfFinal) };
 
             System.IO.File.Delete(pdfInforme);
             System.IO.File.Delete(rutaHtml);
@@ -205,26 +218,37 @@ namespace api.Controllers
             return Ok(salida);
         }
 
-        private string generatePdf(string html,int idEvaluacion)
+        private string generatePdf(string html, int idEvaluacion)
         {
-            var rutaPdf = @"Plantillas\Informe_" + idEvaluacion +".pdf";
-            var rutaHtml = @"Plantillas\Informe_" + idEvaluacion + ".html";
+            var rutaPdf = @"Plantillas\Informe_" + idEvaluacion + ".pdf";
+            try
+            {
+              
+                var rutaHtml = @"Plantillas\Informe_" + idEvaluacion + ".html";
 
-            System.IO.File.WriteAllText(rutaHtml, html);
+                System.IO.File.WriteAllText(rutaHtml, html);
 
-            ConverterProperties converterProperties = new ConverterProperties();
-            converterProperties.SetCharset("UTF-8");
-            PdfWriter writer = new PdfWriter(rutaPdf);
-            PdfDocument pdf = new PdfDocument(writer);
-            pdf.SetDefaultPageSize(PageSize.LETTER);
-            pdf.SetTagged();
+                ConverterProperties converterProperties = new ConverterProperties();
+                converterProperties.SetCharset("UTF-8");
+                PdfWriter writer = new PdfWriter(rutaPdf);
+                PdfDocument pdf = new PdfDocument(writer);
+                pdf.SetDefaultPageSize(PageSize.LETTER);
+                pdf.SetTagged();
 
-            var fstream = new FileStream(rutaHtml, FileMode.OpenOrCreate);
+                var fstream = new FileStream(rutaHtml, FileMode.OpenOrCreate);
 
-            HtmlConverter.ConvertToPdf(fstream, pdf, converterProperties);
-            pdf.Close();
-            writer.Close();
-            fstream.Close();
+                HtmlConverter.ConvertToPdf(fstream, pdf, converterProperties);
+                pdf.Close();
+                writer.Close();
+                fstream.Close();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            
+            }
+            
             return rutaPdf;
         }
 
@@ -246,7 +270,7 @@ namespace api.Controllers
             }
 
             firstSourcePdf.Close();
-            
+
             pdf.Close();
             return ruta;
         }
@@ -273,6 +297,20 @@ namespace api.Controllers
             att2.Close();
 
             return ruta;
+        }
+
+        private int GetIdUser()
+        {
+            var user = HttpContext.Items["User"] as UsuarioPortal;
+            return Convert.ToInt32(user.id);
+
+        }
+        private UsuarioPortal GetUser()
+        {
+            var user = HttpContext.Items["User"] as UsuarioPortal;
+
+            return user;
+
         }
     }
 }

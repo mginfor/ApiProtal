@@ -10,6 +10,7 @@ namespace Entities.EPModels
     {
         public string nombreCandidato { get; set; }
         public string run { get; set; }
+        public string dni_Pasaporte { get; set; }   
         public List<HistoricoProcesoEP> procesos { get; set; }
 
         public int idCandidato { get; set; }
@@ -19,13 +20,15 @@ namespace Entities.EPModels
         {
             this.nombreCandidato = "";
             this.run = "";
+            this.dni_Pasaporte = "";
             procesos = new();
             this.idCandidato = 0;
         }
-        public HistorialCandidatoEP(string nombreCandidato, string run, List<HistoricoProcesoEP> data, int id = 0)
+        public HistorialCandidatoEP(string nombreCandidato, string run, string dniPasaporte, List<HistoricoProcesoEP> data, int id = 0)
         {
             this.nombreCandidato = nombreCandidato;
             this.run = run;
+            this.dni_Pasaporte = dniPasaporte;
             this.procesos = data;
             this.idCandidato = id;
         }
