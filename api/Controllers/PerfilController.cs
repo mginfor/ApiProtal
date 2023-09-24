@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using Entities.DbModels;
 using Services;
+using api.Helpers;
 
 namespace api.Controllers
 {
@@ -66,36 +67,21 @@ namespace api.Controllers
             var perfilesEp = new List<PerfilEP>();
             var sectores = _sectorService.getAllSectores();
             var evals = _evaluacionService.getAllEvaluationsByCliente(idCliente);
-            foreach (var eval in evals)
-            {
-                foreach (var perfil in perfiles)
-                {
-                    if (eval.idPerfil == perfil.id)
-                    {
-                        if (perfil.flgVigencia != 0)
-                        {
-                            foreach (Sector item in sectores)
-                            {
-                                if (item.vigencia != 0)
-                                {
-                                    if (item.id == (int)perfil.codigoSector)
-                                    {
-                                        perfilesEp.Add(new PerfilEP
-                                        {
-                                            id = perfil.id,
-                                            codigoPerfil = perfil.codigoPerfil,
-                                            descripcionPerfil = perfil.descripcionPerfil,
-                                            codigoSector = perfil.codigoSector,
-                                            codigoSubSector = perfil.codigoSubSector
-                                        });
-                                    }
-                                }
-                            }
-                        }
-                    }
+            var idPerfilesConEvaluacion = evals.DistinctBy(x =>x.idPerfil).Select(x => x.idPerfil).ToList();
+            var perfilesFiltrados = perfiles.Where(x => idPerfilesConEvaluacion.Any(y => y == x.id));
+            var sectoresFiltrados = sectores.Where(x => perfilesFiltrados.Any(y => (int)y.codigoSector == x.id));
 
-                }
-            }
+            var request = perfilesFiltrados.Select(x => new PerfilEP
+            {
+                id = x.id,
+                codigoPerfil = x.codigoPerfil,
+                descripcionPerfil = x.descripcionPerfil,
+                codigoSector = x.codigoSector,
+                codigoSubSector = x.codigoSubSector
+            });
+            perfilesEp.AddRange(request);
+
+            
             return Ok(perfilesEp.GroupBy(x => x.id).Select(x => x.FirstOrDefault()).OrderBy(x => x.descripcionPerfil));
         }
     }

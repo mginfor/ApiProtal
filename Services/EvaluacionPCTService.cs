@@ -22,7 +22,7 @@ namespace Services
 
         public List<EvaluacionPCT> getBrechasByIdEvaluacion(int idEvaluacion)
         {
-            return this.findByCondition(x => x.idEvaluacion == idEvaluacion && x.brecha, "documento").ToList();
+            return this.findByCondition(x => x.idEvaluacion == idEvaluacion && x.brecha && x.anulado != true, "documento").ToList();
         }
     }
 }
