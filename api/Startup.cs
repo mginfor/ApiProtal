@@ -37,21 +37,7 @@ namespace api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Cors
-            services.AddCors(options =>
-            {
-                options.AddPolicy("CorsPolicy", builder => builder
-                        .WithOrigins("https://portal.mgcertifica.cl")
-                        .AllowAnyMethod()
-                        .AllowAnyHeader());
-
-                options.AddPolicy("CorsPolicyLocal", builder => builder
-                    .WithOrigins("https://localhost:4200")
-                    .AllowAnyMethod()
-                    .AllowAnyHeader());
-            });
-
-
+            services.AddCors();
             services.AddHealthChecks();
             services.AddControllers();
                 //.AddJsonOptions(opts => opts.JsonSerializerOptions.PropertyNamingPolicy = null); 
@@ -107,11 +93,7 @@ namespace api
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "api v1"));
-                app.UseCors("CorsPolicyLocal");
             }
-
-
-
 
             app.UseCors(builder => builder
                .AllowAnyOrigin()
@@ -121,8 +103,6 @@ namespace api
            );
 
 
-
-            app.UseCors("CorsPolicy");
 
             app.UseMiddleware<JwtMiddleware>();
 
@@ -137,8 +117,6 @@ namespace api
                 endpoints.MapControllers();
                 endpoints.MapHealthChecks("/health");
             });
-
-
         }
     }
 }

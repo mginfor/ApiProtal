@@ -66,17 +66,26 @@ namespace api.Controllers
         }
 
 
+     
+
+
         [Route("[action]")]
         [HttpPost]
         public IActionResult getExcelBrechaCandidatos([FromBody] ExcelBrechaCandidatos excelBrechaCandidatos)
         {
             excelBrechaCandidatos.idCliente = _usuarioPortalService.GetById(excelBrechaCandidatos.idUsuario).idCliente;
             var libro = _exportarService.GenerarExcelBrechasCandidatos(excelBrechaCandidatos);
+
+            if (libro == null)  
+            {
+                return BadRequest(new GenericResponse(false, null, "No existen procesos en la Hoja 1."));
+            }
+
             AdjuntoResponse documento;
             using (var memo = new MemoryStream())
             {
                 libro.SaveAs(memo);
-                var nombreExcel = string.Concat("Reporte", DateTime.Now.ToString(), ".xlsx");
+                var nombreExcel = $"Reporte_{DateTime.Now.ToString("yyyyMMddHHmmss")}.xlsx";
                 documento = new AdjuntoResponse(nombreExcel, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Convert.ToBase64String(memo.ToArray()));
             }
 

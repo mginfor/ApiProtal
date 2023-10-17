@@ -12,5 +12,8 @@ namespace Entities.DbModels
         public int idCliente { get; set; }
         public int idPerfil { get; set; }
         public int idFaena { get; set; }
+        public DateTime? fechaInicio { get; set; }
+        public DateTime? fechaFin { get; set; }
+        public bool SinCritica { get; set; }
     }
 }
