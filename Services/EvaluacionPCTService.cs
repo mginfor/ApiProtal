@@ -2,6 +2,7 @@
 using Entities.DbModels;
 using Persistence;
 using Services.Generic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,7 +23,16 @@ namespace Services
 
         public List<EvaluacionPCT> getBrechasByIdEvaluacion(int idEvaluacion)
         {
-            return this.findByCondition(x => x.idEvaluacion == idEvaluacion && x.brecha && x.anulado != true, "documento").ToList();
+            return this.findByCondition(x => x.idEvaluacion == idEvaluacion && x.brecha && x.anulado == false, "documento").ToList();
         }
+
+
+
+
+
+
+
+
+
     }
 }

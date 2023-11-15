@@ -44,7 +44,7 @@ namespace Entities.DbModels
         public bool brecha { get; set; }
 
         [Column("FLG_CRITICO")]
-        public bool critico { get; set; }
+        public bool? critico { get; set; }
 
         [Column("GLS_BRECHA")]
         public string? glsBrecha { get; set; }
@@ -77,7 +77,7 @@ namespace Entities.DbModels
         public int? idDocumento { get; set; }
 
         [Column("FLG_COMP_COND_CRIT")]
-        public bool flgCompetenciaCritica { get; set; }
+        public bool? flgCompetenciaCritica { get; set; }
 
         //FK
         [ForeignKey("idDocumento")]
