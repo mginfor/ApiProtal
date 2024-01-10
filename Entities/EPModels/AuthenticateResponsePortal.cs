@@ -22,8 +22,8 @@ namespace Entities.EPModels
                 zona = user.zona,
                 cargo = user.cargo,
                 UrlServicio = "",
-                //rol=user.rol,
-                permisos= permisos
+                rol = user.rol,
+                permisos = permisos
             };
             Token = token;
             Expira = 8;

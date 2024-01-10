@@ -37,7 +37,7 @@ namespace Services
          public Rol getCandidato(int idRol, string NombreRol)
          {
             return this.findByCondition(x => x.id == idRol)
-                .Where(x => x.NombreRol == NombreRol)
+                .Where(x => x.nombreRol == NombreRol)
                 .FirstOrDefault();
          }
 

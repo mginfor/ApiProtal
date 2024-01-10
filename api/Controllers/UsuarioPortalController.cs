@@ -50,7 +50,7 @@ namespace api.Controllers
 
 
         // GET: api/<UsuarioController>
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public IActionResult GetUsuario()
         {

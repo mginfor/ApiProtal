@@ -64,7 +64,7 @@ namespace Services
             this._repositoryContext.LogLogins
                 .Add(new LogLogin { id_usuario = user.id, token = token, fecha_creacion = DateTime.Now, fecha_expiracion = DateTime.Now.AddHours(8) });
             this._RepositoryContext.SaveChanges();
-            return new AuthenticateResponsePortal(user, token, permisos); // esta wea teni q retornar
+            return new AuthenticateResponsePortal(user, token, permisos); 
         }
 
         private string generateJwtToken(UsuarioPortal user)
@@ -84,8 +84,15 @@ namespace Services
 
         public UsuarioPortal GetById(int Id)
         {
-            var includes = new string[] { "cliente", "rol" };
-            var user = findByCondition(x => x.id == Id, includes).ToList().First();
+            //var includes = new string[] { "cliente", "rol" };
+            //var user = findByCondition(x => x.id == Id, includes).ToList().First();
+            //return user;
+
+            var user = _RepositoryContext.UsuarioPortals
+                .Include(u => u.rol)
+                .Include(u => u.cliente)
+                .FirstOrDefault(u => u.id == Id);
+
             return user;
 
         }
@@ -95,7 +102,12 @@ namespace Services
         {
 
 
-            return this.findAll().ToList();
+            var usuario = _RepositoryContext.UsuarioPortals
+                .Include(u => u.rol)
+                .Include(u => u.cliente)
+                .ToList();
+
+            return usuario;
         }
 
 

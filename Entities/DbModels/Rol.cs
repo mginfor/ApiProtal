@@ -16,7 +16,7 @@ namespace Entities.DbModels
         public int id { get; set; }
 
         [Required,Column("NOMBRE_ROL")]
-        public string NombreRol { get; set; }
+        public string nombreRol { get; set; }
 
 
     }
