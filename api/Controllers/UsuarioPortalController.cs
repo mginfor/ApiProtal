@@ -3,6 +3,7 @@ using Contracts;
 using Contracts.Generic;
 using Entities.DbModels;
 using Entities.EPModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -76,12 +77,24 @@ namespace api.Controllers
                     return Unauthorized(salida);
                 }
 
-                //enviarCodigoPorCorreo(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.clave);
-                MailHelper mail = new MailHelper(_configuration);
-                mail.EnviarCorreoGraph(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.clave);
-                var aux = user.correo.Split("@");
-                salida.data = new { message = "correo enviado a " + aux[0].Substring(0, 3) + "xxxxx@" + aux[1] };
-                return Ok(salida);
+                if (user.activo != 0)
+                {
+                    //enviarCodigoPorCorreo(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.clave);
+                    MailHelper mail = new MailHelper(_configuration);
+                    mail.EnviarCorreoGraph(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.clave);
+                    var aux = user.correo.Split("@");
+                    salida.data = new { message = "correo enviado a " + aux[0].Substring(0, 3) + "xxxxx@" + aux[1] };
+                    return Ok(salida);
+
+                }
+                else
+                {
+
+                    salida.data = new { message = "Usuario no cuenta con permisos." };
+                    salida.status = false;
+                    return StatusCode(StatusCodes.Status403Forbidden, salida);
+
+                }
 
             }
             catch (Exception ex)
