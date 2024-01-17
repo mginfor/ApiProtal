@@ -22,20 +22,70 @@ namespace Services
         }
 
 
+        //public UsuarioPortal PreLogin(AuthenticateRequestPortal model)
+        //{
+        //    var user = findByCondition(x => x.run == model.RutUsuario &&
+        //                               (x.cliente.run.ToString() + x.cliente.digito) == model.RutCliente
+        //                               , "cliente")
+        //                              .ToList()
+        //                              .FirstOrDefault();
+        //    if (user != null)
+        //    {
+        //        user.clave = generarCodigo();
+        //        update(user);
+        //    }
+        //    return user;
+        //}
+
+
         public UsuarioPortal PreLogin(AuthenticateRequestPortal model)
         {
-            var user = findByCondition(x => x.run  == model.RutUsuario &&
+            var user = findByCondition(x => x.run == model.RutUsuario &&
                                        (x.cliente.run.ToString() + x.cliente.digito) == model.RutCliente
                                        , "cliente")
-                                      .ToList()
-                                      .FirstOrDefault();
+                                   .ToList()
+                                   .FirstOrDefault();
+
             if (user != null)
             {
-                user.clave = generarCodigo();
-                update(user);
+            
+                if (user.activo == 0)
+                {
+                    return null; 
+                }
+
+              
+                if ((user.cliente.run.ToString() + user.cliente.digito) != model.RutCliente)
+                {
+                   
+                    user.estado += 1;
+
+                   
+                    if (user.estado == 3)
+                    {
+                     
+                        user.activo = 0;
+                        user.fechaBloqueo = DateTime.Now;
+                    }
+
+                    update(user);
+                    return null;
+                }
+                else
+                {
+                  
+                    user.estado = 0;
+                    user.clave = generarCodigo();
+                    update(user);
+                }
             }
+
             return user;
         }
+
+
+
+
         public AuthenticateResponsePortal Authenticate(AuthenticateRequestPortal model)
         {
             var user = findByCondition(x => x.run.ToUpper() == model.RutUsuario.ToUpper() &&

@@ -90,7 +90,7 @@ namespace api.Controllers
                 else
                 {
 
-                    salida.data = new { message = "Usuario no cuenta con permisos." };
+                    salida.data = new { message = "Cuenta no activa" };
                     salida.status = false;
                     return StatusCode(StatusCodes.Status403Forbidden, salida);
 
