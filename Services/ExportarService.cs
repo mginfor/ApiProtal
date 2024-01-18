@@ -81,7 +81,12 @@ namespace Services
         public XLWorkbook GenerarExcelBrechasCandidatos(ExcelBrechaCandidatos excelBrechaCandidatosReq)
         {
             //info Hoja 1 y 2
-            DataSet tablaExcel = InfoHoja1(excelBrechaCandidatosReq.idCliente, excelBrechaCandidatosReq.idUsuario, excelBrechaCandidatosReq.idFaena, excelBrechaCandidatosReq.idPerfil);
+            DataSet tablaExcel = InfoHoja1(excelBrechaCandidatosReq.idCliente, excelBrechaCandidatosReq.idUsuario, excelBrechaCandidatosReq.idFaena, excelBrechaCandidatosReq.idPerfil, excelBrechaCandidatosReq.fechaInicio, excelBrechaCandidatosReq.fechaFin);
+
+            if (tablaExcel.Tables[1].Rows.Count == 0)
+            {
+                return null;
+            }
 
             XLWorkbook libro = GenerarHoja1y2(tablaExcel, excelBrechaCandidatosReq);
 
@@ -146,16 +151,39 @@ namespace Services
 
                 worksheet.Cell("A1").InsertTable(tablaExcel.Tables[0]);
                 worksheet.Cell("A10").InsertTable(dtBrechasPorPerfilXCandidato);
+
                 foreach (var cell in worksheet.Row(10).Cells())
                 {
                     for (int contBrecha = 0; contBrecha < dtBrechasPorPerfil.Rows.Count; contBrecha++)
                     {
 
-                        if (cell.Value.ToString() == dtBrechasPorPerfil.Rows[contBrecha]["GLS_BRECHA"].ToString() &&  dtBrechasPorPerfil.Rows[contBrecha]["FLG_COMP_COND_CRIT"].ToString()!= "0")
+
+                        if (excelBrechaCandidatosReq.SinCritica == true)
                         {
-                            cell.Style.Fill.SetBackgroundColor(XLColor.Red);
-                            cell.Style.Font.SetFontColor(XLColor.White);
+                            if (cell.Value.ToString() == dtBrechasPorPerfil.Rows[contBrecha]["GLS_BRECHA"].ToString())
+                            {
+                                cell.Style.Font.SetFontColor(XLColor.White);
+                            }
                         }
+                        else
+                        {
+
+                            if (cell.Value.ToString() == dtBrechasPorPerfil.Rows[contBrecha]["GLS_BRECHA"].ToString() && dtBrechasPorPerfil.Rows[contBrecha]["FLG_COMP_COND_CRIT"].ToString() != "0")
+                            {
+                                cell.Style.Fill.SetBackgroundColor(XLColor.Red);
+                                cell.Style.Font.SetFontColor(XLColor.White);
+                            }
+
+                        }
+
+
+
+
+                        //if (cell.Value.ToString() == dtBrechasPorPerfil.Rows[contBrecha]["GLS_BRECHA"].ToString() &&  dtBrechasPorPerfil.Rows[contBrecha]["FLG_COMP_COND_CRIT"].ToString()!= "0")
+                        //{
+                        //    cell.Style.Fill.SetBackgroundColor(XLColor.Red);
+                        //    cell.Style.Font.SetFontColor(XLColor.White);
+                        //}
                     }
                 }
                 worksheet.ColumnsUsed().Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
@@ -178,13 +206,11 @@ namespace Services
 
             DataTable dtCabeceraVigentes = tablaExcel.Tables[0];
             DataTable dtProcesosVigentes = tablaExcel.Tables[1];
-            DataTable dtCabeceraNoVigentes = tablaExcel.Tables[2];
-            DataTable dtProcesosNoVigentes = tablaExcel.Tables[3];
-            DataTable dtDescripcionCritica = tablaExcel.Tables[4];
-        
+            //DataTable dtCabeceraNoVigentes = tablaExcel.Tables[2];
+            //DataTable dtProcesosNoVigentes = tablaExcel.Tables[3];
 
 
-            dtCabeceraVigentes.TableName = "Vigentes";
+            dtCabeceraVigentes.TableName = "Procesos Vigentes";
 
             dtProcesosVigentes.TableName = "Tickets2";
 
@@ -192,19 +218,19 @@ namespace Services
             if (excelBrechaCandidatosReq.idFaena > 0)
             {
                 dtProcesosVigentes.Columns.Remove("FAENA");
-                dtProcesosNoVigentes.Columns.Remove("FAENA");
+                //dtProcesosNoVigentes.Columns.Remove("FAENA");
             }
-            libro.Worksheet(1).Cell(10, 1).InsertTable(dtProcesosVigentes);
+            libro.Worksheet(1).Cell(11, 1).InsertTable(dtProcesosVigentes);
             libro.Worksheet(1).ColumnsUsed().AdjustToContents();
 
             //hoja2
-            dtCabeceraNoVigentes.TableName = "No Vigente";
+            //dtCabeceraNoVigentes.TableName = "No Vigente";
 
-            dtProcesosNoVigentes.TableName = "Tickets4";
+            //dtProcesosNoVigentes.TableName = "Tickets4";
 
-            libro.Worksheets.Add(dtCabeceraNoVigentes);
-            libro.Worksheet(2).Cell(10, 1).InsertTable(dtProcesosNoVigentes);
-            libro.Worksheet(2).ColumnsUsed().AdjustToContents();
+            //libro.Worksheets.Add(dtCabeceraNoVigentes);
+            //libro.Worksheet(2).Cell(10, 1).InsertTable(dtProcesosNoVigentes);
+            //libro.Worksheet(2).ColumnsUsed().AdjustToContents();
 
             //Hoja4
 
@@ -228,7 +254,7 @@ namespace Services
 
 
         #region llamadas base de datos 
-        private DataSet InfoHoja1(int idCliente, int idUsuario, int idFaena, int idPerfil)
+        private DataSet InfoHoja1(int idCliente, int idUsuario, int idFaena, int idPerfil, DateTime? fechaInicio, DateTime? fechaFin)
         {
             DbCommand command = null;
             try
@@ -261,6 +287,22 @@ namespace Services
                 idPerfilParameter.ParameterName = "PERFIL";
                 idPerfilParameter.Value = idPerfil;
                 command.Parameters.Add(idPerfilParameter);
+
+
+                var fechaInicioParameter = command.CreateParameter();
+                fechaInicioParameter.ParameterName = "FECHA_INICIO";
+                fechaInicioParameter.Value = fechaInicio;
+                command.Parameters.Add(fechaInicioParameter);
+
+
+
+                var fechaFinParameter = command.CreateParameter();
+                fechaFinParameter.ParameterName = "FECHA_FIN";
+                fechaFinParameter.Value = fechaFin;
+                command.Parameters.Add(fechaFinParameter);
+
+
+
                 command.Connection.Open();
                 // Create the DbDataAdapter.
                 DbDataAdapter adapter = factory.CreateDataAdapter();
@@ -309,6 +351,12 @@ namespace Services
 
                 query += excelBrechaCandidatos.idFaena > 0 ? " and CRR_FAENA = @FAENA" : "";
 
+                if (excelBrechaCandidatos.fechaInicio.HasValue && excelBrechaCandidatos.fechaFin.HasValue)
+                {
+                    query += " and te.FECHA_INFORME  >= @FECHAINICIO and te.FECHA_INFORME  <= @FECHAFIN";
+                }
+
+
                 // Create the DbCommand.
                 command = factory.CreateCommand();
                 command.CommandText = query;
@@ -331,6 +379,19 @@ namespace Services
                     idFaenaParameter.ParameterName = "FAENA";
                     idFaenaParameter.Value = excelBrechaCandidatos.idFaena;
                     command.Parameters.Add(idFaenaParameter);
+                }
+
+                if (excelBrechaCandidatos.fechaInicio.HasValue && excelBrechaCandidatos.fechaFin.HasValue)
+                {
+                    var fechaInicioParameter = command.CreateParameter();
+                    fechaInicioParameter.ParameterName = "FECHAINICIO"; 
+                    fechaInicioParameter.Value = excelBrechaCandidatos.fechaInicio.Value;
+                    command.Parameters.Add(fechaInicioParameter);
+
+                    var fechaFinParameter = command.CreateParameter();
+                    fechaFinParameter.ParameterName = "FECHAFIN";
+                    fechaFinParameter.Value = excelBrechaCandidatos.fechaFin.Value;
+                    command.Parameters.Add(fechaFinParameter);
                 }
 
                 command.Connection.Open();
@@ -386,7 +447,16 @@ namespace Services
 
                 query += excelBrechaCandidatos.idFaena > 0 ? @" and  te.CRR_FAENA = @FAENA" : "";
 
+                if (excelBrechaCandidatos.fechaInicio.HasValue && excelBrechaCandidatos.fechaFin.HasValue)
+                {
+                    query += " and te.FECHA_INFORME  >= @FECHAINICIO  and te.FECHA_INFORME  <= @FECHAFIN";
+                }
+
+
+
                 query += @" group by tdi.GLS_BRECHA, CRR_CANDIDATO order by CANDIDATO ASC;";
+
+
 
                 // Create the DbCommand.
                 command = factory.CreateCommand();
@@ -411,6 +481,19 @@ namespace Services
                     idFaenaParameter.ParameterName = "FAENA";
                     idFaenaParameter.Value = excelBrechaCandidatos.idFaena;
                     command.Parameters.Add(idFaenaParameter);
+                }
+
+                if (excelBrechaCandidatos.fechaInicio.HasValue && excelBrechaCandidatos.fechaFin.HasValue)
+                {
+                    var fechaInicioParameter = command.CreateParameter();
+                    fechaInicioParameter.ParameterName = "FECHAINICIO";
+                    fechaInicioParameter.Value = excelBrechaCandidatos.fechaInicio.Value;
+                    command.Parameters.Add(fechaInicioParameter);
+
+                    var fechaFinParameter = command.CreateParameter();
+                    fechaFinParameter.ParameterName = "FECHAFIN";
+                    fechaFinParameter.Value = excelBrechaCandidatos.fechaFin.Value;
+                    command.Parameters.Add(fechaFinParameter);
                 }
 
                 command.Connection.Open();
@@ -456,6 +539,17 @@ namespace Services
                                      where te.FLG_PROCESO_ANULADO = 0 AND te.FLG_PROCESO_ANTIGUO = 0 
                                      and te.CRR_CLIENTE = @CLIENTE and te.CRR_PERFIL = @PERFIL and te.CRR_FAENA = @FAENA ;";
 
+
+                if (excelBrechaCandidatos.fechaInicio.HasValue)
+                {
+                    query += " and te.FECHA_INFORME >= @FECHAINICIO";
+                }
+
+                if (excelBrechaCandidatos.fechaFin.HasValue)
+                {
+                    query += " and te.FECHA_INFORME <= @FECHAFIN";
+                }
+
                 // Create the DbCommand.
                 command = factory.CreateCommand();
                 command.CommandText = query;
@@ -480,6 +574,24 @@ namespace Services
                     idFaenaParameter.Value = excelBrechaCandidatos.idFaena;
                     command.Parameters.Add(idFaenaParameter);
                 }
+
+
+                if (excelBrechaCandidatos.fechaInicio.HasValue)
+                {
+                    var fechaInicioParameter = command.CreateParameter();
+                    fechaInicioParameter.ParameterName = "FECHAINICIO";
+                    fechaInicioParameter.Value = excelBrechaCandidatos.fechaInicio.Value;
+                    command.Parameters.Add(fechaInicioParameter);
+                }
+
+                if (excelBrechaCandidatos.fechaFin.HasValue)
+                {
+                    var fechaFinParameter = command.CreateParameter();
+                    fechaFinParameter.ParameterName = "FECHAFIN";
+                    fechaFinParameter.Value = excelBrechaCandidatos.fechaFin.Value;
+                    command.Parameters.Add(fechaFinParameter);
+                }
+
 
                 command.Connection.Open();
                 // Create the DbDataAdapter.
@@ -526,11 +638,16 @@ namespace Services
                                  join tges_eval_pct tep on (te.CRR_IDEVALUACION = tep.CRR_EVALUACION)
                                  join tcnf_det_instrumento tdi on (tdi.CRR_IDDETINSTRUMENTO = tep.CRR_DETINSTRUMENTO)
                 
-                                where te.FLG_PROCESO_ANULADO = 0 and te.FLG_PROCESO_ANULADO = 0 and tep.FLG_BRECHA <> 0 and 
-                                 te.CRR_PERFIL = @PERFIL and te.CRR_CLIENTE = @CLIENTE ";
+                                where te.FLG_PROCESO_ANULADO = 0 and  tep.FLG_BRECHA <> 0 and 
+                                 te.CRR_CLIENTE = @CLIENTE and te.CRR_PERFIL = @PERFIL  ";
 
 
                 query += excelBrechaCandidatos.idFaena > 0 ? " and te.CRR_FAENA = @FAENA" : "";
+
+                if (excelBrechaCandidatos.fechaInicio.HasValue && excelBrechaCandidatos.fechaFin.HasValue)
+                {
+                    query += " and te.FECHA_INFORME  >= @FECHAINICIO and te.FECHA_INFORME  <= @FECHAFIN";
+                }
                 query += " group by tdi.GLS_BRECHA";
 
                 // Create the DbCommand.
@@ -558,6 +675,19 @@ namespace Services
                     command.Parameters.Add(idFaenaParameter);
                 }
 
+                if (excelBrechaCandidatos.fechaInicio.HasValue && excelBrechaCandidatos.fechaFin.HasValue)
+                {
+                    var fechaInicioParameter = command.CreateParameter();
+                    fechaInicioParameter.ParameterName = "FECHAINICIO";
+                    fechaInicioParameter.Value = excelBrechaCandidatos.fechaInicio.Value;
+                    command.Parameters.Add(fechaInicioParameter);
+
+                    var fechaFinParameter = command.CreateParameter();
+                    fechaFinParameter.ParameterName = "FECHAFIN";
+                    fechaFinParameter.Value = excelBrechaCandidatos.fechaFin.Value;
+                    command.Parameters.Add(fechaFinParameter);
+                }
+
                 command.Connection.Open();
                 // Create the DbDataAdapter.
                 DbDataAdapter adapter = factory.CreateDataAdapter();
@@ -567,7 +697,6 @@ namespace Services
                 DataSet tables = new DataSet();
                 adapter.Fill(tables);
                 return tables.Tables[0];
-                command.Connection.Close();
 
 
             }

@@ -21,11 +21,11 @@ namespace Services
             db = new RepositoryContext();
         }
 
-        public List<Proceso> getProcesosByIdInforme(int idInforme)
+        public List<ProcesoInforme> getProcesosByIdInforme(int idInforme)
         {
-            var query = "select * from vw_portal_proceso where idInforme = {0};";
+            var query = "select * from vw_portal_proceso_Informe  where idInforme = {0};";
 
-            return db.ProcesoPortal
+            return db.ProcesoPortalInforme
                 .FromSqlRaw(query, idInforme)
                 .ToList();
         }

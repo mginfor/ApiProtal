@@ -7,7 +7,7 @@ namespace Contracts
     public interface IProcesoService
     {
 
-        public List<Proceso> getProcesosByIdInforme(int idInforme);
+        public List<ProcesoInforme> getProcesosByIdInforme(int idInforme);
         public List<Proceso> getProcesosByIdEvaluacion(int idEvaluacion);
         public List<Proceso> getProcesosByHash(string hash);
         public List<Proceso> getProcesosByProcesoEP(ProcesoEP proceso);

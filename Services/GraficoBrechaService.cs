@@ -24,7 +24,8 @@ namespace Services
                         "Desc_Perfil as PERFIL, " +
                         "COUNT(DISTINCT(run_operador)) operadores_brechas, " +
                         "crr_cliente " +
-                        "FROM v_pbi_brechas vpb, tg_perfil p " +
+                        "FROM v_pbi_brechas vpb " +
+                        "JOIN tg_perfil p ON vpb.crr_perfil = p.crr_idperfil " +
                         "WHERE vpb.crr_perfil = p.crr_idperfil " +
                         "and vpb.crr_cliente = {0} " +
                         "GROUP BY crr_cliente, Desc_Perfil " +
