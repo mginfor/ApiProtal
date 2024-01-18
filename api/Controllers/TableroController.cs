@@ -112,13 +112,13 @@ namespace api.Controllers
         public IActionResult GetPerfilBrechaById(int idCliente)
         {
 
-            //var idUsuario = this.GetIdUser();
+            var idUsuario = this.GetIdUser();
 
 
-            //if (!_usuarioPortalService.EstaAutorizado(idUsuario, EnumPermisos.TableroGestion))
-            //{
-            //    return Unauthorized();
-            //}
+            if (!_usuarioPortalService.EstaAutorizado(idUsuario, EnumPermisos.TableroGestion))
+            {
+                return Unauthorized();
+            }
 
             var perfilBrecha = _conexion.getDataPerfilBrechaByIdCliente(idCliente);
 

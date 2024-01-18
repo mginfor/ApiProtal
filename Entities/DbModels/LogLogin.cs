@@ -14,6 +14,14 @@ namespace Entities.DbModels
         [Column("CRR_IDLOG")]
         [Key]
         public int crr_idLog { get; set; }
+
+        [Column("NOMBRE_USUARIO")]
+        public string nombreUsuario { get; set; }
+
+        [Column("CARGO_USUARIO")]
+        public string cargoUsuario { get; set; }
+
+
         [Column("CRR_IDUSUARIO")]
         public int id_usuario { get; set; }
         [Column("TOKEN")]

@@ -110,12 +110,16 @@ namespace api.Controllers
             var salida = new GenericResponse();
             var user = _usuarioService.Authenticate(model);
 
+
             if (user == null)
             {
                 salida.data = new { message = "Usuario o Contraseña incorrectos" };
                 salida.status = false;
                 return BadRequest(salida);
             }
+
+
+            
 
             var serviciosVinculados = _servicioVinculadoService.getServicioPorIdCliente(user.usuario.idCliente);
 

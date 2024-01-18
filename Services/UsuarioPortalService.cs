@@ -50,6 +50,8 @@ namespace Services
                                       .FirstOrDefault();
             // return null if user not found
             if (user == null) return null;
+
+
             var permisos = this._RepositoryContext.RolPermisos
                 .Include(x => x.rol)
                 .Include(x => x.permiso)
@@ -58,11 +60,20 @@ namespace Services
             // authentication successful so generate jwt token
             var token = generateJwtToken(user);
 
-            //insertar un registro a la tabla con los datos que necesitas
+          
+            var logLogin = new LogLogin
+            {
+                id_usuario = user.id,
+                nombreUsuario = user.nombreUsuario,
+                cargoUsuario = user.cargo,
+                token = token,
+                fecha_creacion = DateTime.Now,
+                fecha_expiracion = DateTime.Now.AddHours(8)
+               
+            };
 
-             
-            this._repositoryContext.LogLogins
-                .Add(new LogLogin { id_usuario = user.id, token = token, fecha_creacion = DateTime.Now, fecha_expiracion = DateTime.Now.AddHours(8) });
+            this._repositoryContext.LogLogins.Add(logLogin);
+
             this._RepositoryContext.SaveChanges();
             return new AuthenticateResponsePortal(user, token, permisos); 
         }

@@ -50,13 +50,13 @@ namespace api.Controllers
         public IActionResult getDataBrechasByIdEvaluacion(int idEvaluacion)
         {
 
-            //var idUsuario = this.GetIdUser();
+            var idUsuario = this.GetIdUser();
 
 
-            //if (!_usuarioPortalService.EstaAutorizado(idUsuario, EnumPermisos.TratamientoBrecha))
-            //{
-            //    return Unauthorized();
-            //}
+            if (!_usuarioPortalService.EstaAutorizado(idUsuario, EnumPermisos.TratamientoBrecha))
+            {
+                return Unauthorized();
+            }
 
             var salida = new GenericResponse();
             var brechaPCT = _evaluacionPctService.getBrechasByIdEvaluacion(idEvaluacion);
