@@ -85,6 +85,10 @@ namespace Persistence
         // token
         public DbSet<LogLogin> LogLogins { get; set; }
 
+        public DbSet<LogBloqueo> LogBloqueos { get; set; }
+
+
+
 
 
         #endregion

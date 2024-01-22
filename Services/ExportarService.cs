@@ -234,14 +234,11 @@ namespace Services
 
             //Hoja4
 
-            dtDescripcionCritica.TableName = "Competencias Condicionantes";
 
-            dtDescripcionCritica.TableName = "Tickets6";
-
-            libro.Worksheets.Add(dtDescripcionCritica);
-            libro.Worksheet(4).Cell(10, 1).InsertTable(dtProcesosNoVigentes);
-            libro.Worksheet(4).ColumnsUsed().AdjustToContents();
-
+         
+        
+          
+       
 
 
 

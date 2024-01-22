@@ -2,6 +2,7 @@
 using DocumentFormat.OpenXml.Spreadsheet;
 using Entities.DbModels;
 using Entities.EPModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -19,27 +20,14 @@ namespace Services
     {
         private readonly AppSettings _appSettings;
         private readonly RepositoryContext _repositoryContext;
-        public UsuarioPortalService(RepositoryContext repositoryContext, IOptions<AppSettings> appSettings) : base(repositoryContext)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public UsuarioPortalService(RepositoryContext repositoryContext, IOptions<AppSettings> appSettings, IHttpContextAccessor httpContextAccessor) : base(repositoryContext)
         {
             _appSettings = appSettings.Value;
             _repositoryContext = repositoryContext;
+            _httpContextAccessor = httpContextAccessor;
         }
-
-
-        //public UsuarioPortal PreLogin(AuthenticateRequestPortal model)
-        //{
-        //    var user = findByCondition(x => x.run == model.RutUsuario &&
-        //                               (x.cliente.run.ToString() + x.cliente.digito) == model.RutCliente
-        //                               , "cliente")
-        //                              .ToList()
-        //                              .FirstOrDefault();
-        //    if (user != null)
-        //    {
-        //        user.clave = generarCodigo();
-        //        update(user);
-        //    }
-        //    return user;
-        //}
 
 
         public UsuarioPortal PreLogin(AuthenticateRequestPortal model)
@@ -47,51 +35,24 @@ namespace Services
             var user = findByCondition(x => x.run == model.RutUsuario &&
                                        (x.cliente.run.ToString() + x.cliente.digito) == model.RutCliente
                                        , "cliente")
-                                   .ToList()
-                                   .FirstOrDefault();
-
+                                      .ToList()
+                                      .FirstOrDefault();
             if (user != null)
             {
-            
-                if (user.activo == 0)
-                {
-                    return null; 
-                }
-
-              
-                if ((user.cliente.run.ToString() + user.cliente.digito) != model.RutCliente)
-                {
-                   
-                    user.estado += 1;
-
-                   
-                    if (user.estado == 3)
-                    {
-                     
-                        user.activo = 0;
-                        user.fechaBloqueo = DateTime.Now;
-                    }
-
-                    update(user);
-                    return null;
-                }
-                else
-                {
-                  
-                    user.estado = 0;
-                    user.clave = generarCodigo();
-                    update(user);
-                }
+                user.clave = generarCodigo();
+                update(user);
             }
-
             return user;
         }
 
 
 
-
         public AuthenticateResponsePortal Authenticate(AuthenticateRequestPortal model)
         {
+
+            var ipAddress = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
+
+
             var user = findByCondition(x => x.run.ToUpper() == model.RutUsuario.ToUpper() &&
                                       (x.cliente.run.ToString() + x.cliente.digito).ToUpper() == model.RutCliente.ToUpper() &&
                                        x.clave == model.Codigo,
@@ -99,7 +60,58 @@ namespace Services
                                       .ToList()
                                       .FirstOrDefault();
             // return null if user not found
-            if (user == null) return null;
+            if (user == null)
+            {
+                throw new AuthenticationException("Usuario o Contraseña incorrectos");
+            }
+
+            if (user.estado == 0 && user.fechaBloqueo.HasValue)
+            {
+                var tiempoBloqueo = DateTime.Now - user.fechaBloqueo.Value;
+                if (tiempoBloqueo.TotalMinutes > 30)
+                {
+                    user.estado = 1;
+                    user.intentos = 0;
+                }
+                else
+                {
+                    throw new AuthenticationException("Su cuenta está bloqueada y se desbloqueará después de 30 minutos.");
+                }
+            }
+
+            if (user.clave != model.Codigo)
+            {
+                user.intentos++;
+
+                if(user.intentos >= 3)
+                {
+                    user.estado = 0;
+                    user.fechaBloqueo = DateTime.Now;
+
+
+                    var logBloqueo = new LogBloqueo
+                    {
+                        IdUsuario = user.id,
+                        NombreUsuario = user.nombreUsuario,
+                        CargoUsuario = user.cargo,
+                        CrrCliente = user.idCliente,
+                        FechaBloqueo = DateTime.Now,
+                        DireccionIP = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString()
+                    };
+
+                    this._repositoryContext.LogBloqueos.Add(logBloqueo);
+                    throw new AuthenticationException("Su cuenta ha sido bloqueada debido a múltiples intentos fallidos.");
+
+                }
+
+                this._repositoryContext.SaveChanges();
+
+                return null;
+            }
+
+            user.intentos = 0;
+            user.estado = 1; 
+            this._RepositoryContext.SaveChanges();
 
 
             var permisos = this._RepositoryContext.RolPermisos
@@ -108,7 +120,7 @@ namespace Services
                 .Where(x => x.rol.id == user.idRol)
                 .Select(x => x.permiso).ToList();
             // authentication successful so generate jwt token
-            var token = generateJwtToken(user);
+            var token = generateJwtToken(user, out var fechaExpiracion);
 
           
             var logLogin = new LogLogin
@@ -118,7 +130,7 @@ namespace Services
                 cargoUsuario = user.cargo,
                 token = token,
                 fecha_creacion = DateTime.Now,
-                fecha_expiracion = DateTime.Now.AddHours(8)
+                fecha_expiracion = fechaExpiracion
                
             };
 
@@ -128,8 +140,9 @@ namespace Services
             return new AuthenticateResponsePortal(user, token, permisos); 
         }
 
-        private string generateJwtToken(UsuarioPortal user)
+        private string generateJwtToken(UsuarioPortal user, out DateTime fechaExpiracion)
         {
+            fechaExpiracion = DateTime.UtcNow.AddHours(8);
             // generate token that is valid for 8 HOURS
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
@@ -223,5 +236,13 @@ namespace Services
             return new AuthenticateResponsePortal(log.usuario, log.token, permisos);
         }
         
+    }
+
+
+    public class AuthenticationException : Exception
+    {
+        public AuthenticationException(string message) : base(message)
+        {
+        }
     }
 }

@@ -131,8 +131,7 @@ namespace api.Controllers
                 return BadRequest(salida);
             }
 
-
-            
+           
 
             var serviciosVinculados = _servicioVinculadoService.getServicioPorIdCliente(user.usuario.idCliente);
 
