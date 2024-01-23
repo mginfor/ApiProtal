@@ -81,6 +81,7 @@ namespace api
             services.AddScoped<IExportarService, ExportarService>();
             services.AddScoped<IEvaluacionExportarService, EvaluacionExportarService>();
 
+
             //
             services.AddScoped<ICandidatoService, CandidatoService>();
         }

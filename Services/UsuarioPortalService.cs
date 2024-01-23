@@ -120,8 +120,14 @@ namespace Services
 
         public UsuarioPortal GetById(int Id)
         {
-            var user = findByCondition(x => x.id == Id, "cliente").ToList().First();
+            var user = findByCondition(x => x.id == Id, "cliente").FirstOrDefault();
             return user;
+        }
+
+
+        public IEnumerable<UsuarioPortal> GetAllUsuarios()
+        {
+            return findAll().ToList();
         }
 
         private int generarCodigo()

@@ -47,17 +47,50 @@ namespace api.Controllers
         // GET: api/<UsuarioController>
         //[Authorize]
         [HttpGet]
-        public IActionResult Get()
+        [HttpGet]
+        public IActionResult GetAllUsuarios()
         {
-            return Ok();
+            try
+            {
+                var usuarios = _usuarioService.GetAllUsuarios(); 
+                if (usuarios == null || !usuarios.Any())
+                {
+                    return NotFound("No se encontraron usuarios.");
+                }
+
+                return Ok(usuarios);
+            }
+            catch (Exception ex)
+            {
+               
+                return StatusCode(500, "Internal server error");
+            }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var salida = new GenericResponse();
-            salida.data = _usuarioService.GetById(id);
+            var usuario = _usuarioService.GetById(id);
+
+            // Comprobar si el usuario no fue encontrado
+            if (usuario == null)
+            {
+                return NotFound(new GenericResponse
+                {
+                    status = false,
+                    message = $"No se encontró el usuario con el ID {id}.",
+                    data = null
+                });
+            }
+
+            // Si se encuentra el usuario, devolver los datos
+            var salida = new GenericResponse
+            {
+                status = true,
+                data = usuario,
+                message = "Usuario encontrado con éxito."
+            };
             return Ok(salida);
         }
 
