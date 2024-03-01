@@ -81,6 +81,10 @@ namespace Persistence
         public DbSet<Grafico_Brecha> graficoBrecha { get; set; }
         public DbSet<Tablero_brecha> tablero_Brechas { get; set; }
 
+        public DbSet<EvaluacionPCT> EvaluacionPCT { get; set; }
+
+        public DbSet<Criterios> Criterio { get; set; }
+
         public DbSet<BrechasCandidato> brechasCandidato { get; set; }
         // token
         public DbSet<LogLogin> LogLogins { get; set; }

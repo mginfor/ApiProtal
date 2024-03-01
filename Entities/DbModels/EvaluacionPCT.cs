@@ -82,6 +82,9 @@ namespace Entities.DbModels
         //FK
         [ForeignKey("idDocumento")]
         public DocumentoBrecha documento { get; set; }
+
+        [ForeignKey("idCriterio")]
+        public Criterios Criterio { get; set; }
     }
 
 }

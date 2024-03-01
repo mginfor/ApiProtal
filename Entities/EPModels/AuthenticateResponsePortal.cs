@@ -7,9 +7,14 @@ namespace Entities.EPModels
     {
         public UsuarioPortalEP usuario { get; set; }
         public string Token { get; set; }
+        public string Mensaje { get; set; }
         public int Expira { get; set; }
 
-
+        public AuthenticateResponsePortal()
+        {
+           
+     
+        }
         public AuthenticateResponsePortal(UsuarioPortal user, string token,List<Permisos> permisos)
         {
             usuario = new UsuarioPortalEP()

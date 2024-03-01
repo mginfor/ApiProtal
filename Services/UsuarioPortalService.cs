@@ -54,40 +54,41 @@ namespace Services
 
 
             var user = findByCondition(x => x.run.ToUpper() == model.RutUsuario.ToUpper() &&
-                                      (x.cliente.run.ToString() + x.cliente.digito).ToUpper() == model.RutCliente.ToUpper() &&
-                                       x.clave == model.Codigo,
+                                      (x.cliente.run.ToString() + x.cliente.digito).ToUpper() == model.RutCliente.ToUpper(),
+                                        //&& x.clave == model.Codigo,
                                        new string[] { "cliente", "rol" })
                                       .ToList()
                                       .FirstOrDefault();
-            // return null if user not found
+            //  usuario y empresa invalido
             if (user == null)
             {
-                throw new AuthenticationException("Usuario o Contraseña incorrectos");
+             
+                return null; 
             }
 
             if (user.estado == 0 && user.fechaBloqueo.HasValue)
             {
+                //desbloqueo despues de 30 min
                 var tiempoBloqueo = DateTime.Now - user.fechaBloqueo.Value;
                 if (tiempoBloqueo.TotalMinutes > 30)
                 {
                     user.estado = 1;
                     user.intentos = 0;
+                    this._repositoryContext.UsuarioPortals.Update(user);
                 }
-                else
-                {
-                    throw new AuthenticationException("Su cuenta está bloqueada y se desbloqueará después de 30 minutos.");
-                }
+               
             }
-
+            // contraseña invalida
             if (user.clave != model.Codigo)
             {
                 user.intentos++;
-
+                var mensaje = "Usuario o contraseña incorrecta, al tercer intento usuario sera bloqueado";
                 if(user.intentos >= 3)
                 {
                     user.estado = 0;
                     user.fechaBloqueo = DateTime.Now;
 
+                    
 
                     var logBloqueo = new LogBloqueo
                     {
@@ -100,13 +101,13 @@ namespace Services
                     };
 
                     this._repositoryContext.LogBloqueos.Add(logBloqueo);
-                    throw new AuthenticationException("Su cuenta ha sido bloqueada debido a múltiples intentos fallidos.");
+                    mensaje = "Usuario bloqueado";
 
                 }
-
+                this._repositoryContext.UsuarioPortals.Update(user);
                 this._repositoryContext.SaveChanges();
 
-                return null;
+                return new AuthenticateResponsePortal() { Mensaje=mensaje};
             }
 
             user.intentos = 0;

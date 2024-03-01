@@ -121,30 +121,29 @@ namespace api.Controllers
         public IActionResult login(AuthenticateRequestPortal model)
         {
             var salida = new GenericResponse();
-            var user = _usuarioService.Authenticate(model);
+            var dto = _usuarioService.Authenticate(model);
 
 
-            if (user == null)
+            if (dto.usuario == null)
             {
-                salida.data = new { message = "Usuario o Contraseña incorrectos" };
+                salida.data = new { message =dto.Mensaje };
                 salida.status = false;
                 return BadRequest(salida);
             }
 
-           
 
-            var serviciosVinculados = _servicioVinculadoService.getServicioPorIdCliente(user.usuario.idCliente);
+            var serviciosVinculados = _servicioVinculadoService.getServicioPorIdCliente(dto.usuario.idCliente);
 
             //Información cliente
-            var informacionCliente = _clienteService.getClienteByidCliente(user.usuario.idCliente);
+            var informacionCliente = _clienteService.getClienteByidCliente(dto.usuario.idCliente);
 
 
-            _logService.create(new Log() { idUsuario = user.usuario.id, fechaIngreso = DateTime.Now, clave = model.Codigo.ToString() });
+            _logService.create(new Log() { idUsuario = dto.usuario.id, fechaIngreso = DateTime.Now, clave = model.Codigo.ToString() });
 
 
             if (serviciosVinculados != null)
             {
-                user.usuario.UrlServicio = serviciosVinculados.urlServicio;
+                dto.usuario.UrlServicio = serviciosVinculados.urlServicio;
 
               
             }
@@ -152,11 +151,11 @@ namespace api.Controllers
             if (informacionCliente != null)
             {
                 //info cliente
-                user.usuario.tipoNivelCliente = informacionCliente.nivel;
+                dto.usuario.tipoNivelCliente = informacionCliente.nivel;
             }
 
 
-            salida.data = user;
+            salida.data = dto;
 
             return Ok(salida);
         }

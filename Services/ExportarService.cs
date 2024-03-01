@@ -158,7 +158,7 @@ namespace Services
                     {
 
 
-                        if (excelBrechaCandidatosReq.SinCritica == true)
+                        if (dtBrechasPorPerfil.Rows[contBrecha]["CRR_RUBRICA"].ToString() == "1")
                         {
                             if (cell.Value.ToString() == dtBrechasPorPerfil.Rows[contBrecha]["GLS_BRECHA"].ToString())
                             {

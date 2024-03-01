@@ -77,6 +77,8 @@ namespace api
             services.AddScoped<IPermisosServices, PermisosServices>();
             services.AddScoped<IRolService, RolServices>();
 
+            services.AddScoped<ICriterioService, CriterioServices>();
+
 
             //Funciones realizadas por Syscomp
             services.AddScoped<IPerfilService, PerfilService>();
