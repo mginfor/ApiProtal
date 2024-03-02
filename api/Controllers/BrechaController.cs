@@ -105,6 +105,44 @@ namespace api.Controllers
                 return BadRequest(salida);
             }
         }
+
+
+
+
+
+
+
+
+        [Route("[action]/{idEvaluacion}")]
+        [HttpGet]
+        public IActionResult getDataProcesoByIdEvaluacionTrata(int idEvaluacion)
+        {
+            var salida = new GenericResponse();
+            var resultado = _procesoService.getProcesosByIdEvaluacionTratamiento(idEvaluacion).FirstOrDefault();
+            if (idEvaluacion > 0)
+            {
+                if (resultado == null)
+                {
+                    salida.status = false;
+                    salida.data = new { message = "Evaluacion no Encontrada" };
+                    return BadRequest(salida);
+                }
+                else
+                {
+                    salida.data = resultado;
+                    return Ok(salida);
+                }
+
+            }
+            else
+            {
+                salida.status = false;
+                salida.data = new { message = "No Evaluacion" };
+                return BadRequest(salida);
+            }
+        }
+
+
         /// <summary>
         /// recibe enum, nombre archivo y string de archivo base64
         /// [Enum]= PdfAcreditaciones = 0, PdfCotizaciones = 1, Img = 2, Brechas = 3

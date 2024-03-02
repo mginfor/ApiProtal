@@ -41,6 +41,7 @@ namespace api.Controllers
             return Ok(procesos);
         }
 
+      
 
         [HttpGet("[action]")]
         [ProducesResponseType(200, Type = typeof(ProcesoReportabilidadDTO))]
