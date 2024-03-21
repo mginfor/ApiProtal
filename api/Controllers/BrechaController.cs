@@ -152,11 +152,24 @@ namespace api.Controllers
         [HttpPost("postSubeArchivo")]
         public async Task<IActionResult> postSubeArchivo([FromBody] SharePointFileMap archivo)
         {
+            string relativePath = "";
+
             var salida = new GenericResponse();
-            string relativePath = fromBase64(archivo.attName, archivo.att);
-            var resultado = await FileServerHelper.UploadFileToSharePoint((FileServerHelper.Libreria)archivo.libreria, relativePath);
-            salida.data = new { archivoName = archivo.attName, archivoRuta = resultado + "/" + archivo.attName };
-            System.IO.File.Delete(relativePath);
+            try
+            {
+                relativePath = fromBase64(archivo.attName, archivo.att);
+                var resultado = await FileServerHelper.UploadFileToSharePoint((FileServerHelper.Libreria)archivo.libreria, relativePath);
+                salida.data = new { archivoName = archivo.attName, archivoRuta = resultado + "/" + archivo.attName };
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }finally {
+
+                System.IO.File.Delete(relativePath);
+            }
+
             return Ok(salida);
         }
 
@@ -212,6 +225,7 @@ namespace api.Controllers
         public IActionResult postAsignaLevantamiento([FromBody] LevantamientoMap levantamiento)
         {
             var salida = new GenericResponse();
+            DocumentoBrecha resultado = new();
             var documento = new DocumentoBrecha
             {
                 idEvaluacion = levantamiento.idEvaluacion,
@@ -220,25 +234,35 @@ namespace api.Controllers
                 entidadTratamiento = levantamiento.entidad,
                 ruta = levantamiento.rutaDocumento
             };
-
-            var resultado = _documentoBrechaService.saveDocumento(documento);
-            foreach (var item in levantamiento.brechas)
+            try
             {
-                switch (item.tipoBrecha)
+                resultado = _documentoBrechaService.saveDocumento(documento);
+                foreach (var item in levantamiento.brechas)
                 {
-                    case "PCT":
-                        _evaluacionPctService.addDocumentoInBrecha(item.idBrecha, resultado.id);
-                        break;
-                    case "PROT":
-                        _evaluacionProtService.addDocumentoInBrecha(item.idBrecha, resultado.id);
-                        break;
-                    case "EI":
-                        _evaluacionEiService.addDocumentoInBrecha(item.idBrecha, resultado.id);
-                        break;
-                    default:
-                        break;
+                    switch (item.tipoBrecha)
+                    {
+                        case "PCT":
+                            _evaluacionPctService.addDocumentoInBrecha(item.idBrecha, resultado.id);
+                            break;
+                        case "PROT":
+                            _evaluacionProtService.addDocumentoInBrecha(item.idBrecha, resultado.id);
+                            break;
+                        case "EI":
+                            _evaluacionEiService.addDocumentoInBrecha(item.idBrecha, resultado.id);
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")+"ERROR"+e.ToString());
+                return StatusCode(500,"Ha ocurrido un error, contacte a soporte MG");
+
+                throw;
+            }
+         
             salida.data = resultado;
             return Ok(salida);
         }

@@ -41,7 +41,14 @@ namespace api.Controllers
             return Ok(procesos);
         }
 
-      
+        //[HttpPost("[action]")]
+        //public IActionResult GetInformes(ProcesoEP proceso)
+        //{
+        //    var tratamientos = _procesoService.getProcesosByProcesoEP(proceso);
+        //    return Ok(tratamientos);
+        //}
+
+
 
         [HttpGet("[action]")]
         [ProducesResponseType(200, Type = typeof(ProcesoReportabilidadDTO))]

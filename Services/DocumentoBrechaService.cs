@@ -23,7 +23,8 @@ namespace Services
         public DocumentoBrecha saveDocumento(DocumentoBrecha documento)
         {
             this.create(documento);
-            return this.findByCondition(x => x.nombreDocumento == documento.nombreDocumento).FirstOrDefault();
+            return this.findByCondition(x => x.nombreDocumento == documento.nombreDocumento).OrderByDescending(x=> x.id)
+                .ToList().FirstOrDefault();
         }
 
     }
