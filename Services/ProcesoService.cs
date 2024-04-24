@@ -96,6 +96,54 @@ namespace Services
         }
 
 
+        public List<Proceso> getProcesosByProcesoTratamiento(ProcesoEP proceso)
+        {
+            var query = "select * from vw_portal_proceso_Tratamineto where idCliente = {0} order by fechaInforme desc ;";
+            var resultado = db.ProcesoPortal
+                .FromSqlRaw(query, Convert.ToInt32(proceso.idCliente)).ToList();
+
+
+            if (!string.IsNullOrEmpty(proceso.zonaFaena))
+            {
+                resultado = resultado.Where(x => x.zonaFaena == proceso.zonaFaena).ToList();
+            }
+            if (!string.IsNullOrEmpty(proceso.runCandidato))
+            {
+                resultado = resultado.Where(x => x.runCandidato == proceso.runCandidato).ToList();
+            }
+            if (!string.IsNullOrEmpty(proceso.dni_Pasaporte))
+            {
+                resultado = resultado.Where(x => x.dni_Pasaporte == proceso.dni_Pasaporte).ToList();
+            }
+            if (!string.IsNullOrEmpty(proceso.estado))
+            {
+                resultado = resultado.Where(x => x.estado == proceso.estado).ToList();
+            }
+            //revisar
+            if (!string.IsNullOrEmpty(proceso.resultado))
+            {
+                resultado = resultado.Where(x => x.idResultado == Convert.ToInt32(proceso.resultado)).ToList();
+            }
+            //revisar
+            if (!string.IsNullOrEmpty(proceso.vigencia))
+            {
+                resultado = resultado.Where(x => x.vigencia == proceso.vigencia).ToList();
+            }
+            if (!string.IsNullOrEmpty(proceso.fechaInicio))
+            {
+                resultado = resultado.Where(x => x.fechaInforme >= DateTime.Parse(proceso.fechaInicio)).ToList();
+            }
+            if (!string.IsNullOrEmpty(proceso.fechaFinal))
+            {
+                resultado = resultado.Where(x => x.fechaInforme <= DateTime.Parse(proceso.fechaFinal)).ToList();
+            }
+
+            return resultado.ToList();
+
+        }
+
+
+
         public List<BrechaPortal> getbrechasByHash(int idEvaluacion)
         {
             var query = "SELECT distinct " +
