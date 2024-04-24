@@ -118,6 +118,38 @@ namespace api.Controllers
                 return BadRequest(salida);
             }
         }
+
+
+
+        [Route("[action]/{idEvaluacion}")]
+        [HttpGet]
+        public IActionResult getDataProcesoByIdEvaluacionTrata(int idEvaluacion)
+        {
+            var salida = new GenericResponse();
+            var resultado = _procesoService.getProcesosByIdEvaluacionTratamiento(idEvaluacion).FirstOrDefault();
+            if (idEvaluacion > 0)
+            {
+                if (resultado == null)
+                {
+                    salida.status = false;
+                    salida.data = new { message = "Evaluacion no Encontrada" };
+                    return BadRequest(salida);
+                }
+                else
+                {
+                    salida.data = resultado;
+                    return Ok(salida);
+                }
+
+            }
+            else
+            {
+                salida.status = false;
+                salida.data = new { message = "No Evaluacion" };
+                return BadRequest(salida);
+            }
+        }
+
         /// <summary>
         /// recibe enum, nombre archivo y string de archivo base64
         /// [Enum]= PdfAcreditaciones = 0, PdfCotizaciones = 1, Img = 2, Brechas = 3
@@ -187,6 +219,7 @@ namespace api.Controllers
         public IActionResult postAsignaLevantamiento([FromBody] LevantamientoMap levantamiento)
         {
             var salida = new GenericResponse();
+            DocumentoBrecha resultado = new();
             var documento = new DocumentoBrecha
             {
                 idEvaluacion = levantamiento.idEvaluacion,
@@ -195,28 +228,39 @@ namespace api.Controllers
                 entidadTratamiento = levantamiento.entidad,
                 ruta = levantamiento.rutaDocumento
             };
-
-            var resultado = _documentoBrechaService.saveDocumento(documento);
-            foreach (var item in levantamiento.brechas)
+            try
             {
-                switch (item.tipoBrecha)
+                resultado = _documentoBrechaService.saveDocumento(documento);
+                foreach (var item in levantamiento.brechas)
                 {
-                    case "PCT":
-                        _evaluacionPctService.addDocumentoInBrecha(item.idBrecha, resultado.id);
-                        break;
-                    case "PROT":
-                        _evaluacionProtService.addDocumentoInBrecha(item.idBrecha, resultado.id);
-                        break;
-                    case "EI":
-                        _evaluacionEiService.addDocumentoInBrecha(item.idBrecha, resultado.id);
-                        break;
-                    default:
-                        break;
+                    switch (item.tipoBrecha)
+                    {
+                        case "PCT":
+                            _evaluacionPctService.addDocumentoInBrecha(item.idBrecha, resultado.id);
+                            break;
+                        case "PROT":
+                            _evaluacionProtService.addDocumentoInBrecha(item.idBrecha, resultado.id);
+                            break;
+                        case "EI":
+                            _evaluacionEiService.addDocumentoInBrecha(item.idBrecha, resultado.id);
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + "ERROR" + e.ToString());
+                return StatusCode(500, "Ha ocurrido un error, contacte a soporte MG");
+
+                throw;
+            }
+
             salida.data = resultado;
             return Ok(salida);
         }
+
 
         private string generatePdf(string html, int idEvaluacion)
         {

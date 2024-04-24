@@ -14,6 +14,7 @@ namespace Contracts
         public List<BrechaPortal> getbrechasByHash(int idEvaluacion);
         public List<ProcesoReportabilidad> GetProcesosReportabilidad();
         public List<Proceso> getProcesosByProcesoTratamiento(ProcesoEP proceso);
+        public List<Proceso> getProcesosByIdEvaluacionTratamiento(int idEvaluacion);
 
 
 

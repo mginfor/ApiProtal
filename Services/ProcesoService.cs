@@ -142,6 +142,15 @@ namespace Services
 
         }
 
+        public List<Proceso> getProcesosByIdEvaluacionTratamiento(int idEvaluacion)
+        {
+            var query = "select * from vw_portal_proceso_Tratamineto where idEvaluacion = {0};";
+
+            return db.ProcesoPortal
+                .FromSqlRaw(query, idEvaluacion)
+                .ToList();
+        }
+
 
 
         public List<BrechaPortal> getbrechasByHash(int idEvaluacion)
