@@ -49,6 +49,7 @@ namespace Persistence
 
             //
             modelBuilder.Entity<Candidato>().HasNoKey();
+
         }
         #region Otros
         public DbSet<Perfil> Perfiles { get; set; }
@@ -66,6 +67,8 @@ namespace Persistence
         public DbSet<Rol> Rol { get; set; }
         public DbSet<Permisos> Permisos { get; set; }
         public DbSet<RolPermisos> RolPermisos{ get; set; }
+
+        public DbSet<Tablero_brecha> Tablero_brecha { get; set; }
 
         #endregion
 
@@ -90,6 +93,8 @@ namespace Persistence
         public DbSet<LogLogin> LogLogins { get; set; }
 
         public DbSet<LogBloqueo> LogBloqueos { get; set; }
+
+        public DbSet<Log_Tablero> LogTablero { get; set; }
 
 
 

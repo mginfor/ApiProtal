@@ -21,6 +21,7 @@ using NLog;
 using System.IO;
 using api.Helpers;
 using Entities.EPModels;
+using Entities.DbModels;
 
 namespace api
 {
@@ -89,6 +90,7 @@ namespace api
 
             //
             services.AddScoped<ICandidatoService, CandidatoService>();
+            services.AddScoped<ILogTableroService,  LogTableroServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

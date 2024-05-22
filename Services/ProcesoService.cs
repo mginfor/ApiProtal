@@ -109,7 +109,7 @@ namespace Services
             }
             if (!string.IsNullOrEmpty(proceso.runCandidato))
             {
-                resultado = resultado.Where(x => x.runCandidato == proceso.runCandidato).ToList();
+                resultado = resultado.Where(x => x.runCandidato.ToUpper() == proceso.runCandidato).ToList();
             }
             if (!string.IsNullOrEmpty(proceso.dni_Pasaporte))
             {
@@ -156,21 +156,20 @@ namespace Services
         public List<BrechaPortal> getbrechasByHash(int idEvaluacion)
         {
             var query = "SELECT distinct " +
-                        "pp.GLS_BRECHA AS BRECHA, " +
+                        "epct.GLS_BRECHA AS BRECHA, " +
                         "if (epct.CRR_DOCUMENTOBRECHA > 0, 'SI', 'NO') as Brecha_Tratada, " +
-                        "tp.DESC_PERFIL as Prefil_Brecha " +
-                        "FROM tges_evaluacion ev, tges_eval_pct epct, tcnf_pool_preguntas pp, tcnf_det_instrumento di, tg_perfil tp " +
+                        "tp.DESC_PERFIL as Prefil_Brecha, " +
+                        "if (ev.FECHA_VIGENCIAINFORME >= now(), 'Vigente', 'No Vigente') as Estado_Vigencia " +
+                        "FROM tges_evaluacion ev " +
+                        "INNER JOIN tges_eval_pct epct ON ev.CRR_IDEVALUACION = epct.CRR_EVALUACION " +
+                        "INNER JOIN tg_perfil tp ON ev.CRR_PERFIL = tp.CRR_IDPERFIL " +
                         "WHERE ev.CRR_IDEVALUACION = epct.CRR_EVALUACION " +
                         "AND ev.FLG_PROCESO_ANULADO = 0 " +
-                        "AND ev.FLG_CIERRE_ADM = 0 " +
                         "AND ev.COD_ESTADO_PROCESO <> 0 " +
                         "AND epct.FLG_ANULADO = 0 " +
                         "AND epct.FLG_BRECHA <> 0 " +
-                        "AND ev.FECHA_VIGENCIAINFORME >= NOW() " +
                         "AND ev.CRR_IDEVALUACION = {0} " +
                         "and ev.CRR_PERFIL = tp.CRR_IDPERFIL " +
-                        "AND di.CRR_IDDETINSTRUMENTO = epct.CRR_DETINSTRUMENTO " +
-                        "AND pp.CRR_IDPOOLPREGUNTA = di.CRR_IDPOOLPREGUNTA " +
                         "ORDER BY 1;";
 
             return db.BrechaPortal

@@ -11,5 +11,6 @@ namespace Entities.DbModels
         public string Brecha { get; set; }
         public string Brecha_Tratada { get; set; }
         public string Prefil_Brecha { get; set; }
+        public string Estado_Vigencia { get; set; }
     }
 }
