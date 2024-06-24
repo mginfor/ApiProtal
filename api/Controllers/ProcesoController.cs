@@ -62,6 +62,7 @@ namespace api.Controllers
                     ResultadoChilevalora = item.COD_RESULTADO == 1 ? "Competente" : "No Competente",
                     Perfil = item.DESC_PERFIL,
                     Rut = item.RUN_CANDIDATO.ToString("N0") + "- " + item.DIG_CANDIDATO,
+                    RutEvaluador = item.RUN_EVALUADOR + "- " + item.DIG_EVALUADOR,
                     Auditoria = item.FECHA_AUDITORIA,
                     Elegibilidad = item.FECHA_ELEGIBILIDAD,
                     FECHAINICIO = item.FECHA_INICIO,
