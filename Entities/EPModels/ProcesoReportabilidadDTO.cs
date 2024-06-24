@@ -14,6 +14,8 @@ namespace Entities.EPModels
             public string Rut { get; set; }
             public string Perfil { get; set; }
             public string Evaluador { get; set; }
+
+            public string? RutEvaluador { get; set; }
             public DateTime? Socializacion { get; set; }
             public DateTime? Elegibilidad { get; set; }
             public DateTime? PruebaTeorica { get; set; }

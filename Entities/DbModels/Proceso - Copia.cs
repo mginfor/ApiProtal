@@ -34,6 +34,7 @@ namespace Entities.DbModels
         public int idCliente { get; set; }
         public string equipo { get; set; }
         public string modelo { get; set; }
+        public int? anos { get; set; }
         public string perfil { get; set; }
         public int? idEvaluacion { get; set; }
         public string zonaFaena { get; set; }

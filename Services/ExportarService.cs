@@ -158,7 +158,7 @@ namespace Services
                     {
 
 
-                        if (dtBrechasPorPerfil.Rows[contBrecha]["CRR_RUBRICA"].ToString() == "1")
+                        if (dtBrechasPorPerfil.Columns.Contains("CRR_RUBRICA") && dtBrechasPorPerfil.Rows[contBrecha]["CRR_RUBRICA"].ToString() == "1")
                         {
                             if (cell.Value.ToString() == dtBrechasPorPerfil.Rows[contBrecha]["GLS_BRECHA"].ToString())
                             {
@@ -630,7 +630,8 @@ namespace Services
                 string query = @"select distinct
                                  tdi.GLS_BRECHA,
                                  tdi.CRR_IDDETINSTRUMENTO,
-                                 tdi.FLG_COMP_COND_CRIT 
+                                 tdi.FLG_COMP_COND_CRIT,
+                                 te.CRR_RUBRICA
                                  from tges_evaluacion te
                                  join tges_eval_pct tep on (te.CRR_IDEVALUACION = tep.CRR_EVALUACION)
                                  join tcnf_det_instrumento tdi on (tdi.CRR_IDDETINSTRUMENTO = tep.CRR_DETINSTRUMENTO)

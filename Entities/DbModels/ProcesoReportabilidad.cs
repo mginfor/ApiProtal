@@ -13,11 +13,12 @@ namespace Entities.DbModels
         public string NOMBRE_CANDIDATO { get; set; }
         public int RUN_CANDIDATO { get; set; }
         public string DIG_CANDIDATO { get; set; }
+        public int? RUN_EVALUADOR { get; set; }
+        public string DIG_EVALUADOR { get; set; }
         public string DESC_PERFIL { get; set; }
         public string NOMBRE_EVALUADOR { get; set; }
         public string PORCENTAJE_AVANCE { get; set; }
         public int? COD_RESULTADO { get; set; }
-        public DateTime? FECHA_SOCIALIZACION { get; set; }
         public DateTime? FECHA_ELEGIBILIDAD { get; set; }
         public DateTime? FECHA_REAL_PROT { get; set; }
         public DateTime? FECHA_REAL_PROT2 { get; set; }

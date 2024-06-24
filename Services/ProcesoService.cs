@@ -9,6 +9,9 @@ using Entities.DbModels;
 using System.Threading.Tasks;
 using Entities.EPModels;
 using System.Diagnostics;
+using Microsoft.IdentityModel.Tokens;
+using System.Data.SqlClient;
+using DocumentFormat.OpenXml.InkML;
 
 namespace Services
 {
@@ -182,10 +185,46 @@ namespace Services
             var query = "select * from vw_reportabilidad;";
             var resultado = db.ProcesoReportabilidadPortal
                 .FromSqlRaw(query).ToList();
-       
-            return CalcularPorcentajeAvance(resultado) ;
+
+            return CalcularPorcentajeAvance(resultado);
 
         }
+
+
+        public List<ProcesoReportabilidad> GetProcesosReportabilidadUltramar2()
+            {
+            var query = "select * from vw_reportabilidadultraport;";
+            var resultado = db.ProcesoReportabilidadPortal
+                .FromSqlRaw(query).ToList();
+
+            return CalcularPorcentajeAvance(resultado);
+
+        }
+
+        public List<ProcesoReportabilidad> GetProcesosReportabilidadUltramar(int crrProyectoContrato)
+        {
+            var resultado = db.ProcesoReportabilidadPortal
+                .FromSqlRaw("CALL SP_ReportabilidadUltraport({0})", crrProyectoContrato)
+                .ToList();
+
+            return CalcularPorcentajeAvance(resultado);
+        }
+
+
+        public List<ProyectosyContratos> GetDetallesClienteProyecto(int crrIdCliente)
+        {
+            var resultado = db.ProyectosyContratos
+                .FromSqlRaw("CALL SP_ObtenerPoryectoContrato({0})", crrIdCliente)
+                .ToList();
+
+            return resultado;
+        }
+
+
+
+
+
+
         private List<ProcesoReportabilidad> CalcularPorcentajeAvance(List<ProcesoReportabilidad> procesos)
         {
             foreach (var item in procesos)
@@ -198,13 +237,10 @@ namespace Services
         private string CalcularPorcentajeAvance(ProcesoReportabilidad proceso)
         {
             int avance = 0;
-            if (proceso.FECHA_SOCIALIZACION != null)
-            {
-                avance += 10;
-            }
+        
             if (proceso.FECHA_ELEGIBILIDAD != null)
             {
-                avance += 10;
+                avance += 30;
             }
             if (proceso.FECHA_REAL_PCT != null)
             {
@@ -234,7 +270,7 @@ namespace Services
             {
                 avance += 10;
             }
-            if (proceso.FECHA_TERMINO != null)
+            if (proceso.COD_RESULTADO == 1)
             {
                 avance += 10;
             }
