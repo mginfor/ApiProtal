@@ -20,6 +20,9 @@ namespace Contracts
        public List<Proceso> getProcesosByProcesoTratamiento(ProcesoEP proceso);
         public List<Proceso> getProcesosByIdEvaluacionTratamiento(int idEvaluacion);
 
+        public List<ProcesoInformeValidador> getProcesosByIdInformeNuevo(string idInforme, string runCandidato, int idCliente);
+
+
 
 
 

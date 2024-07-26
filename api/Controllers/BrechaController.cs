@@ -160,11 +160,24 @@ namespace api.Controllers
         public async Task<IActionResult> postSubeArchivo([FromBody] SharePointFileMap archivo)
         {
             var salida = new GenericResponse();
-            string relativePath = fromBase64(archivo.attName, archivo.att);
-            var resultado = await FileServerHelper.UploadFileToSharePoint((FileServerHelper.Libreria)archivo.libreria, relativePath);
-            salida.data = new { archivoName = archivo.attName, archivoRuta = resultado + "/" + archivo.attName };
-            System.IO.File.Delete(relativePath);
-            return Ok(salida);
+            try
+            {
+                string relativePath = fromBase64(archivo.attName, archivo.att);
+                var resultado = await FileServerHelper.UploadFileToSharePoint((FileServerHelper.Libreria)archivo.libreria, relativePath);
+                salida.data = new { archivoName = archivo.attName, archivoRuta = resultado + "/" + archivo.attName };
+                System.IO.File.Delete(relativePath);
+                return Ok(salida);
+            }
+            catch (ArgumentException ex)
+            {
+         
+                return BadRequest(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                // Maneja otros errores
+                return StatusCode(500, new { error = "Ocurrió un error inesperado.", details = ex.Message });
+            }
         }
 
         /// <summary>
@@ -328,6 +341,12 @@ namespace api.Controllers
         }
         private string fromBase64(string nombre, string att)
         {
+
+            if (!validarPdf.IsPdf(nombre))
+            {
+                throw new ArgumentException("Solo se permiten archivos PDF.");
+            }
+
             var ruta = @"Plantillas\" + nombre;
             var strParse = "";
 

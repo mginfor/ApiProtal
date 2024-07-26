@@ -54,6 +54,9 @@ namespace Entities.DbModels
         [Column("CRR_IDROL")]
         public int idRol { get; set; }
 
+        [Column("FECHA_CODIGO")]
+        public DateTime? UltimoEnvioCodigo { get; set; }
+
         //FKs
         [ForeignKey("idCliente")]
         public Cliente cliente { get; set; }

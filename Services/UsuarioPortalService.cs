@@ -37,9 +37,24 @@ namespace Services
                                        , "cliente")
                                       .ToList()
                                       .FirstOrDefault();
+
+            
+
             if (user != null)
             {
+       
+                var ahora = DateTime.UtcNow;
+                if(user.UltimoEnvioCodigo.HasValue && ahora.Subtract(user.UltimoEnvioCodigo.Value).TotalMinutes < 2)
+                {
+                   
+                    return null;
+           
+                };
+
+
+
                 user.clave = generarCodigo();
+                user.UltimoEnvioCodigo = ahora;
                 update(user);
             }
             return user;
@@ -60,6 +75,9 @@ namespace Services
                                       .ToList()
                                       .FirstOrDefault();
             //  usuario y empresa invalido
+
+           
+
             if (user == null)
             {
              
@@ -121,9 +139,9 @@ namespace Services
                 .Where(x => x.rol.id == user.idRol)
                 .Select(x => x.permiso).ToList();
             // authentication successful so generate jwt token
-            var token = generateJwtToken(user, out var fechaExpiracion);
+            var token = generateJwtToken(user, permisos, out var fechaExpiracion); 
 
-          
+
             var logLogin = new LogLogin
             {
                 id_usuario = user.id,
@@ -153,6 +171,32 @@ namespace Services
                 Expires = DateTime.UtcNow.AddHours(8),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
+
+        private string generateJwtToken(UsuarioPortal user, List<Permisos> permisos, out DateTime fechaExpiracion)
+        {
+            fechaExpiracion = DateTime.UtcNow.AddHours(8);
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+
+            var claims = new List<Claim>
+            {
+              new Claim("id", user.id.ToString()),
+              new Claim(ClaimTypes.Role, user.rol.nombreRol)
+            };
+
+            // Agregar permisos como claims
+            claims.AddRange(permisos.Select(p => new Claim("permission", p.NombrePermiso)));
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = fechaExpiracion,
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }

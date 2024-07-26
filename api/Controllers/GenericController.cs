@@ -6,12 +6,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json;
+using api.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace api.Controllers
 {
+    //[Authorize]
     [Route("[controller]")]
     [ApiController]
     public class GenericController : ControllerBase
@@ -39,6 +42,7 @@ namespace api.Controllers
 
         [Route("[action]/{folio}")]
         [HttpGet]
+        [Authorize(Policy = "GestionInformes")]
         public IActionResult getDataInformeByFolio(int folio)
         {
             var salida = new GenericResponse();
@@ -159,6 +163,39 @@ namespace api.Controllers
 
 
 
+        }
+
+
+
+
+        [Route("[action]/{folio}/{run}/{cliente}")]
+        [HttpGet]
+        public IActionResult getDataInformeByFolio(string folio, string run, int cliente)
+        {
+            var salida = new GenericResponse();
+
+            try
+            {
+                var resultado = _procesoService.getProcesosByIdInformeNuevo(folio, run, cliente).FirstOrDefault();
+
+                if (resultado == null)
+                {
+                    salida.status = false;
+                    salida.data = new { message = "Folio no Encontrado" };
+                    return BadRequest(salida);
+                }
+                else
+                {
+                    salida.data = resultado;
+                    return Ok(salida);
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                salida.status = false;
+                salida.data = new { message = ex.Message };
+                return BadRequest(salida);
+            }
         }
 
 

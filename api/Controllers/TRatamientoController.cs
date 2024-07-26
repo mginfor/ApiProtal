@@ -1,10 +1,11 @@
-﻿using Contracts;
+﻿using api.Helpers;
+using Contracts;
 using Entities.EPModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
-    //[Authorize]
+
     [Route("[controller]/[action]")]
     [ApiController]
     public class tratamientoController : ControllerBase

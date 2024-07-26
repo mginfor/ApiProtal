@@ -37,6 +37,7 @@ namespace Persistence
 
             //Portal
             modelBuilder.Entity<ProcesoInforme>().HasNoKey();
+            modelBuilder.Entity<ProcesoInformeValidador>().HasNoKey();
             modelBuilder.Entity<Proceso>().HasNoKey();
             modelBuilder.Entity<ProcesoReportabilidad>().HasNoKey();
             modelBuilder.Entity<ProyectosyContratos>().HasNoKey();
@@ -79,6 +80,8 @@ namespace Persistence
         public DbSet<Proceso> ProcesoPortal { get; set; }
 
         public DbSet<ProcesoInforme> ProcesoPortalInforme { get; set; }
+
+        public DbSet<ProcesoInformeValidador> ProcesoPortalInformeValidador { get; set; }
         public DbSet<ProcesoReportabilidad> ProcesoReportabilidadPortal { get; set; }
 
         public DbSet<ProyectosyContratos> ProyectosyContratos { get; set; }

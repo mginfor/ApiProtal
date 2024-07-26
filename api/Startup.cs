@@ -22,6 +22,10 @@ using System.IO;
 using api.Helpers;
 using Entities.EPModels;
 using Entities.DbModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Routing;
+using AspNetCoreRateLimit;
+using api.Extensions;
 
 namespace api
 {
@@ -91,7 +95,28 @@ namespace api
             //
             services.AddScoped<ICandidatoService, CandidatoService>();
             services.AddScoped<ILogTableroService,  LogTableroServices>();
+
+            // Configuración de autorización
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("GestionInformesPolicy", policy =>
+                    policy.Requirements.Add(new PermissionRequirement("GestionInformes")));
+                options.AddPolicy("TableroGestionPolicy", policy =>
+                    policy.Requirements.Add(new PermissionRequirement("TableroGestion")));
+                options.AddPolicy("TratamientoBrechaPolicy", policy =>
+                    policy.Requirements.Add(new PermissionRequirement("TratamientoBrecha")));
+                options.AddPolicy("DescargasPolicy", policy =>
+                    policy.Requirements.Add(new PermissionRequirement("Descargas")));
+            });
+
+            // Registrar manejadores de autorización
+            services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
+            services.AddSingleton<IAuthorizationHandler, RoleHandler>();
+            services.ConfigureRateLimitiong();
         }
+
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -102,6 +127,32 @@ namespace api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "api v1"));
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+
+
+            app.Use(async (context, next) =>
+            {
+                // Eliminar encabezados específicos
+                context.Response.OnStarting(() =>
+                {
+                    context.Response.Headers.Remove("X-Powered-By");
+                    context.Response.Headers.Remove("X-AspNet-Version");
+                    // Puedes agregar más encabezados a eliminar según sea necesario
+                    return Task.CompletedTask;
+                });
+
+                // Agregar encabezados de seguridad
+                context.Response.Headers["X-Content-Type-Options"] = "nosniff";
+                context.Response.Headers["X-Frame-Options"] = "DENY";
+                context.Response.Headers["X-XSS-Protection"] = "1; mode=block";
+                context.Response.Headers["Referrer-Policy"] = "no-referrer-when-downgrade";
+
+                await next();
+            });
 
             app.UseCors(builder => builder
                .AllowAnyOrigin()
@@ -110,19 +161,10 @@ namespace api
 
            );
 
-            
-            //app.Use(async (context, next) =>
-            //{
-                
-            //    context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
-            //    context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
-            //    context.Response.Headers.Add("Referrer-Policy", "no-referrer-when-downgrade");
-
-            //    await next();
-            //});
+          
 
 
-
+            app.UseIpRateLimiting();
 
             app.UseMiddleware<JwtMiddleware>();
 

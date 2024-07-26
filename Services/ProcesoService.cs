@@ -33,6 +33,21 @@ namespace Services
                 .ToList();
         }
 
+        public List<ProcesoInformeValidador> getProcesosByIdInformeNuevo(string idInforme, string runCandidato, int idCliente)
+        {
+            if (string.IsNullOrEmpty(idInforme) || string.IsNullOrEmpty(runCandidato) || idCliente <= 0)
+            {
+                throw new ArgumentException("Todos los parámetros son obligatorios");
+            }
+
+            var query = "select * from vw_portal_proceso_informe_validador where idInforme = {0} and runCandidato = {1} and idCliente = {2}";
+
+            return db.ProcesoPortalInformeValidador
+                .FromSqlRaw(query, idInforme, runCandidato, idCliente)
+                .ToList();
+        }
+
+
         public List<Proceso> getProcesosByIdEvaluacion(int idEvaluacion)
         {
             var query = "select * from vw_portal_proceso where idEvaluacion = {0};";

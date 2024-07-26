@@ -41,8 +41,6 @@ namespace api.Controllers
         }
 
 
-        // GET: api/<UsuarioController>
-        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {

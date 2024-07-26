@@ -162,7 +162,7 @@ namespace api.Controllers
 
 
 
-        [HttpGet("getlogin")]
+        [HttpGet("Validarlogin")]
         public IActionResult GetLogin(string token)
         {
             var salida = new GenericResponse();
