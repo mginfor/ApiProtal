@@ -3,6 +3,7 @@ using Contracts;
 using Contracts.Generic;
 using Entities.DbModels;
 using Entities.EPModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -161,7 +162,7 @@ namespace api.Controllers
         }
 
 
-
+        [Authorize]
         [HttpGet("Validarlogin")]
         public IActionResult GetLogin(string token)
         {

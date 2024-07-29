@@ -1,5 +1,6 @@
 ﻿using Email;
 using Entities.EPModels;
+using MailKit;
 using MailKit.Security;
 using Microsoft.Extensions.Configuration;
 using MimeKit;

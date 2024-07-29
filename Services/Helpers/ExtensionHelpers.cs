@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace api.Helpers
 {
-    static class ExtensionHelpers
+    public static class ExtensionHelpers
     {
         public static IEnumerable<TSource> DistinctBy<TSource, TKey>
         (this IEnumerable<TSource> source, Func<TSource, TKey> keySelector)

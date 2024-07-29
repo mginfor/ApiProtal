@@ -7,6 +7,7 @@ using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Kernel.Utils;
 using iText.Layout;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services;
@@ -156,6 +157,8 @@ namespace api.Controllers
         /// </summary>
         /// <param name="archivo"></param>
         /// <returns></returns>
+        [Authorize(Roles = EnumRol.Admin + "," + EnumRol.Tratamiento + "," + EnumRol.DescargaTratamiento) ]
+
         [HttpPost("postSubeArchivo")]
         public async Task<IActionResult> postSubeArchivo([FromBody] SharePointFileMap archivo)
         {

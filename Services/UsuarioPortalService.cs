@@ -1,4 +1,5 @@
-﻿using Contracts;
+﻿using api.Helpers;
+using Contracts;
 using DocumentFormat.OpenXml.Spreadsheet;
 using Entities.DbModels;
 using Entities.EPModels;
@@ -14,6 +15,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+
+
+
 namespace Services
 {
     public class UsuarioPortalService : RepositoryBase<UsuarioPortal>, IUsuarioPortalService
@@ -21,9 +25,11 @@ namespace Services
         private readonly AppSettings _appSettings;
         private readonly RepositoryContext _repositoryContext;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly JWT _jwt;
 
-        public UsuarioPortalService(RepositoryContext repositoryContext, IOptions<AppSettings> appSettings, IHttpContextAccessor httpContextAccessor) : base(repositoryContext)
+        public UsuarioPortalService(RepositoryContext repositoryContext, IOptions<AppSettings> appSettings, IHttpContextAccessor httpContextAccessor, JWT jwt) : base(repositoryContext)
         {
+            _jwt = jwt;
             _appSettings = appSettings.Value;
             _repositoryContext = repositoryContext;
             _httpContextAccessor = httpContextAccessor;
@@ -139,7 +145,11 @@ namespace Services
                 .Where(x => x.rol.id == user.idRol)
                 .Select(x => x.permiso).ToList();
             // authentication successful so generate jwt token
-            var token = generateJwtToken(user, permisos, out var fechaExpiracion); 
+
+            JwtSecurityToken jwtSecurityToken = CreateJwtToken(user);
+            var token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+
+            //var token = generateJwtToken(user, permisos, out var fechaExpiracion); 
 
 
             var logLogin = new LogLogin
@@ -149,7 +159,7 @@ namespace Services
                 cargoUsuario = user.cargo,
                 token = token,
                 fecha_creacion = DateTime.Now,
-                fecha_expiracion = fechaExpiracion
+
                
             };
 
@@ -158,6 +168,38 @@ namespace Services
             this._RepositoryContext.SaveChanges();
             return new AuthenticateResponsePortal(user, token, permisos); 
         }
+
+
+        private JwtSecurityToken CreateJwtToken(UsuarioPortal usuario)
+        {
+            var rol = usuario.rol;
+            var rolesClaims = new List<Claim>
+                {
+                    new Claim("roles", rol.nombreRol)
+                };
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Email,usuario.correo),
+                new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
+                new Claim("uid",usuario.id.ToString())
+            }.Union(rolesClaims);
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.Key));
+            var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
+            var jwtSecurityToken = new JwtSecurityToken(
+                issuer: _jwt.Issuer,
+                audience: _jwt.Audience,
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(_jwt.DurationInMinutes),
+                signingCredentials: signingCredentials);
+            return jwtSecurityToken;
+
+        }
+
+
+      
+
+
+
 
         private string generateJwtToken(UsuarioPortal user, out DateTime fechaExpiracion)
         {
@@ -171,32 +213,6 @@ namespace Services
                 Expires = DateTime.UtcNow.AddHours(8),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
-        }
-
-        private string generateJwtToken(UsuarioPortal user, List<Permisos> permisos, out DateTime fechaExpiracion)
-        {
-            fechaExpiracion = DateTime.UtcNow.AddHours(8);
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-
-            var claims = new List<Claim>
-            {
-              new Claim("id", user.id.ToString()),
-              new Claim(ClaimTypes.Role, user.rol.nombreRol)
-            };
-
-            // Agregar permisos como claims
-            claims.AddRange(permisos.Select(p => new Claim("permission", p.NombrePermiso)));
-
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = fechaExpiracion,
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }

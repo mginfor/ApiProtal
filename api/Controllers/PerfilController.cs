@@ -9,6 +9,8 @@ using System.Text.Json;
 using Entities.DbModels;
 using Services;
 using api.Helpers;
+using SystemDistinctBy = System.Linq.Enumerable;
+using CustomDistinctBy = api.Helpers.ExtensionHelpers;
 
 namespace api.Controllers
 {
@@ -67,7 +69,7 @@ namespace api.Controllers
             var perfilesEp = new List<PerfilEP>();
             var sectores = _sectorService.getAllSectores();
             var evals = _evaluacionService.getAllEvaluationsByCliente(idCliente);
-            var idPerfilesConEvaluacion = evals.DistinctBy(x =>x.idPerfil).Select(x => x.idPerfil).ToList();
+            var idPerfilesConEvaluacion = CustomDistinctBy.DistinctBy(evals, x => x.idPerfil).Select(x => x.idPerfil).ToList();
             var perfilesFiltrados = perfiles.Where(x => idPerfilesConEvaluacion.Any(y => y == x.id));
             var sectoresFiltrados = sectores.Where(x => perfilesFiltrados.Any(y => (int)y.codigoSector == x.id));
 

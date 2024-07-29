@@ -26,6 +26,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Routing;
 using AspNetCoreRateLimit;
 using api.Extensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace api
 {
@@ -35,6 +38,8 @@ namespace api
         {
             LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             Configuration = configuration;
+
+
         }
 
         public IConfiguration Configuration { get; }
@@ -42,6 +47,10 @@ namespace api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+
+
             services.AddCors();
             services.AddHealthChecks();
             services.AddControllers();
@@ -95,24 +104,15 @@ namespace api
             //
             services.AddScoped<ICandidatoService, CandidatoService>();
             services.AddScoped<ILogTableroService,  LogTableroServices>();
+            services.AddScoped<JWT, JWT>();
 
-            // Configuración de autorización
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("GestionInformesPolicy", policy =>
-                    policy.Requirements.Add(new PermissionRequirement("GestionInformes")));
-                options.AddPolicy("TableroGestionPolicy", policy =>
-                    policy.Requirements.Add(new PermissionRequirement("TableroGestion")));
-                options.AddPolicy("TratamientoBrechaPolicy", policy =>
-                    policy.Requirements.Add(new PermissionRequirement("TratamientoBrecha")));
-                options.AddPolicy("DescargasPolicy", policy =>
-                    policy.Requirements.Add(new PermissionRequirement("Descargas")));
-            });
+            // Aquí se pasa la instancia de IConfiguration a AddJwt
+            services.AddJwt(Configuration);
 
-            // Registrar manejadores de autorización
-            services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
-            services.AddSingleton<IAuthorizationHandler, RoleHandler>();
-            services.ConfigureRateLimitiong();
+        // Registrar manejadores de autorización
+        services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
+        services.AddSingleton<IAuthorizationHandler, RoleHandler>();
+        services.ConfigureRateLimitiong();
         }
 
 
@@ -171,6 +171,8 @@ namespace api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

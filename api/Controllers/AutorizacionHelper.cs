@@ -15,4 +15,17 @@ namespace api.Helpers
         public const string TratamientoBrecha = "TratamientoBrecha";
         public const string Descargas = "Descargas";
     }
+
+    public static class EnumRol
+    {
+        public const string Admin = "Admin";
+        public const string Descarga = "Descarga";
+        public const string Tratamiento = "Tratamiento";
+        public const string GestionInformes = "Tablero";
+        public const string DescargaInformes = "DescargaInformes";
+        public const string InformeDescargaTablero = "InformeDescargaTablero";
+        public const string DescargaTratamiento = "DescargaTratamiento";
+   
+
+    }
 }
