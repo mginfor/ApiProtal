@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.DbModels
 {
-    public class Grafico_Brecha
+    public class Grafico_Brechas
     {
         public string perfil { get; set; }
 

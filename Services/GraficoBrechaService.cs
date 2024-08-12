@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Services
 {
-    public class GraficoBrechaService : RepositoryBase<Grafico_Brecha>, IGraficoBrechaService
+    public class GraficoBrechaService : RepositoryBase<Grafico_Brechas>, IGraficoBrechaService
     {
 
         private RepositoryContext db;
@@ -18,7 +18,7 @@ namespace Services
             db = new RepositoryContext();
         }
 
-        public List<Grafico_Brecha> getCantidadOperadoresBrechasPerfil(int idCliente)
+        public List<Grafico_Brechas> getCantidadOperadoresBrechasPerfil(int idCliente)
         {
             var query = "SELECT " +
                         "Desc_Perfil as PERFIL, " +

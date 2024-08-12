@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -56,6 +58,8 @@ namespace Entities.DbModels
 
         [Column("FECHA_CODIGO")]
         public DateTime? UltimoEnvioCodigo { get; set; }
+
+        public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
 
         //FKs
         [ForeignKey("idCliente")]

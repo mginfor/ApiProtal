@@ -1,4 +1,5 @@
 ﻿using Entities.DbModels;
+using Entities.EPModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence
@@ -36,12 +37,13 @@ namespace Persistence
             modelBuilder.Entity<BrechaPortal>().HasNoKey();
 
             //Portal
+            modelBuilder.Entity<DatosUsuarios>().HasNoKey();
             modelBuilder.Entity<ProcesoInforme>().HasNoKey();
             modelBuilder.Entity<ProcesoInformeValidador>().HasNoKey();
             modelBuilder.Entity<Proceso>().HasNoKey();
             modelBuilder.Entity<ProcesoReportabilidad>().HasNoKey();
             modelBuilder.Entity<ProyectosyContratos>().HasNoKey();
-            modelBuilder.Entity<Grafico_Brecha>().HasNoKey();
+            modelBuilder.Entity<Grafico_Brechas>().HasNoKey();
             modelBuilder.Entity<Tablero_brecha>().HasNoKey();
 
             //Exportar
@@ -51,6 +53,7 @@ namespace Persistence
 
             //
             modelBuilder.Entity<Candidato>().HasNoKey();
+        
 
         }
         #region Otros
@@ -87,7 +90,7 @@ namespace Persistence
         public DbSet<ProyectosyContratos> ProyectosyContratos { get; set; }
         public DbSet<BrechaPortal> BrechaPortal { get; set; }
         public DbSet<ServiciosVinculados> ServiciosVinculados { get; set; }
-        public DbSet<Grafico_Brecha> graficoBrecha { get; set; }
+        public DbSet<Grafico_Brechas> graficoBrecha { get; set; }
         public DbSet<Tablero_brecha> tablero_Brechas { get; set; }
 
         public DbSet<EvaluacionPCT> EvaluacionPCT { get; set; }
@@ -98,9 +101,13 @@ namespace Persistence
         // token
         public DbSet<LogLogin> LogLogins { get; set; }
 
+        public DbSet<LogToken> LogLoginToken { get; set; }
+
         public DbSet<LogBloqueo> LogBloqueos { get; set; }
 
         public DbSet<Log_Tablero> LogTablero { get; set; }
+
+        public DbSet<RefreshToken> RefreshToken { get; set; }
 
 
 

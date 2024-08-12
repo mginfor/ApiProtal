@@ -121,7 +121,7 @@ namespace api.Controllers
         }
 
 
-
+        [Authorize(Roles = EnumRol.Admin + "," + EnumRol.Tratamiento + "," + EnumRol.DescargaTratamiento)]
         [Route("[action]/{idEvaluacion}")]
         [HttpGet]
         public IActionResult getDataProcesoByIdEvaluacionTrata(int idEvaluacion)

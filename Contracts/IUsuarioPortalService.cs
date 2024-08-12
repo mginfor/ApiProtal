@@ -2,6 +2,7 @@
 using Entities.DbModels;
 using Entities.EPModels;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Contracts
 {
@@ -14,6 +15,15 @@ namespace Contracts
         public List<UsuarioPortal> GetAllUsuario();
         public bool EstaAutorizado(int idUsuario, string constantePermisos);
         public AuthenticateResponsePortal GetUserByToken(string token);
+
+        Task<UsuarioPortal> GetByRefreshTokenAsync(string refreshToken);
+
+        Task<DatosUsuarios> LoginAsync(AuthenticateRequestPortal model);
+
+        Task<DatosUsuarios> Refreshtoken(string refreshToken);
+
+
+        Task<DatosUsuarios> ValidateTokenAsync(string token);
 
 
     }

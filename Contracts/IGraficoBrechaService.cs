@@ -8,9 +8,9 @@ using Entities.DbModels;
 
 namespace Contracts
 {
-    public interface IGraficoBrechaService : IRepositoryBase<Grafico_Brecha>
+    public interface IGraficoBrechaService : IRepositoryBase<Grafico_Brechas>
     {
 
-        List<Grafico_Brecha> getCantidadOperadoresBrechasPerfil(int idCliente);
+        List<Grafico_Brechas> getCantidadOperadoresBrechasPerfil(int idCliente);
     }
 }

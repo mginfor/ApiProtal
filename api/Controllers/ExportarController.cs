@@ -2,6 +2,7 @@
 using Contracts;
 using Entities.DbModels;
 using Entities.EPModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -66,25 +67,15 @@ namespace api.Controllers
         }
 
 
-     
 
 
+        [Authorize(Roles = EnumRol.Admin + "," + EnumRol.Descarga + "," + EnumRol.DescargaTratamiento + "," + EnumRol.InformeDescargaTablero + "," + EnumRol.DescargaInformes)]
         [Route("[action]")]
         [HttpPost]
 
         public IActionResult getExcelBrechaCandidatos([FromBody] ExcelBrechaCandidatos excelBrechaCandidatos)
         {
           
-            //AutorizacionHelper autorizacionHelper = new AutorizacionHelper();
-
-            //bool isAuthorized = autorizacionHelper.EstaAutorizado(excelBrechaCandidatos.idUsuario, AutorizacionHelper.Roles.Descarga);
-
-            //if (!isAuthorized)
-            //{
-               
-            //    return StatusCode(403, "No tiene permiso.");
-            //}
-
             excelBrechaCandidatos.idCliente = _usuarioPortalService.GetById(excelBrechaCandidatos.idUsuario).idCliente;
             var libro = _exportarService.GenerarExcelBrechasCandidatos(excelBrechaCandidatos);
 

@@ -1,20 +1,26 @@
 ﻿using api.Helpers;
 using Contracts;
+using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Spreadsheet;
 using Entities.DbModels;
 using Entities.EPModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.Graph.Models;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.SharePoint.Client;
 using Persistence;
 using Services.Generic;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 
 
 
@@ -26,13 +32,19 @@ namespace Services
         private readonly RepositoryContext _repositoryContext;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly JWT _jwt;
+        private IServicioVinculadoService _servicioVinculadoService;
+        private IClienteService _clienteService;
 
-        public UsuarioPortalService(RepositoryContext repositoryContext, IOptions<AppSettings> appSettings, IHttpContextAccessor httpContextAccessor, JWT jwt) : base(repositoryContext)
+        public UsuarioPortalService(RepositoryContext repositoryContext, IOptions<AppSettings> appSettings, IHttpContextAccessor httpContextAccessor, JWT jwt, IServicioVinculadoService servicioVinculadoService,
+            IClienteService clienteService) : base(repositoryContext)
         {
             _jwt = jwt;
             _appSettings = appSettings.Value;
             _repositoryContext = repositoryContext;
             _httpContextAccessor = httpContextAccessor;
+            _servicioVinculadoService = servicioVinculadoService;
+            _clienteService = clienteService;
+
         }
 
 
@@ -48,7 +60,7 @@ namespace Services
 
             if (user != null)
             {
-       
+    
                 var ahora = DateTime.UtcNow;
                 if(user.UltimoEnvioCodigo.HasValue && ahora.Subtract(user.UltimoEnvioCodigo.Value).TotalMinutes < 2)
                 {
@@ -56,8 +68,6 @@ namespace Services
                     return null;
            
                 };
-
-
 
                 user.clave = generarCodigo();
                 user.UltimoEnvioCodigo = ahora;
@@ -68,8 +78,169 @@ namespace Services
 
 
 
+        public async Task<DatosUsuarios> LoginAsync(AuthenticateRequestPortal model)
+        {
+            var ipAddress = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
+            DatosUsuarios datosUsuarioDto = new DatosUsuarios();
+
+            // Buscar usuario basado en rut y clave
+            var user = await _repositoryContext.UsuarioPortals
+                             .Include(u => u.rol)
+                             .Include(u => u.cliente)
+                             .Include(u => u.RefreshTokens)
+                              .FirstOrDefaultAsync(x => x.run.ToUpper() == model.RutUsuario.ToUpper() &&
+                               (x.cliente.run.ToString() + x.cliente.digito).ToUpper() == model.RutCliente.ToUpper());
+
+            // Verificar si el usuario no existe
+            if (user == null)
+            {
+                datosUsuarioDto.EstaAutenticado = false;
+                datosUsuarioDto.Mensaje = "Usuario o contraseña inválida";
+                return datosUsuarioDto;
+            }
+
+            // Verificar contraseña
+            if (user.clave != model.Codigo)
+            {
+                user.intentos++;
+                var mensaje = "Usuario o contraseña incorrecta, al tercer intento usuario será bloqueado";
+                if (user.intentos >= 3)
+                {
+                    user.estado = 0;
+                    user.fechaBloqueo = DateTime.Now;
+
+                    // Registrar bloqueo
+                    var logBloqueo = new LogBloqueo
+                    {
+                        IdUsuario = user.id,
+                        NombreUsuario = user.nombreUsuario,
+                        CargoUsuario = user.cargo,
+                        CrrCliente = user.idCliente,
+                        FechaBloqueo = DateTime.Now,
+                        DireccionIP = ipAddress
+                    };
+
+                    _repositoryContext.LogBloqueos.Add(logBloqueo);
+                    mensaje = "Usuario bloqueado";
+                }
+
+                _repositoryContext.UsuarioPortals.Update(user);
+                await _repositoryContext.SaveChangesAsync();
+
+                datosUsuarioDto.EstaAutenticado = false;
+                datosUsuarioDto.Mensaje = mensaje;
+                return datosUsuarioDto;
+            }
+
+            // Restablecer intentos y estado si la contraseña es correcta
+            user.intentos = 0;
+            user.estado = 1;
+            _repositoryContext.UsuarioPortals.Update(user);
+            await _repositoryContext.SaveChangesAsync();
+
+            // Verificar si el usuario está activo
+            if (user.activo == 0)
+            {
+                datosUsuarioDto.EstaAutenticado = false;
+                datosUsuarioDto.Mensaje = "Usuario bloqueado";
+                return datosUsuarioDto;
+            }
+            // Obtener información adicional
+            var serviciosVinculados = _servicioVinculadoService.getServicioPorIdCliente(user.idCliente);
+            var informacionCliente = _clienteService.getClienteByidCliente(user.idCliente);
+
+            var rolPermisos = this._repositoryContext.RolPermisos
+                .Include(x => x.permiso)
+                .Where(x => x.rol.id == user.idRol)
+                .Select(x => new
+                {
+                    Id = x.permiso.id,
+                    NombrePermiso = x.permiso.NombrePermiso
+                })
+                 .ToList();
+
+            // Crear JWT y Refresh Token
+            datosUsuarioDto.EstaAutenticado = true;
+            JwtSecurityToken jwtSecurityToken = CreateJwtToken(user);
+            datosUsuarioDto.Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+            datosUsuarioDto.Id = user.id;
+            datosUsuarioDto.NombreUsuario = user.nombreUsuario + " " + user.apellidoUsuario;
+            datosUsuarioDto.IdCliente = user.idCliente;
+            datosUsuarioDto.Correo = user.correo;
+            datosUsuarioDto.Rol = user.rol;
+            datosUsuarioDto.UrlServicio = serviciosVinculados?.urlServicio ?? "";
+            datosUsuarioDto.TipoNivelCliente = informacionCliente?.nivel?.ToString() ?? "";
+            var Permisos = rolPermisos.Select(p => new Permisos
+            {
+                id = p.Id,
+                NombrePermiso = p.NombrePermiso
+            }).ToList();
+
+            datosUsuarioDto.Permisos = Permisos;
+
+
+            var activeRefreshToken = user.RefreshTokens.FirstOrDefault(rt => rt.IsActive);
+            if (activeRefreshToken != null)
+            {
+                datosUsuarioDto.RefreshToken = activeRefreshToken.Token;
+                datosUsuarioDto.RefreshTokenExpiration = activeRefreshToken.Expires;
+            }
+            else
+            {
+                var refreshToken = CreateRefreshToken();
+                datosUsuarioDto.RefreshToken = refreshToken.Token;
+                datosUsuarioDto.RefreshTokenExpiration = refreshToken.Expires;
+                refreshToken.idUsuario = user.id;
+                _repositoryContext.RefreshToken.Add(refreshToken);
+                _repositoryContext.UsuarioPortals.Update(user);
+                await _repositoryContext.SaveChangesAsync();
+            }
+
+            // Registrar el login
+            var logLogin = new LogLogin
+            {
+                id_usuario = user.id,
+                nombreUsuario = user.nombreUsuario,
+                cargoUsuario = user.cargo,
+                token = datosUsuarioDto.Token,
+                fecha_creacion = DateTime.Now,
+            };
+
+
+            _repositoryContext.LogLogins.Add(logLogin);
+            await _repositoryContext.SaveChangesAsync();
+
+
+
+            var logLoginToken = new LogToken
+            {
+                idUsuario = user.id,
+                Token = datosUsuarioDto.Token,
+                FechaIngreso = DateTime.Now,
+                FechaExpiracion = jwtSecurityToken.ValidTo.ToUniversalTime(),
+                Revocado = false,
+                
+
+
+            };
+
+
+            _repositoryContext.LogLoginToken.Add(logLoginToken);
+            await _repositoryContext.SaveChangesAsync();
+
+            datosUsuarioDto.Mensaje = "Login exitoso";
+
+            return datosUsuarioDto;
+
+
+        }
+
+
+
         public AuthenticateResponsePortal Authenticate(AuthenticateRequestPortal model)
         {
+
+
 
             var ipAddress = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
 
@@ -164,8 +335,9 @@ namespace Services
             };
 
             this._repositoryContext.LogLogins.Add(logLogin);
-
             this._RepositoryContext.SaveChanges();
+
+
             return new AuthenticateResponsePortal(user, token, permisos); 
         }
 
@@ -193,6 +365,165 @@ namespace Services
                 signingCredentials: signingCredentials);
             return jwtSecurityToken;
 
+        }
+
+
+        public async Task<DatosUsuarios> ValidateTokenAsync(string token)
+        {
+            var datosUsuariosDto = new DatosUsuarios();
+
+            var tokenValido = await _repositoryContext.LogLoginToken.FirstOrDefaultAsync(x => !x.Revocado && DateTime.UtcNow < x.FechaExpiracion && x.Token == token);
+
+            if (tokenValido != null)
+            {
+                var usuario = await GetIdUsuario(tokenValido.idUsuario);
+
+                if (usuario.activo == 0)
+                {
+                    datosUsuariosDto.EstaAutenticado = false;
+                    datosUsuariosDto.Mensaje = $"el ususario esta bloqueado.";
+                    return datosUsuariosDto;
+                }
+
+                var rolPermisos = this._repositoryContext.RolPermisos
+                .Include(x => x.permiso)
+                .Where(x => x.rol.id == usuario.idRol)
+                .Select(x => new
+                {
+                  Id = x.permiso.id,
+                  NombrePermiso = x.permiso.NombrePermiso
+                 })
+               .ToList();
+
+
+                datosUsuariosDto.EstaAutenticado = true;
+                JwtSecurityToken jwtSecurityToken = CreateJwtToken(usuario);
+                datosUsuariosDto.Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+                datosUsuariosDto.Correo = usuario.correo;
+                datosUsuariosDto.Rol = usuario.rol;
+                var Permisos = rolPermisos.Select(p => new Permisos
+                {
+                    id = p.Id,
+                    NombrePermiso = p.NombrePermiso
+                }).ToList();
+
+                datosUsuariosDto.Permisos = Permisos;
+
+                if (usuario.RefreshTokens.Any(a => a.IsActive))
+                {
+                    var activeRefreshToken = usuario.RefreshTokens.Where(a => a.IsActive == true).FirstOrDefault();
+                    datosUsuariosDto.RefreshToken = activeRefreshToken.Token;
+                    datosUsuariosDto.RefreshTokenExpiration = activeRefreshToken.Expires;
+                }
+                else
+                {
+                    var refreshToken = CreateRefreshToken();
+                    datosUsuariosDto.RefreshToken = refreshToken.Token;
+                    datosUsuariosDto.RefreshTokenExpiration = refreshToken.Expires;
+                    refreshToken.idUsuario = usuario.id;
+                    _repositoryContext.UsuarioPortals.Update(usuario);
+                    await _repositoryContext.RefreshToken.AddAsync(refreshToken);
+                    await _repositoryContext.SaveChangesAsync();
+
+                }
+
+                var LoginToken = new LogToken
+                {
+                    FechaIngreso = DateTime.UtcNow,
+                    Token = datosUsuariosDto.Token,
+                    FechaExpiracion = jwtSecurityToken.ValidTo.ToUniversalTime(),
+                    Revocado = false,
+                    idUsuario = usuario.id
+                };
+                _repositoryContext.LogLoginToken.Add(LoginToken);
+                await _repositoryContext.SaveChangesAsync();
+
+                return datosUsuariosDto;
+
+            }
+
+            datosUsuariosDto.EstaAutenticado = false;
+            datosUsuariosDto.Mensaje = $"Token Invalido";
+            return datosUsuariosDto;
+
+        }
+
+
+        public async Task<DatosUsuarios> Refreshtoken(string refreshToken)
+        {
+            var datosUsuariosDto = new DatosUsuarios();
+
+            var usuario = await GetByRefreshTokenAsync(refreshToken);
+
+            if (usuario != null) 
+            {
+                datosUsuariosDto.EstaAutenticado = false;
+                datosUsuariosDto.Mensaje = $"El token no pertenece a ningun Usuario";
+                return datosUsuariosDto;
+            }
+
+            var refreshTokenBd = usuario.RefreshTokens.Single(x => x.Token == refreshToken);
+
+            if (refreshTokenBd.IsActive)
+            {
+                datosUsuariosDto.EstaAutenticado = false;
+                datosUsuariosDto.Mensaje = $"El token no esta activo";
+                return datosUsuariosDto;
+            }
+
+            //revocamos el refresh token actual
+
+            var rolPermisos = this._repositoryContext.RolPermisos
+                .Include(x => x.permiso)
+                .Where(x => x.rol.id == usuario.idRol)
+                .Select(x => new
+                {
+                    Id = x.permiso.id,
+                    NombrePermiso = x.permiso.NombrePermiso
+                })
+               .ToList();
+
+            refreshTokenBd.Revoked = DateTime.UtcNow;
+
+            var newRefreshToken = CreateRefreshToken();
+            usuario.RefreshTokens.Add(newRefreshToken);
+            _repositoryContext.UsuarioPortals.Update(usuario);
+            await _repositoryContext.SaveChangesAsync();
+
+            datosUsuariosDto.EstaAutenticado = true;
+            JwtSecurityToken jwtSecurityToken = CreateJwtToken(usuario);
+            datosUsuariosDto.Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);    
+            datosUsuariosDto.Correo = usuario.correo;
+            datosUsuariosDto.Rol = usuario.rol;
+            var Permisos = rolPermisos.Select(p => new Permisos
+            {
+                id = p.Id,
+                NombrePermiso = p.NombrePermiso
+            }).ToList();
+
+            datosUsuariosDto.Permisos = Permisos;
+            datosUsuariosDto.RefreshToken = newRefreshToken.Token;
+            datosUsuariosDto.RefreshTokenExpiration = newRefreshToken.Expires;
+            return datosUsuariosDto;
+
+                                            
+        }
+
+
+
+        private RefreshToken CreateRefreshToken() 
+        {
+            var ramdomNumber = new byte[32];
+            using (var generator = RandomNumberGenerator.Create())
+            {
+                generator.GetBytes(ramdomNumber);
+                return new RefreshToken
+                {
+                    Token = Convert.ToBase64String(ramdomNumber),
+                    Expires = DateTime.UtcNow.AddDays(10),
+                    Created = DateTime.UtcNow
+                };
+            }
         }
 
 
@@ -296,7 +627,39 @@ namespace Services
 
             return new AuthenticateResponsePortal(log.usuario, log.token, permisos);
         }
-        
+
+        public async Task<UsuarioPortal> GetByRefreshTokenAsync(string refreshToken)
+        {
+            return await _repositoryContext.UsuarioPortals
+                         .Include(u => u.rol)
+                         .Include(u => u.RefreshTokens)
+                         .FirstOrDefaultAsync(u => u.RefreshTokens.Any(t => t.Token == refreshToken && t.IsActive));
+   
+
+
+        }
+
+
+        public async Task<UsuarioPortal> GetIdUsuario(int id)
+        {
+            return await _repositoryContext.UsuarioPortals
+                         .Include(u => u.rol)
+                         .Include(u => u.RefreshTokens)
+                         .FirstOrDefaultAsync(u => u.id == id);
+        }
+
+
+
+        public async Task<UsuarioPortal> GetByEmail(string Email)
+        {
+            return await _repositoryContext.UsuarioPortals
+                         .Include(u => u.rol)
+                         .Include(u => u.RefreshTokens)
+                         .FirstOrDefaultAsync(u => u.correo.ToLower() == Email.ToLower());
+        }
+
+
+
     }
 
 
@@ -306,4 +669,7 @@ namespace Services
         {
         }
     }
+
+
+
 }

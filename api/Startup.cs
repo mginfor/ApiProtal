@@ -166,15 +166,19 @@ namespace api
 
             app.UseIpRateLimiting();
 
-            app.UseMiddleware<JwtMiddleware>();
+            //app.UseMiddleware<JwtMiddleware>();
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
+     
+
             app.UseAuthentication();
 
-            app.UseAuthorization();
+            app.UseAuthorization(); 
+
+            app.UseMiddleware<CustomExceptionMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

@@ -7,11 +7,15 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Graph.Models;
+using Microsoft.IdentityModel.Tokens;
 using Services;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace api.Controllers
@@ -111,10 +115,58 @@ namespace api.Controllers
                 return Unauthorized(ex);
             }
 
-           
 
 
 
+
+        }
+
+
+        [HttpPost("loginAsync")]
+        public async Task<IActionResult> loginAsync(AuthenticateRequestPortal model)
+        {
+            var salida = new GenericResponse();
+            var dto = await _usuarioService.LoginAsync(model);
+
+            if (!dto.EstaAutenticado)
+            {
+                salida.data = new { message = dto.Mensaje };
+                salida.status = false;
+                return BadRequest(salida);
+            }
+
+            salida.data = dto;
+            salida.status = true;
+            return Ok(salida);
+        }
+
+
+        // Endpoint para validar un token
+        [HttpPost("validate")]
+        public async Task<IActionResult> ValidateToken([FromBody] string token)
+        {
+            var datosUsuariosDto = await _usuarioService.ValidateTokenAsync(token);
+
+            if (!datosUsuariosDto.EstaAutenticado)
+            {
+                return Unauthorized(new { message = datosUsuariosDto.Mensaje });
+            }
+
+            return Ok(datosUsuariosDto);
+        }
+
+        // Endpoint para refrescar un token
+        [HttpPost("refresh")]
+        public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
+        {
+            var datosUsuariosDto = await _usuarioService.Refreshtoken(refreshToken);
+
+            if (!datosUsuariosDto.EstaAutenticado)
+            {
+                return Unauthorized(new { message = datosUsuariosDto.Mensaje });
+            }
+
+            return Ok(datosUsuariosDto);
         }
 
 
@@ -127,7 +179,7 @@ namespace api.Controllers
 
             if (dto.usuario == null)
             {
-                salida.data = new { message =dto.Mensaje };
+                salida.data = new { message = dto.Mensaje };
                 salida.status = false;
                 return BadRequest(salida);
             }
@@ -139,14 +191,11 @@ namespace api.Controllers
             var informacionCliente = _clienteService.getClienteByidCliente(dto.usuario.idCliente);
 
 
-            _logService.create(new Log() { idUsuario = dto.usuario.id, fechaIngreso = DateTime.Now, clave = model.Codigo.ToString() });
-
-
             if (serviciosVinculados != null)
             {
                 dto.usuario.UrlServicio = serviciosVinculados.urlServicio;
 
-              
+
             }
 
             if (informacionCliente != null)
@@ -160,6 +209,74 @@ namespace api.Controllers
 
             return Ok(salida);
         }
+
+
+
+        [HttpGet("ValidarToken")]
+        public IActionResult GetToken([FromQuery] string token)
+        {
+            var salida = new GenericResponse();
+
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                salida.data = new { message = "Token is required" };
+                salida.status = false;
+                return BadRequest(salida);
+
+            }
+
+            try
+            {
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes(_configuration["JWT:Key"]);
+                var validationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = _configuration["JWT:Issuer"],
+                    ValidAudience = _configuration["JWT:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ClockSkew = TimeSpan.Zero
+                };
+
+                var principal = tokenHandler.ValidateToken(token, validationParameters, out var validatedToken);
+
+                if (validatedToken is JwtSecurityToken jwtToken)
+                {
+                    // Optionally, you can check additional claims here
+                    var userId = principal.Claims.FirstOrDefault(c => c.Type == "uid")?.Value;
+                    if (userId != null)
+                    {
+                        // Optionally fetch user by id or other claims
+                        // var user = _usuarioService.GetUserById(int.Parse(userId));
+                        // salida.data = user;
+                        salida.data = new { message = "Token is valid" };
+                        salida.status = true;
+                        return Ok(salida);
+                    }
+                }
+
+                salida.data = new { message = "Token is invalid" };
+                salida.status = false;
+                return Unauthorized(salida);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                salida.data = new { message = "Token validation failed", details = ex.Message };
+                salida.status = false;
+                return Unauthorized(salida);
+
+            }
+        }
+
+
+
+
 
 
         [Authorize]
