@@ -53,6 +53,7 @@ namespace Persistence
 
             //
             modelBuilder.Entity<Candidato>().HasNoKey();
+
         
 
         }

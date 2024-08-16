@@ -15,6 +15,6 @@ namespace Entities.EPModels
         [Required]
         public string RutCliente { get; set; }
 
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
     }
 }

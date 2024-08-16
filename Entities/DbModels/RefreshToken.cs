@@ -24,7 +24,6 @@ namespace Entities.DbModels
         [Column("EXPIRES")]
         public DateTime Expires { get; set; }
 
-        [Column("ISEXPIRED")]
         public bool IsExpired => DateTime.UtcNow >= Expires;
 
         [Column("CREATED")]
@@ -32,8 +31,6 @@ namespace Entities.DbModels
 
         [Column("REVOKED")]
         public DateTime? Revoked { get; set; }
-
-        [Column("ISACTIVED")]
         public bool IsActive => Revoked == null && !IsExpired;
 
         //FKs

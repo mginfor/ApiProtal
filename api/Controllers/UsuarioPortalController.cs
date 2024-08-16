@@ -93,7 +93,7 @@ namespace api.Controllers
                 {
                     //enviarCodigoPorCorreo(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.clave);
                     MailHelper mail = new MailHelper(_configuration);
-                    mail.EnviarCorreoGraph(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.clave);
+                    mail.EnviarCorreoGraph(user.correo, user.nombreUsuario + " " + user.apellidoUsuario, user.Pass);
                     var aux = user.correo.Split("@");
                     salida.data = new { message = "correo enviado a " + aux[0].Substring(0, 3) + "xxxxx@" + aux[1] };
                     return Ok(salida);
@@ -128,45 +128,65 @@ namespace api.Controllers
             var salida = new GenericResponse();
             var dto = await _usuarioService.LoginAsync(model);
 
-            if (!dto.EstaAutenticado)
+            if (!string.IsNullOrEmpty(dto.RefreshToken))
             {
-                salida.data = new { message = dto.Mensaje };
-                salida.status = false;
-                return BadRequest(salida);
+                SetRefreshTokenInCookie(dto.RefreshToken);
             }
 
-            salida.data = dto;
-            salida.status = true;
-            return Ok(salida);
+
+            if (dto.EstaAutenticado)
+            {
+                salida.data = dto;
+                salida.status = true;
+                return Ok(salida);
+            }
+
+            salida.data = new { message = dto.Mensaje };
+            salida.status = false;
+            return BadRequest(salida);
+
+         
         }
 
 
         // Endpoint para validar un token
         [HttpPost("validate")]
-        public async Task<IActionResult> ValidateToken([FromBody] string token)
+        public async Task<IActionResult> ValidateToken(string token)
         {
-            var datosUsuariosDto = await _usuarioService.ValidateTokenAsync(token);
+            var result = await _usuarioService.ValidateTokenAsync(token);
 
-            if (!datosUsuariosDto.EstaAutenticado)
+            if (!string.IsNullOrEmpty(result.RefreshToken))
             {
-                return Unauthorized(new { message = datosUsuariosDto.Mensaje });
+                SetRefreshTokenInCookie(result.RefreshToken);
             }
+            if (result.EstaAutenticado)
+            {
 
-            return Ok(datosUsuariosDto);
+                return Ok(result);
+            }
+            return BadRequest(result);
+
         }
 
         // Endpoint para refrescar un token
         [HttpPost("refresh")]
-        public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
+        public async Task<IActionResult> RefreshToken()
         {
-            var datosUsuariosDto = await _usuarioService.Refreshtoken(refreshToken);
+            var refreshToken = Request.Cookies["refreshToken"];
+            var response = await _usuarioService.Refreshtoken(refreshToken);
+            if(!string.IsNullOrEmpty(response.RefreshToken))
+                SetRefreshTokenInCookie(response.RefreshToken);
+            return Ok(response);
+        }
 
-            if (!datosUsuariosDto.EstaAutenticado)
+        private void SetRefreshTokenInCookie(string refreshToken)
+        {
+            var cookieOptions = new CookieOptions
             {
-                return Unauthorized(new { message = datosUsuariosDto.Mensaje });
-            }
-
-            return Ok(datosUsuariosDto);
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddDays(10)
+            };
+            Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
 
 

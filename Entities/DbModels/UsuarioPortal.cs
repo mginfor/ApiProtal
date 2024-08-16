@@ -59,7 +59,10 @@ namespace Entities.DbModels
         [Column("FECHA_CODIGO")]
         public DateTime? UltimoEnvioCodigo { get; set; }
 
-        public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
+        [Column("PASS")]
+        public string Pass { get; set; }
+
+        public ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
 
         //FKs
         [ForeignKey("idCliente")]

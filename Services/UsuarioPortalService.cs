@@ -1,5 +1,6 @@
 ﻿using api.Helpers;
 using Contracts;
+using DocumentFormat.OpenXml.InkML;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Spreadsheet;
 using Entities.DbModels;
@@ -69,7 +70,7 @@ namespace Services
            
                 };
 
-                user.clave = generarCodigo();
+                user.Pass = GenerarCodigo();
                 user.UltimoEnvioCodigo = ahora;
                 update(user);
             }
@@ -100,7 +101,7 @@ namespace Services
             }
 
             // Verificar contraseña
-            if (user.clave != model.Codigo)
+            if (user.Pass != model.Codigo)
             {
                 user.intentos++;
                 var mensaje = "Usuario o contraseña incorrecta, al tercer intento usuario será bloqueado";
@@ -179,11 +180,12 @@ namespace Services
             datosUsuarioDto.Permisos = Permisos;
 
 
-            var activeRefreshToken = user.RefreshTokens.FirstOrDefault(rt => rt.IsActive);
-            if (activeRefreshToken != null)
+          
+            if (user.RefreshTokens.Any(a => a.IsActive))
             {
-                datosUsuarioDto.RefreshToken = activeRefreshToken.Token;
-                datosUsuarioDto.RefreshTokenExpiration = activeRefreshToken.Expires;
+                var activerefreshToken =  user.RefreshTokens.Where(a => a.IsActive).FirstOrDefault();
+                datosUsuarioDto.RefreshToken = activerefreshToken.Token;
+                datosUsuarioDto.RefreshTokenExpiration = activerefreshToken.Expires;
             }
             else
             {
@@ -274,7 +276,7 @@ namespace Services
                
             }
             // contraseña invalida
-            if (user.clave != model.Codigo)
+            if (user.Pass != model.Codigo)
             {
                 user.intentos++;
                 var mensaje = "Usuario o contraseña incorrecta, al tercer intento usuario sera bloqueado";
@@ -397,6 +399,7 @@ namespace Services
 
 
                 datosUsuariosDto.EstaAutenticado = true;
+                datosUsuariosDto.Id = usuario.id;
                 JwtSecurityToken jwtSecurityToken = CreateJwtToken(usuario);
                 datosUsuariosDto.Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
                 datosUsuariosDto.Correo = usuario.correo;
@@ -455,7 +458,7 @@ namespace Services
 
             var usuario = await GetByRefreshTokenAsync(refreshToken);
 
-            if (usuario != null) 
+            if (usuario != null)
             {
                 datosUsuariosDto.EstaAutenticado = false;
                 datosUsuariosDto.Mensaje = $"El token no pertenece a ningun Usuario";
@@ -463,6 +466,8 @@ namespace Services
             }
 
             var refreshTokenBd = usuario.RefreshTokens.Single(x => x.Token == refreshToken);
+
+      
 
             if (refreshTokenBd.IsActive)
             {
@@ -577,10 +582,26 @@ namespace Services
         }
 
 
-        private int generarCodigo()
+        //private int generarCodigo()
+        //{
+        //    Random rnd = new();
+        //    return rnd.Next(100000, 999999);
+        //}
+
+
+        private string GenerarCodigo()
         {
+            const string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?";
+            int longitud = 8;
             Random rnd = new();
-            return rnd.Next(100000, 999999);
+            char[] codigo = new char[longitud];
+
+            for (int i = 0; i < longitud; i++)
+            {
+                codigo[i] = caracteres[rnd.Next(caracteres.Length)];
+            }
+
+            return new string(codigo);
         }
 
         public bool EstaAutorizado(int idUsuario, string constantePermisos)
@@ -634,12 +655,24 @@ namespace Services
                          .Include(u => u.rol)
                          .Include(u => u.RefreshTokens)
                          .FirstOrDefaultAsync(u => u.RefreshTokens.Any(t => t.Token == refreshToken && t.IsActive));
-   
-
 
         }
 
+        public async Task<UsuarioPortal> GetByRefreshTokenAsync2(string refreshToken)
+        {
+            var utcNow = DateTime.UtcNow;
 
+            return await _repositoryContext.UsuarioPortals
+                         .Include(u => u.rol) 
+                         .Include(u => u.RefreshTokens) 
+                         .FirstOrDefaultAsync(u => u.RefreshTokens.Any(t =>
+                             t.Token == refreshToken &&  
+                             t.Revoked == null &&        
+                             t.Expires > utcNow));
+        }
+
+
+       
         public async Task<UsuarioPortal> GetIdUsuario(int id)
         {
             return await _repositoryContext.UsuarioPortals

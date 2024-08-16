@@ -105,7 +105,7 @@ namespace api.Helpers
         }
 
 
-        public void EnviarCorreoGraph(string destinatario, string usuario, int codigo)
+        public void EnviarCorreoGraph(string destinatario, string usuario, string codigo)
         {
             string relativePath = @"Plantillas\mensaje.html";
             var ruta = Path.GetFullPath(relativePath);
