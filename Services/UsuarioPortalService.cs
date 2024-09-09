@@ -167,6 +167,9 @@ namespace Services
             datosUsuarioDto.Id = user.id;
             datosUsuarioDto.NombreUsuario = user.nombreUsuario + " " + user.apellidoUsuario;
             datosUsuarioDto.IdCliente = user.idCliente;
+            datosUsuarioDto.cargo = user.cargo;
+            datosUsuarioDto.zona = user.zona;
+            datosUsuarioDto.nombrecliente = user.cliente?.nombre;
             datosUsuarioDto.Correo = user.correo;
             datosUsuarioDto.Rol = user.rol;
             datosUsuarioDto.UrlServicio = serviciosVinculados?.urlServicio ?? "";

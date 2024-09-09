@@ -23,6 +23,12 @@ namespace Entities.EPModels
         public string NombreUsuario { get; set; }
         public int IdCliente { get; set; }
 
+        public string cargo { get; set; }
+
+        public string zona { get; set; }
+
+        public string nombrecliente { get; set; } 
+
         public string UrlServicio { get; set; }
         public string TipoNivelCliente { get; set; }
 
