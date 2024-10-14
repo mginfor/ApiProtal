@@ -647,7 +647,10 @@ namespace Services
 
                 if (excelBrechaCandidatos.fechaInicio.HasValue && excelBrechaCandidatos.fechaFin.HasValue)
                 {
-                    query += " and te.FECHA_INFORME  >= @FECHAINICIO and te.FECHA_INFORME  <= @FECHAFIN";
+                    query += @" and (
+                       (te.FECHA_INFORME >= @FECHAINICIO AND te.FECHA_INFORME <= @FECHAFIN)
+                          OR (te.FECHA_INFORME >= @FECHAINICIO AND @FECHAFIN IS NULL)
+                        )";
                 }
                 query += " group by tdi.GLS_BRECHA";
 
