@@ -24,7 +24,7 @@ namespace Services
             db = new RepositoryContext();
         }
 
-        public List<ProcesoInforme> getProcesosByIdInforme(int idInforme)
+        public List<ProcesoInforme> getProcesosByIdInforme(long idInforme)
         {
             var query = "select * from vw_portal_proceso_Informe  where idInforme = {0};";
 
