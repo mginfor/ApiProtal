@@ -110,7 +110,7 @@ namespace Entities.DbModels
         public DateTime? fechaIngresoProceso { get; set; }
         
         [Column("CRR_IDINFORME")]
-        public int? idInforme { get; set; }
+        public long? idInforme { get; set; }
         
         [Column("DIGITO_INFORME")]
         public string digitoInforme { get; set; }

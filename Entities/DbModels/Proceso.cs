@@ -19,7 +19,7 @@ namespace Entities.DbModels
         public double? porcCumplimiento { get; set; }
         public int? idResultado { get; set; }
         public string descResultado { get; set; }
-        public int? idInforme { get; set; }
+        public long? idInforme { get; set; }
         public bool? conFirma { get; set; }
         public int rutCliente { get; set; }
         public string nombreCliente { get; set; }
