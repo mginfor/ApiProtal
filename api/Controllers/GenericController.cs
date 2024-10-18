@@ -42,7 +42,7 @@ namespace api.Controllers
 
         [Route("[action]/{folio}")]
         [HttpGet]
-        [Authorize(Policy = "GestionInformes")]
+        //[Authorize(Policy = "GestionInformes")]
         public IActionResult getDataInformeByFolio(int folio)
         {
             var salida = new GenericResponse();
