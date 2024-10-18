@@ -99,8 +99,8 @@ namespace api
             // Configuración de autorización
             services.AddAuthorization(options =>
             {
-                //options.AddPolicy("GestionInformesPolicy", policy =>
-                //    policy.Requirements.Add(new PermissionRequirement("GestionInformes")));
+                options.AddPolicy("GestionInformesPolicy", policy =>
+                    policy.Requirements.Add(new PermissionRequirement("GestionInformes")));
                 options.AddPolicy("TableroGestionPolicy", policy =>
                     policy.Requirements.Add(new PermissionRequirement("TableroGestion")));
                 options.AddPolicy("TratamientoBrechaPolicy", policy =>
